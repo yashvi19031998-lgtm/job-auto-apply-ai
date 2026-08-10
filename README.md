@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Auto Apply AI
 
-## Getting Started
+An intelligent job application assistant that parses your resume, extracts jobs from sources like WhatsApp, scores the jobs against your skills, and automatically drafts and sends customized application emails. 
 
-First, run the development server:
+## Features
+- **Resume Parsing**: Upload a PDF resume to securely extract and store your professional profile.
+- **WhatsApp Job Extraction**: Paste raw WhatsApp job alerts to instantly extract them into structured data.
+- **Job Matching**: A deterministic algorithm matches required skills against your resume.
+- **Automated Mock Application Emails**: Drafts personalized emails tailored to the job's required skills.
+- **SMTP Integration**: Directly sends your applications via standard SMTP with your resume PDF securely attached.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Local Development
+
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
+
+### Environment Variables
+Copy `.env.example` to `.env.local` and configure your environment variables.
+
+```env
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=your-project-url
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+
+# SMTP Configuration
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+SMTP_FROM_NAME=Your Name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> **Security Note**: Never commit your `.env.local` file or expose your `SUPABASE_SERVICE_ROLE_KEY` or `SMTP_PASSWORD` to the public or client-side code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+## Supabase Setup
+1. Create a project in Supabase.
+2. Enable Email Auth.
+3. Create a private storage bucket named `resumes`.
+4. Deploy your database schema (profiles, resumes, job_batches, jobs, applications, settings).
 
-To learn more about Next.js, take a look at the following resources:
+## Vercel Deployment
+This application is fully compatible with Vercel serverless deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your repository to GitHub.
+2. Import the project into your Vercel dashboard.
+3. Under **Environment Variables**, add all the variables from your `.env.local` file.
+4. Click **Deploy**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Security
+- This application relies on server-side SMTP execution. Passwords are never sent to or exposed in the browser.
+- Resume PDFs are retrieved securely on the server directly from private Supabase Storage and never exposed publicly.
+- Next.js security headers are implemented in `next.config.ts`.
