@@ -4,6 +4,7 @@ export interface Signature {
   phone: string;
   location: string;
   portfolioUrl: string;
+  linkedinUrl?: string;
 }
 
 export interface WorkingWebsite {

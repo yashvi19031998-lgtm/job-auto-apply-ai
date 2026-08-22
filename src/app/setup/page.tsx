@@ -17,7 +17,8 @@ export default function SetupPage() {
     email: "",
     phone: "",
     location: "",
-    portfolioUrl: ""
+    portfolioUrl: "",
+    linkedinUrl: ""
   });
 
   const [newWebsite, setNewWebsite] = useState({
@@ -128,9 +129,13 @@ export default function SetupPage() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
               <input type="text" className="w-full px-4 py-2 border rounded-lg" value={formData.location} onChange={e => setFormData({...formData, location: e.target.value})} placeholder="City, Country" />
             </div>
-            <div className="md:col-span-2">
+            <div className="md:col-span-1">
               <label className="block text-sm font-medium text-gray-700 mb-1">Portfolio URL</label>
               <input type="url" className="w-full px-4 py-2 border rounded-lg" value={formData.portfolioUrl} onChange={e => setFormData({...formData, portfolioUrl: e.target.value})} placeholder="https://..." />
+            </div>
+            <div className="md:col-span-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">LinkedIn URL</label>
+              <input type="url" className="w-full px-4 py-2 border rounded-lg" value={formData.linkedinUrl || ""} onChange={e => setFormData({...formData, linkedinUrl: e.target.value})} placeholder="https://linkedin.com/in/..." />
             </div>
           </div>
         </section>

@@ -53,6 +53,7 @@ Email: ${signature.email}
 Phone: ${signature.phone}
 Location: ${signature.location}
 Portfolio: ${signature.portfolioUrl}
+LinkedIn: ${signature.linkedinUrl || "Not provided"}
 
 My Working Projects/Websites:
 ${websitesText}

@@ -28,7 +28,7 @@ Required JSON format:
       "company": "String or null",
       "recruiterName": "String or null",
       "recipientEmail": "String or null (Must be a valid email format)",
-      "alternateContact": "String or null (Extract WhatsApp number, LinkedIn link, or form link if email is NOT found)",
+      "alternateContact": "String or null (Extract ANY available contact info: WhatsApp number, ANY web link like careers page or Google form, LinkedIn profile, Telegram handle, or phone number if email is NOT found)",
       "requirements": "A concise bulleted list string of key skills and responsibilities."
     }
   ]

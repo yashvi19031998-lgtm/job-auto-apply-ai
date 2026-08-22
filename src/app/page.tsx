@@ -38,6 +38,12 @@ export default function Dashboard() {
       const urlMatch = job.alternateContact.match(/https?:\/\/[^\s]+/);
       return urlMatch ? { type: 'form', url: urlMatch[0] } : null;
     }
+
+    // Check for ANY other HTTP link
+    const anyUrlMatch = job.alternateContact.match(/https?:\/\/[^\s]+/);
+    if (anyUrlMatch) {
+      return { type: 'link', url: anyUrlMatch[0] };
+    }
     
     // Extract numbers only
     const digits = job.alternateContact.replace(/\D/g, '');
@@ -45,7 +51,6 @@ export default function Dashboard() {
     // Simple validation for Indian numbers or generic 10+ digits
     if (digits.length >= 10) {
       let waNumber = digits;
-      // If it doesn't have a country code but is 10 digits (common in India), add 91
       if (waNumber.length === 10) {
         waNumber = "91" + waNumber;
       }
@@ -53,6 +58,12 @@ export default function Dashboard() {
       const message = `Hi, I am interested in the ${job.jobTitle || 'open'} role at ${job.company || 'your company'}. I am an Immediate Joiner. Could you please review my profile?`;
       return { type: 'whatsapp', url: `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}` };
     }
+
+    // If it has SOME text but doesn't match above, return a generic 'text' type so we can display it!
+    if (job.alternateContact.trim().length > 3) {
+      return { type: 'text', text: job.alternateContact, url: null };
+    }
+
     return null;
   };
 
@@ -77,7 +88,7 @@ export default function Dashboard() {
           {new Date(job.createdAt).toLocaleDateString()}
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium flex items-center justify-end space-x-4 h-full pt-6">
-          {job.status !== 'sent' && externalAction && (
+          {job.status !== 'sent' && externalAction && externalAction.url && (
             <a href={externalAction.url} target="_blank" rel="noreferrer" 
               className={`flex items-center transition px-3 py-1.5 rounded-lg border 
                 ${externalAction.type === 'whatsapp' ? 'text-green-600 hover:text-green-700 bg-green-50 border-green-200' : 
@@ -87,6 +98,14 @@ export default function Dashboard() {
               {externalAction.type === 'whatsapp' ? 'WhatsApp' : 
                externalAction.type === 'linkedin' ? 'LinkedIn' : 'Apply Link'}
             </a>
+          )}
+          {job.status !== 'sent' && externalAction && !externalAction.url && externalAction.type === 'text' && (
+             <span className="text-gray-600 text-xs font-medium px-3 py-1.5 bg-gray-100 rounded-lg truncate max-w-[150px] inline-block" title={externalAction.text}>
+               {externalAction.text}
+             </span>
+          )}
+          {job.status !== 'sent' && !externalAction && (
+             <span className="text-gray-400 text-xs italic px-3 py-1.5 border border-transparent">No contact info</span>
           )}
           <Link href={`/jobs/${job.id}`} className="text-blue-600 hover:text-blue-900 font-semibold px-3 py-1.5">
             View
