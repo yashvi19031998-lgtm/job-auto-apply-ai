@@ -12,7 +12,14 @@ export default function SetupPage() {
   const [mounted, setMounted] = useState(false);
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    fullName: string;
+    email: string;
+    phone: string;
+    location: string;
+    portfolioUrl: string;
+    linkedinUrl?: string;
+  }>({
     fullName: "",
     email: "",
     phone: "",

@@ -14,22 +14,31 @@ export interface WorkingWebsite {
   description: string;
 }
 
+export interface AutoScoutPreferences {
+  keywords: string;
+  location: string;
+  mode: "fulltime" | "freelance";
+  source: "web" | "linkedin" | "naukri" | "indeed";
+}
+
 export interface Resume {
   name: string;
   base64Data: string; // The base64 encoded PDF string
   parsedText?: string; // The extracted text content for the AI to use
 }
 
-export type JobApplicationStatus = "draft" | "generated" | "sent" | "error";
+export type JobApplicationStatus = "draft" | "generated" | "sent" | "manually_applied" | "error";
 
 export interface JobApplication {
   id: string;
-  inputSource: "text" | "file";
+  inputSource: "text" | "file" | "scraper";
   originalInput: string;
   
   // Extracted by AI
+  jobType?: "fulltime" | "freelance";
   jobTitle?: string;
   company?: string;
+  jobUrl?: string;
   recipientEmail?: string;
   alternateContact?: string;
   recruiterName?: string;

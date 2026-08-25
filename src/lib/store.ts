@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Signature, WorkingWebsite, Resume, JobApplication } from "@/types";
+import { Signature, WorkingWebsite, Resume, JobApplication, AutoScoutPreferences } from "@/types";
 import { v4 as uuidv4 } from "uuid";
 
 interface AppState {
@@ -8,10 +8,12 @@ interface AppState {
   resume: Resume | null;
   websites: WorkingWebsite[];
   jobs: JobApplication[];
+  autoScoutPreferences: AutoScoutPreferences | null;
 
   // Actions
   setSignature: (signature: Signature) => void;
   setResume: (resume: Resume) => void;
+  setAutoScoutPreferences: (prefs: AutoScoutPreferences) => void;
   
   addWebsite: (website: Omit<WorkingWebsite, "id">) => void;
   updateWebsite: (id: string, website: Omit<WorkingWebsite, "id">) => void;
@@ -31,10 +33,13 @@ export const useAppStore = create<AppState>()(
       resume: null,
       websites: [],
       jobs: [],
+      autoScoutPreferences: null,
 
       setSignature: (signature) => set({ signature }),
       
       setResume: (resume) => set({ resume }),
+      
+      setAutoScoutPreferences: (prefs) => set({ autoScoutPreferences: prefs }),
 
       addWebsite: (website) => 
         set((state) => ({
@@ -52,11 +57,36 @@ export const useAppStore = create<AppState>()(
         })),
 
       addJob: (job) => {
-        const id = uuidv4();
-        set((state) => ({
-          jobs: [{ ...job, id, createdAt: Date.now() }, ...state.jobs]
-        }));
-        return id;
+        let existingId: string | null = null;
+        let isDuplicate = false;
+        
+        set((state) => {
+          if (job.jobUrl) {
+            const existing = state.jobs.find(j => j.jobUrl === job.jobUrl);
+            if (existing) {
+              isDuplicate = true;
+              return state;
+            }
+          }
+          if (job.recipientEmail && job.company) {
+            const existing = state.jobs.find(j => j.recipientEmail === job.recipientEmail && j.company === job.company);
+            if (existing) {
+              isDuplicate = true;
+              return state;
+            }
+          }
+          const id = uuidv4();
+          existingId = id;
+          return {
+            jobs: [{ ...job, id, createdAt: Date.now() }, ...state.jobs]
+          };
+        });
+        
+        if (isDuplicate) {
+          throw new Error("This job has already been imported.");
+        }
+        
+        return existingId!;
       },
 
       updateJob: (id, updates) =>

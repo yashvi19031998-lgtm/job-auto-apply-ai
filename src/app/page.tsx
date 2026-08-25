@@ -9,7 +9,7 @@ import { JobApplication } from "@/types";
 
 export default function Dashboard() {
   const router = useRouter();
-  const { signature, resume, websites, jobs } = useAppStore();
+  const { signature, resume, websites, jobs, updateJob } = useAppStore();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -23,8 +23,8 @@ export default function Dashboard() {
   if (!mounted || !signature) return null;
 
   // Filter Jobs
-  const sentJobs = jobs.filter(j => j.status === 'sent').sort((a, b) => b.createdAt - a.createdAt);
-  const pendingJobs = jobs.filter(j => j.status !== 'sent').sort((a, b) => b.createdAt - a.createdAt);
+  const sentJobs = jobs.filter(j => j.status === 'sent' || j.status === 'manually_applied').sort((a, b) => b.createdAt - a.createdAt);
+  const pendingJobs = jobs.filter(j => j.status !== 'sent' && j.status !== 'manually_applied').sort((a, b) => b.createdAt - a.createdAt);
 
   const getExternalLink = (job: JobApplication) => {
     if (!job.alternateContact) return null;
@@ -79,13 +79,15 @@ export default function Dashboard() {
         <td className="px-6 py-4 whitespace-nowrap">
           <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
             ${job.status === 'sent' ? 'bg-green-100 text-green-800' : 
+              job.status === 'manually_applied' ? 'bg-teal-100 text-teal-800' :
               job.status === 'generated' ? 'bg-blue-100 text-blue-800' : 
               'bg-yellow-100 text-yellow-800'}`}>
-            {job.status.charAt(0).toUpperCase() + job.status.slice(1)}
+            {job.status === 'manually_applied' ? 'Manually Applied' : job.status.charAt(0).toUpperCase() + job.status.slice(1)}
           </span>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-          {new Date(job.createdAt).toLocaleDateString()}
+          <div className="font-medium text-gray-900">{new Date(job.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}</div>
+          <div className="text-xs mt-0.5">{new Date(job.createdAt).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', hour12: true })}</div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium flex items-center justify-end space-x-4 h-full pt-6">
           {job.status !== 'sent' && externalAction && externalAction.url && (
@@ -107,6 +109,15 @@ export default function Dashboard() {
           {job.status !== 'sent' && !externalAction && (
              <span className="text-gray-400 text-xs italic px-3 py-1.5 border border-transparent">No contact info</span>
           )}
+          {job.status !== 'sent' && job.status !== 'manually_applied' && (
+            <button 
+              onClick={() => updateJob(job.id, { status: 'manually_applied' })}
+              title="Mark as Manually Applied"
+              className="text-gray-400 hover:text-green-600 transition px-2 py-1.5 rounded-lg border border-transparent hover:bg-green-50"
+            >
+              <CheckCircle2 className="w-5 h-5" />
+            </button>
+          )}
           <Link href={`/jobs/${job.id}`} className="text-blue-600 hover:text-blue-900 font-semibold px-3 py-1.5">
             View
           </Link>
@@ -123,6 +134,10 @@ export default function Dashboard() {
           <p className="text-gray-500">Welcome back, {signature.fullName.split(' ')[0]}</p>
         </div>
         <div className="flex items-center space-x-3">
+          <Link href="/auto-scout" className="flex items-center bg-purple-100 text-purple-700 px-5 py-2.5 rounded-xl font-medium hover:bg-purple-200 transition shadow-sm">
+            <Globe className="w-5 h-5 mr-2" />
+            Auto-Scout
+          </Link>
           <Link href="/jobs/new" className="flex items-center bg-blue-900 text-white px-5 py-2.5 rounded-xl font-medium hover:bg-blue-800 transition shadow-sm">
             <Plus className="w-5 h-5 mr-2" />
             New Application
@@ -204,7 +219,7 @@ export default function Dashboard() {
             <div>
               <div className="flex items-center mb-4 mt-8">
                 <CheckCircle2 className="w-6 h-6 text-green-500 mr-2" />
-                <h2 className="text-2xl font-bold text-gray-900">Email Sent</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Completed Applications</h2>
                 <span className="ml-3 bg-green-100 text-green-700 py-1 px-3 rounded-full text-xs font-bold">{sentJobs.length}</span>
               </div>
               <div className="bg-white border border-green-100 rounded-2xl shadow-sm overflow-hidden">

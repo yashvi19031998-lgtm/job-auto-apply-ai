@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAppStore } from "@/lib/store";
-import { FileText, MessageSquare, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
+import { FileText, MessageSquare, ArrowRight, Loader2, CheckCircle2, Search } from "lucide-react";
 
 async function fetchWithTimeout(resource: string, options: any = {}) {
   const { timeout = 25000 } = options;
@@ -34,10 +34,21 @@ export default function NewJobPage() {
     }
   }, [jobs]);
 
-  const [inputType, setInputType] = useState<"text" | "file" | null>(null);
+  const [inputType, setInputType] = useState<"text" | "file" | "scraper" | null>(null);
   const [jobText, setJobText] = useState("");
   const [fileContent, setFileContent] = useState("");
   const [fileName, setFileName] = useState("");
+
+  // Scraper State
+  const [searchKeywords, setSearchKeywords] = useState("");
+  const [searchLocation, setSearchLocation] = useState("");
+  const [searchMode, setSearchMode] = useState<"fulltime" | "freelance">("fulltime");
+  const [searchSource, setSearchSource] = useState<"web" | "linkedin" | "naukri" | "indeed">("web");
+  const [scrapedJobs, setScrapedJobs] = useState<any[]>([]);
+  const [isScraping, setIsScraping] = useState(false);
+  const [importingJobs, setImportingJobs] = useState<Record<number, boolean>>({});
+  const [isImportingAll, setIsImportingAll] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -60,8 +71,120 @@ export default function NewJobPage() {
     }
   };
 
+  const handleScrape = async () => {
+    if (!searchKeywords || !searchLocation) {
+      setError("Please provide both keywords and location.");
+      return;
+    }
+    setIsScraping(true);
+    setError("");
+    setScrapedJobs([]);
+
+    try {
+      const res = await fetch("/api/scrape", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ keywords: searchKeywords, location: searchLocation, searchMode, searchSource })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Scraping failed");
+
+      setScrapedJobs(data.jobs || []);
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setIsScraping(false);
+    }
+  };
+
+  const handleImport = async (job: any, idx: number, silent = false) => {
+    setImportingJobs(prev => ({ ...prev, [idx]: true }));
+    if (!silent) {
+      setLoading(true);
+      setLogs([]);
+      setProgress({ current: 1, total: 1 });
+    }
+    try {
+      const isDuplicate = jobs.some(j => {
+        const sameUrl = j.alternateContact && job.url && j.alternateContact.includes(job.url);
+        const sameTitleAndCompany = j.jobTitle && job.title && j.company && job.company &&
+          j.jobTitle.toLowerCase().trim() === job.title.toLowerCase().trim() &&
+          j.company.toLowerCase().trim() === job.company.toLowerCase().trim();
+        return sameUrl || sameTitleAndCompany;
+      });
+
+      if (isDuplicate) {
+        if (!silent) {
+          addLog(`⚠️ Job already imported: ${job.title} at ${job.company}`);
+          alert("Already imported");
+        }
+        return;
+      }
+
+      if (!silent) addLog(`\n⚙️ Processing: ${job.title} at ${job.company}`);
+      if (!silent) addLog(`🤖 AI is extracting email and contact details...`);
+
+      const content = `Job Title: ${job.title}\nCompany: ${job.company}\nLocation: ${job.location}\nJob Link: ${job.url}\nSnippet: ${job.snippet}`;
+      const res = await fetch("/api/extract", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          text: content,
+          inputType: "scraper",
+          jobType: searchMode
+        })
+      });
+
+      if (!res.ok) throw new Error("Failed to extract");
+      const data = await res.json();
+
+      if (data.jobs && data.jobs.length > 0) {
+        const extracted = data.jobs[0];
+
+        if (extracted.recipientEmail) {
+          if (!silent) addLog(`✅ Found email: ${extracted.recipientEmail}`);
+        } else {
+          if (!silent) addLog(`⚠️ No email found. Saved as Draft with Original Link.`);
+        }
+
+        addJob({
+          jobTitle: extracted.jobTitle || job.title,
+          company: extracted.company || job.company || "Unknown Company",
+          status: "draft",
+          recipientEmail: extracted.recipientEmail || "",
+          alternateContact: extracted.alternateContact || job.url,
+          jobType: searchMode,
+          inputSource: "scraper",
+          originalInput: content
+        });
+        if (!silent) {
+          addLog(`✅ Job imported successfully to Drafts!`);
+          alert("Imported successfully as Draft");
+        }
+      }
+    } catch (e: any) {
+      if (!silent) {
+        addLog(`❌ Import failed: ${e.message}`);
+        alert(e.message);
+      }
+    } finally {
+      setImportingJobs(prev => ({ ...prev, [idx]: false }));
+      if (!silent) setLoading(false);
+    }
+  };
+
+  const handleImportAll = async () => {
+    setIsImportingAll(true);
+    for (let i = 0; i < scrapedJobs.length; i++) {
+      await handleImport(scrapedJobs[i], i, true);
+    }
+    setIsImportingAll(false);
+    alert("Finished importing all unique jobs");
+  };
+
   const handleProcess = async () => {
-    const content = inputType === "text" ? jobText : fileContent;
+    const content = inputType === "text" ? jobText : inputType === "file" ? fileContent : scrapedJobs.map(j => `Job Title: ${j.title}\nCompany: ${j.company}\nLocation: ${j.location}\nJob Link: ${j.url}\nSnippet: ${j.snippet}`).join('\n\n');
     if (!content.trim()) {
       setError("Please provide job details.");
       return;
@@ -82,7 +205,11 @@ export default function NewJobPage() {
       const res = await fetch("/api/extract", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: content })
+        body: JSON.stringify({
+          text: content,
+          inputType: inputType,
+          jobType: inputType === "scraper" ? searchMode : "fulltime"
+        })
       });
 
       if (!res.ok) throw new Error(await res.text());
@@ -132,17 +259,25 @@ export default function NewJobPage() {
         await new Promise(resolve => setTimeout(resolve, 4000));
 
         // 1. Create Draft
-        const jobId = addJob({
-          inputSource: inputType!,
-          originalInput: inputType === "file" ? `Uploaded File: ${fileName}` : content.substring(0, 500) + (content.length > 500 ? "..." : ""),
-          status: "draft",
-          jobTitle: jobData.jobTitle,
-          company: jobData.company,
-          recipientEmail: jobData.recipientEmail,
-          alternateContact: jobData.alternateContact,
-          recruiterName: jobData.recruiterName,
-          requirements: jobData.requirements,
-        });
+        let jobId;
+        try {
+          jobId = addJob({
+            inputSource: inputType!,
+            originalInput: inputType === "file" ? `Uploaded File: ${fileName}` : content.substring(0, 500) + (content.length > 500 ? "..." : ""),
+            status: "draft",
+            jobType: inputType === "scraper" ? searchMode : "fulltime",
+            jobTitle: jobData.jobTitle,
+            company: jobData.company,
+            recipientEmail: jobData.recipientEmail,
+            alternateContact: jobData.alternateContact,
+            recruiterName: jobData.recruiterName,
+            requirements: jobData.requirements,
+            jobUrl: inputType === "scraper" ? jobData.alternateContact : undefined
+          });
+        } catch (storeErr: any) {
+          addLog(`   ❌ ${storeErr.message}`);
+          continue;
+        }
 
         // 2. Generate Email
         let generatedSub = "";
@@ -163,7 +298,8 @@ export default function NewJobPage() {
                 },
                 signature,
                 resumeBase64: resume.base64Data,
-                websites
+                websites,
+                jobType: inputType === "scraper" ? searchMode : "fulltime"
               })
             });
 
@@ -246,7 +382,18 @@ export default function NewJobPage() {
       </div>
 
       {!inputType ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <button
+            onClick={() => setInputType("scraper")}
+            className="flex flex-col items-center justify-center p-10 bg-white border-2 border-gray-100 rounded-2xl hover:border-purple-500 hover:shadow-md transition text-left group"
+          >
+            <div className="w-16 h-16 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Search className="w-8 h-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Job Search (Auto)</h3>
+            <p className="text-gray-500 text-center">Search the web or specific portals for jobs and IT leads.</p>
+          </button>
+
           <button
             onClick={() => setInputType("file")}
             className="flex flex-col items-center justify-center p-10 bg-white border-2 border-gray-100 rounded-2xl hover:border-blue-500 hover:shadow-md transition text-left group"
@@ -273,7 +420,7 @@ export default function NewJobPage() {
         <div className="bg-white rounded-2xl shadow-sm border p-8">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold">
-              {inputType === "text" ? "Paste Job Descriptions" : "Upload Chat File"}
+              {inputType === "text" ? "Paste Job Descriptions" : inputType === "file" ? "Upload Chat File" : "Job Search"}
             </h2>
             {!loading && (
               <button onClick={() => setInputType(null)} className="text-sm text-blue-600 hover:underline">
@@ -284,7 +431,111 @@ export default function NewJobPage() {
 
           {!loading && logs.length === 0 ? (
             <>
-              {inputType === "text" ? (
+              {inputType === "scraper" ? (
+                <div className="space-y-6">
+                  <div className="flex bg-gray-100 p-1 rounded-lg w-max mb-2">
+                    <button
+                      onClick={() => setSearchMode("fulltime")}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition ${searchMode === "fulltime" ? "bg-white shadow text-gray-900" : "text-gray-500 hover:text-gray-700"}`}
+                    >
+                      Full-Time Jobs
+                    </button>
+                    <button
+                      onClick={() => setSearchMode("freelance")}
+                      className={`px-4 py-2 rounded-md text-sm font-medium transition ${searchMode === "freelance" ? "bg-white shadow text-gray-900" : "text-gray-500 hover:text-gray-700"}`}
+                    >
+                      Freelance / IT Leads
+                    </button>
+                  </div>
+
+                  {searchMode === "fulltime" && (
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Source Portal</label>
+                      <select
+                        value={searchSource}
+                        onChange={(e) => setSearchSource(e.target.value as any)}
+                        className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                      >
+                        <option value="web">Global Web Search (Best for direct emails)</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="naukri">Naukri.com</option>
+                        <option value="indeed">Indeed</option>
+                      </select>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Keywords</label>
+                      <input
+                        type="text"
+                        className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                        placeholder="e.g. React Developer"
+                        value={searchKeywords}
+                        onChange={(e) => setSearchKeywords(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
+                      <input
+                        type="text"
+                        className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none"
+                        placeholder="e.g. India"
+                        value={searchLocation}
+                        onChange={(e) => setSearchLocation(e.target.value)}
+                      />
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={handleScrape}
+                    disabled={isScraping || !searchKeywords || !searchLocation}
+                    className="w-full py-3 bg-purple-100 text-purple-700 rounded-xl font-medium hover:bg-purple-200 transition disabled:opacity-50 flex items-center justify-center"
+                  >
+                    {isScraping ? <Loader2 className="w-5 h-5 animate-spin mr-2" /> : <Search className="w-5 h-5 mr-2" />}
+                    {isScraping ? "Searching the Web (Email-First)..." : "Search Jobs"}
+                  </button>
+
+                  {scrapedJobs.length > 0 && (
+                    <div className="mt-6 space-y-4">
+                      <div className="flex items-center justify-between border-b pb-2">
+                        <h3 className="font-semibold text-gray-900">Top Results</h3>
+                        <button
+                          onClick={handleImportAll}
+                          disabled={isImportingAll}
+                          className="text-sm bg-gray-900 text-white px-4 py-1.5 rounded-lg hover:bg-gray-800 disabled:opacity-50"
+                        >
+                          {isImportingAll ? "Importing..." : "Import All"}
+                        </button>
+                      </div>
+                      {scrapedJobs.map((job, idx) => (
+                        <div key={idx} className="p-4 border rounded-xl hover:shadow-sm transition bg-gray-50 flex justify-between items-center">
+                          <div className="flex-1 pr-4">
+                            <h4 className="font-bold text-gray-900">{job.title || "Unknown Title"}</h4>
+                            <p className="text-sm text-gray-600 font-medium">{job.company || "Unknown Company"} &bull; {job.location || "Unknown Location"}</p>
+                            <p className="text-xs text-gray-500 mt-1 line-clamp-2">{job.snippet}</p>
+                            <div className="flex items-center gap-3 mt-2 text-xs">
+                              <span className="bg-gray-200 px-2 py-0.5 rounded-md text-gray-700 capitalize">Source: {searchMode === "freelance" ? "IT Lead" : searchSource}</span>
+                              <a href={job.url} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">
+                                View Original Source
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <button
+                              onClick={() => handleImport(job, idx)}
+                              disabled={importingJobs[idx] || isImportingAll}
+                              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                            >
+                              {importingJobs[idx] ? "Importing..." : "Import"}
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : inputType === "text" ? (
                 <textarea
                   className="w-full p-4 border rounded-xl h-64 focus:ring-2 focus:ring-blue-500 outline-none resize-none font-mono text-sm"
                   placeholder="Paste the full job description(s) here..."
@@ -304,18 +555,22 @@ export default function NewJobPage() {
 
               {error && <div className="mt-4 p-4 bg-red-50 text-red-700 rounded-xl text-sm">{error}</div>}
 
-              <div className="mt-8 flex justify-end">
-                <button
-                  onClick={handleProcess}
-                  disabled={loading || (inputType === "text" ? !jobText : !fileContent)}
-                  className="flex items-center bg-blue-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-800 transition disabled:opacity-50"
-                >
-                  <MessageSquare className="w-5 h-5 mr-2" /> Start Auto-Apply Robot
-                </button>
-              </div>
+              {inputType !== "scraper" && (
+                <div className="mt-8 flex justify-end">
+                  <button
+                    onClick={handleProcess}
+                    disabled={loading || (inputType === "text" ? !jobText : inputType === "file" ? !fileContent : scrapedJobs.length === 0)}
+                    className="flex items-center bg-blue-900 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-800 transition disabled:opacity-50"
+                  >
+                    <MessageSquare className="w-5 h-5 mr-2" /> Start Auto-Apply Robot
+                  </button>
+                </div>
+              )}
             </>
-          ) : (
-            <div className="bg-gray-900 text-green-400 p-6 rounded-xl font-mono text-sm h-80 overflow-y-auto">
+          ) : null}
+
+          {(logs.length > 0 || loading) && (
+            <div className="bg-gray-900 text-green-400 p-6 rounded-xl font-mono text-sm h-80 overflow-y-auto mt-8">
               {progress.total > 0 && (
                 <div className="mb-4 pb-4 border-b border-gray-700 text-white flex justify-between">
                   <span>Processing Application: {progress.current} / {progress.total}</span>
@@ -329,7 +584,7 @@ export default function NewJobPage() {
               {logs.map((log, idx) => (
                 <div key={idx} className="whitespace-pre-wrap mb-1">{log}</div>
               ))}
-              {error && (
+              {error && logs.length > 0 && (
                 <div className="mt-4 p-4 bg-red-900 border border-red-500 text-white rounded-xl text-sm font-sans">
                   <strong>Engine Error:</strong> {error}
                 </div>
