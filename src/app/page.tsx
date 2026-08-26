@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAppStore } from "@/lib/store";
-import { Briefcase, FileText, Globe, Plus, Settings, CheckCircle2, Clock, MessageCircle } from "lucide-react";
+import { Briefcase, FileText, Globe, Plus, Settings, CheckCircle2, Clock, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { JobApplication } from "@/types";
 
@@ -20,11 +20,21 @@ export default function Dashboard() {
     }
   }, [signature, resume, router]);
 
+  const [pendingPage, setPendingPage] = useState(1);
+  const [sentPage, setSentPage] = useState(1);
+  const ITEMS_PER_PAGE = 10;
+
   if (!mounted || !signature) return null;
 
   // Filter Jobs
   const sentJobs = jobs.filter(j => j.status === 'sent' || j.status === 'manually_applied').sort((a, b) => b.createdAt - a.createdAt);
   const pendingJobs = jobs.filter(j => j.status !== 'sent' && j.status !== 'manually_applied').sort((a, b) => b.createdAt - a.createdAt);
+
+  const totalPendingPages = Math.ceil(pendingJobs.length / ITEMS_PER_PAGE);
+  const paginatedPending = pendingJobs.slice((pendingPage - 1) * ITEMS_PER_PAGE, pendingPage * ITEMS_PER_PAGE);
+
+  const totalSentPages = Math.ceil(sentJobs.length / ITEMS_PER_PAGE);
+  const paginatedSent = sentJobs.slice((sentPage - 1) * ITEMS_PER_PAGE, sentPage * ITEMS_PER_PAGE);
 
   const getExternalLink = (job: JobApplication) => {
     if (!job.alternateContact) return null;
@@ -207,9 +217,22 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-100">
-                    {pendingJobs.map(renderJobRow)}
+                    {paginatedPending.map(renderJobRow)}
                   </tbody>
                 </table>
+                {totalPendingPages > 1 && (
+                  <div className="flex items-center justify-between px-6 py-3 border-t border-orange-100 bg-orange-50/30">
+                    <span className="text-sm text-gray-600">Page <span className="font-medium">{pendingPage}</span> of <span className="font-medium">{totalPendingPages}</span></span>
+                    <div className="flex space-x-2">
+                      <button disabled={pendingPage === 1} onClick={() => setPendingPage(pendingPage - 1)} className="p-1 rounded-md border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 transition">
+                         <ChevronLeft className="w-5 h-5 text-gray-600" />
+                      </button>
+                      <button disabled={pendingPage === totalPendingPages} onClick={() => setPendingPage(pendingPage + 1)} className="p-1 rounded-md border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 transition">
+                         <ChevronRight className="w-5 h-5 text-gray-600" />
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -233,9 +256,22 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-100">
-                    {sentJobs.map(renderJobRow)}
+                    {paginatedSent.map(renderJobRow)}
                   </tbody>
                 </table>
+                {totalSentPages > 1 && (
+                  <div className="flex items-center justify-between px-6 py-3 border-t border-green-100 bg-green-50/30">
+                    <span className="text-sm text-gray-600">Page <span className="font-medium">{sentPage}</span> of <span className="font-medium">{totalSentPages}</span></span>
+                    <div className="flex space-x-2">
+                      <button disabled={sentPage === 1} onClick={() => setSentPage(sentPage - 1)} className="p-1 rounded-md border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 transition">
+                         <ChevronLeft className="w-5 h-5 text-gray-600" />
+                      </button>
+                      <button disabled={sentPage === totalSentPages} onClick={() => setSentPage(sentPage + 1)} className="p-1 rounded-md border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 transition">
+                         <ChevronRight className="w-5 h-5 text-gray-600" />
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}

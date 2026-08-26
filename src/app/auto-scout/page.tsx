@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAppStore } from "@/lib/store";
-import { Globe, Search, Settings, Loader2, CheckCircle2, AlertCircle, Play } from "lucide-react";
+import { Globe, Search, Settings, Loader2, CheckCircle2, AlertCircle, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { AutoScoutPreferences } from "@/types";
 
 async function fetchWithTimeout(resource: string, options: any = {}) {
@@ -27,13 +27,19 @@ export default function AutoScoutPage() {
     keywords: "React Developer",
     location: "Remote",
     mode: "freelance",
-    source: "linkedin"
+    source: "linkedin",
+    timeRange: "any"
   });
 
   // Scraping State
   const [scrapedJobs, setScrapedJobs] = useState<any[]>([]);
   const [isScraping, setIsScraping] = useState(false);
   const [error, setError] = useState("");
+  const [filter, setFilter] = useState<"all" | "new" | "applied">("new");
+  
+  // Pagination State
+  const [page, setPage] = useState(1);
+  const ITEMS_PER_PAGE = 10;
 
   // Processing State
   const [processingJobs, setProcessingJobs] = useState<Record<number, boolean>>({});
@@ -70,13 +76,20 @@ export default function AutoScoutPage() {
       const res = await fetch("/api/scrape", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ keywords: prefs.keywords, location: prefs.location, searchMode: prefs.mode, searchSource: prefs.source })
+        body: JSON.stringify({ 
+          keywords: prefs.keywords, 
+          location: prefs.location, 
+          searchMode: prefs.mode, 
+          searchSource: prefs.source,
+          timeRange: prefs.timeRange
+        })
       });
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Scraping failed");
 
       setScrapedJobs(data.jobs || []);
+      setPage(1);
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -126,27 +139,7 @@ export default function AutoScoutPage() {
          return;
       }
 
-      // 3. Save as Draft
-      let jobId;
-      try {
-        jobId = addJob({
-          inputSource: "scraper",
-          originalInput: content,
-          status: "draft",
-          jobType: prefs.mode,
-          jobTitle: extracted.jobTitle || job.title,
-          company: extracted.company || job.company,
-          recipientEmail: extracted.recipientEmail,
-          alternateContact: extracted.alternateContact || job.url,
-          recruiterName: extracted.recruiterName,
-          requirements: extracted.requirements,
-          jobUrl: extracted.alternateContact || job.url
-        });
-      } catch (e: any) {
-         setLog(idx, `Failed: ${e.message}`);
-         setProcessingJobs(prev => ({ ...prev, [idx]: false }));
-         return;
-      }
+      // Removed early Draft saving to avoid blocking retries if email extraction fails
 
       if (!extracted.recipientEmail) {
          let msg = "Saved as Draft (No Email Found). Apply manually.";
@@ -182,12 +175,7 @@ export default function AutoScoutPage() {
       if (!genRes.ok) throw new Error("Generation failed");
       const genData = await genRes.json();
 
-      updateJob(jobId, {
-        generatedSubject: genData.subject,
-        generatedBody: genData.body,
-        selectedWebsiteId: genData.selectedWebsiteId,
-        status: "generated"
-      });
+      // Removed intermediate updateJob
 
       // 5. Send Email
       setLog(idx, "Sending Email...");
@@ -205,7 +193,22 @@ export default function AutoScoutPage() {
 
       if (!sendRes.ok) throw new Error("Failed to send email");
 
-      updateJob(jobId, { status: "sent" });
+      addJob({
+        inputSource: "scraper",
+        originalInput: content,
+        status: "sent",
+        jobType: prefs.mode,
+        jobTitle: extracted.jobTitle || job.title,
+        company: extracted.company || job.company,
+        recipientEmail: extracted.recipientEmail,
+        alternateContact: extracted.alternateContact || job.url,
+        recruiterName: extracted.recruiterName,
+        requirements: extracted.requirements,
+        jobUrl: extracted.alternateContact || job.url,
+        generatedSubject: genData.subject,
+        generatedBody: genData.body,
+        selectedWebsiteId: genData.selectedWebsiteId,
+      });
       setLog(idx, "✅ Sent Successfully!");
 
     } catch (e: any) {
@@ -245,7 +248,7 @@ export default function AutoScoutPage() {
       {showSettings && (
         <div className="bg-white p-6 rounded-2xl shadow-sm border mb-8 border-purple-100">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Auto-Scout Preferences</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Keywords</label>
               <input
@@ -283,9 +286,23 @@ export default function AutoScoutPage() {
                 onChange={e => setPrefs({...prefs, source: e.target.value as any})}
               >
                 <option value="linkedin">LinkedIn (Recommended)</option>
-                <option value="web">Global Web Search (Email-First)</option>
+                <option value="web">Global Web Search</option>
+                <option value="custom">Custom Google Search (Raw)</option>
                 <option value="naukri">Naukri.com</option>
                 <option value="indeed">Indeed</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Date Posted</label>
+              <select
+                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-purple-500 outline-none"
+                value={prefs.timeRange || "any"}
+                onChange={e => setPrefs({...prefs, timeRange: e.target.value as any})}
+              >
+                <option value="any">Any Time</option>
+                <option value="past_24h">Past 24 Hours</option>
+                <option value="past_week">Past Week</option>
+                <option value="past_month">Past Month</option>
               </select>
             </div>
           </div>
@@ -318,16 +335,47 @@ export default function AutoScoutPage() {
         </div>
       )}
 
-      {scrapedJobs.length > 0 && (
-        <div className="space-y-4">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Found {scrapedJobs.length} Opportunities</h2>
-          {scrapedJobs.map((job, idx) => {
-            const isProcessing = processingJobs[idx];
-            const logMsg = processingLogs[idx];
+      {scrapedJobs.length > 0 && (() => {
+        const isAlreadyApplied = (job: any) => {
+          return jobs.some(j => {
+            const sameUrl = j.alternateContact && job.url && j.alternateContact.includes(job.url);
+            const sameTitleAndCompany = j.jobTitle && job.title && j.company && job.company &&
+              j.jobTitle.toLowerCase().trim() === job.title.toLowerCase().trim() &&
+              j.company.toLowerCase().trim() === job.company.toLowerCase().trim();
+            return sameUrl || sameTitleAndCompany;
+          });
+        };
+
+        const filteredJobs = scrapedJobs.filter(job => {
+          const applied = isAlreadyApplied(job);
+          if (filter === "new") return !applied;
+          if (filter === "applied") return applied;
+          return true;
+        });
+
+        const totalPages = Math.ceil(filteredJobs.length / ITEMS_PER_PAGE);
+
+        return (
+          <div className="space-y-4">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+              <h2 className="text-xl font-bold text-gray-900">Found {filteredJobs.length} Opportunities</h2>
+              <div className="flex bg-gray-100 rounded-lg p-1 border border-gray-200">
+                <button onClick={() => {setFilter('all'); setPage(1)}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'all' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>All</button>
+                <button onClick={() => {setFilter('new'); setPage(1)}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'new' ? 'bg-white shadow-sm text-purple-700' : 'text-gray-500 hover:text-gray-700'}`}>New Leads</button>
+                <button onClick={() => {setFilter('applied'); setPage(1)}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'applied' ? 'bg-white shadow-sm text-green-700' : 'text-gray-500 hover:text-gray-700'}`}>Already Applied</button>
+              </div>
+            </div>
+            {filteredJobs.length === 0 ? (
+               <div className="text-center py-10 text-gray-500">No jobs match the selected filter.</div>
+            ) : (
+              filteredJobs.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE).map((job, idx) => {
+                const actualIdx = scrapedJobs.indexOf(job);
+            const isProcessing = processingJobs[actualIdx];
+            const logMsg = processingLogs[actualIdx];
             const isDone = logMsg?.includes("✅");
             
             return (
-              <div key={idx} className="bg-white p-5 border rounded-2xl shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+              <div key={actualIdx} className="bg-white p-5 border rounded-2xl shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1">
                   <h4 className="font-bold text-gray-900 text-lg">{job.title || "Unknown Title"}</h4>
                   <p className="text-sm text-gray-600 font-medium mb-2">{job.company || "Unknown Company"} &bull; {job.location || "Unknown Location"}</p>
@@ -342,7 +390,7 @@ export default function AutoScoutPage() {
                 </div>
                 <div className="flex flex-col gap-2 min-w-[140px]">
                   <button
-                    onClick={() => handleOneClickApply(job, idx)}
+                    onClick={() => handleOneClickApply(job, actualIdx)}
                     disabled={isProcessing || isDone}
                     className="w-full bg-blue-600 text-white px-4 py-3 rounded-xl text-sm font-bold hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center transition"
                   >
@@ -354,9 +402,24 @@ export default function AutoScoutPage() {
                 </div>
               </div>
             );
-          })}
+          }))}
+          
+          {totalPages > 1 && (
+            <div className="flex items-center justify-between px-6 py-4 mt-6 border border-purple-100 rounded-xl bg-white shadow-sm">
+              <span className="text-sm text-gray-600">Page <span className="font-bold">{page}</span> of <span className="font-bold">{totalPages}</span></span>
+              <div className="flex space-x-2">
+                <button disabled={page === 1} onClick={() => setPage(page - 1)} className="p-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 transition">
+                   <ChevronLeft className="w-5 h-5 text-gray-600" />
+                </button>
+                <button disabled={page === totalPages} onClick={() => setPage(page + 1)} className="p-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50 transition">
+                   <ChevronRight className="w-5 h-5 text-gray-600" />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
-      )}
+        );
+      })()}
     </div>
   );
 }

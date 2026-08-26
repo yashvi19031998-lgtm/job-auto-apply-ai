@@ -18,7 +18,8 @@ export interface AutoScoutPreferences {
   keywords: string;
   location: string;
   mode: "fulltime" | "freelance";
-  source: "web" | "linkedin" | "naukri" | "indeed";
+  source: "web" | "linkedin" | "naukri" | "indeed" | "custom";
+  timeRange?: "past_24h" | "past_week" | "past_month" | "any";
 }
 
 export interface Resume {

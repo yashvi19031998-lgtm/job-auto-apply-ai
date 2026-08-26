@@ -66,11 +66,12 @@ ${text}
       if (!foundEmail && inputType === 'scraper' && job.alternateContact && job.alternateContact.startsWith('http')) {
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 6000);
+          const timeoutId = setTimeout(() => controller.abort(), 3000);
           
           const pageRes = await fetch(job.alternateContact, {
             headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
-            signal: controller.signal
+            signal: controller.signal,
+            cache: 'no-store'
           });
           clearTimeout(timeoutId);
 
@@ -112,7 +113,8 @@ ${strippedText}
               'Content-Type': 'application/x-www-form-urlencoded',
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
             },
-            body: `q=${encodeURIComponent(query)}`
+            body: `q=${encodeURIComponent(query)}`,
+            cache: 'no-store'
           });
           
           if (ddgRes.ok) {
@@ -127,7 +129,8 @@ ${strippedText}
               const timeoutId = setTimeout(() => controller.abort(), 6000);
               const pageRes = await fetch(targetUrl, {
                 headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
-                signal: controller.signal
+                signal: controller.signal,
+                cache: 'no-store'
               }).catch(() => null);
               clearTimeout(timeoutId);
 
