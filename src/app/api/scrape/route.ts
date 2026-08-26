@@ -30,7 +30,7 @@ export async function POST(req: Request) {
 
     if (searchSource === "linkedin") {
       try {
-        const jobs = [];
+        const jobs: any[] = [];
         const limit = 100;
         let start = 0;
         let timeParam = "";
@@ -115,7 +115,7 @@ export async function POST(req: Request) {
         
         const html = await response.text();
         // Naukri HTML is mostly SPA (Single Page Application). We extract from the preloaded state if available.
-        const jobs = [];
+        const jobs: any[] = [];
         const stateMatch = html.match(/window\.PRELOADED_STATE\s*=\s*(\{.*?\});/);
         
         if (stateMatch && stateMatch[1]) {
@@ -175,7 +175,7 @@ export async function POST(req: Request) {
         return NextResponse.json({ error: 'Search engine anomaly detected. Your server IP is temporarily rate-limited. Please use LinkedIn.' }, { status: 429 });
       }
 
-      const jobs = [];
+      const jobs: any[] = [];
       const resultRegex = /<a class="result__url" href="([^"]+)">([\s\S]*?)<\/a>[\s\S]*?<a class="result__snippet[^>]*>([\s\S]*?)<\/a>/g;
       let match;
       
