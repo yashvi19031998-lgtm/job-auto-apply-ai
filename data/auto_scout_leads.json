@@ -21,7 +21,7 @@
     "applicationUrl": "https://uk.linkedin.com/jobs/view/software-engineer-java-at-rockstar-games-4414705268",
     "recruiterName": null,
     "firstSeenAt": 1788018782404,
-    "lastSeenAt": 1788087306263
+    "lastSeenAt": 1788103770076
   },
   {
     "id": "lead-1788018786625-242",
@@ -165,7 +165,7 @@
     "jobTitle": "Java",
     "company": "上海盒马网络科技有限公司普陀分公司",
     "location": "Shanghai, Shanghai, China",
-    "jobUrl": "https://cn.linkedin.com/jobs/view/java%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88-at-%E4%B8%8A%E6%B5%B7%E7%94%84%E4%BA%91%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-4458843155",
+    "jobUrl": "https://cn.linkedin.com/jobs/view/java%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88-at-%E4%B8%8A%E6%B5%B7%E5%8E%9A%E6%B2%83%E4%BF%A1%E6%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-4458844202",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Java development skills as indicated by the job title.",
     "status": "no_email",
     "errorReason": "",
@@ -174,7 +174,7 @@
     "applicationUrl": "https://cn.linkedin.com/jobs/view/java-at-%E4%B8%8A%E6%B5%B7%E7%9B%92%E9%A9%AC%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E6%99%AE%E9%99%80%E5%88%86%E5%85%AC%E5%8F%B8-4458440934",
     "recruiterName": null,
     "firstSeenAt": 1788018852782,
-    "lastSeenAt": 1788087443006
+    "lastSeenAt": 1788103945687
   },
   {
     "id": "lead-1788018856990-719",
@@ -711,7 +711,7 @@
     "jobTitle": "Software Engineer II, Backend - Platform Team",
     "company": "Rippling",
     "location": "New York, NY",
-    "jobUrl": "https://www.linkedin.com/jobs/view/software-engineer-ii-backend-platform-team-at-rippling-4414564252",
+    "jobUrl": "https://www.linkedin.com/jobs/view/software-engineer-ii-backend-platform-team-at-rippling-4414574050",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Backend software engineering experience\n- Experience with platform development\n- Ability to work in New York, NY",
     "status": "applied",
     "errorReason": "",
@@ -721,7 +721,7 @@
     "recruiterName": null,
     "appliedAt": 1788019111507,
     "firstSeenAt": 1788019111557,
-    "lastSeenAt": 1788087433271
+    "lastSeenAt": 1788103890779
   },
   {
     "id": "lead-1788019115768-117",
@@ -738,7 +738,7 @@
     "applicationUrl": "https://ch.linkedin.com/jobs/view/senior-software-engineer-%E2%80%93-full-stack-at-expleo-group-4405257846",
     "recruiterName": null,
     "firstSeenAt": 1788019119200,
-    "lastSeenAt": 1788087433442
+    "lastSeenAt": 1788103930662
   },
   {
     "id": "lead-1788019123420-301",
@@ -1267,7 +1267,7 @@
     "applicationUrl": "https://qa.linkedin.com/jobs/view/software-engineer-at-vistas-global-4459494546",
     "recruiterName": null,
     "firstSeenAt": 1788019401414,
-    "lastSeenAt": 1788095304822
+    "lastSeenAt": 1788104042938
   },
   {
     "id": "lead-1788019405654-655",
@@ -1426,12 +1426,12 @@
     "jobTitle": "Salesforce Developer",
     "company": "NTT DATA Europe &amp; Latam",
     "location": "Centralna Srbija, Serbia",
-    "jobUrl": "https://rs.linkedin.com/jobs/view/salesforce-developer-at-ntt-data-europe-latam-4430238475",
+    "jobUrl": "https://rs.linkedin.com/jobs/view/salesforce-developer-at-ntt-data-europe-latam-4430238479",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Salesforce development experience\n- Ability to work in Centralna Srbija, Serbia",
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788019451151,
-    "lastSeenAt": 1788087209586,
+    "lastSeenAt": 1788104042400,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://rs.linkedin.com/jobs/view/salesforce-developer-at-ntt-data-europe-latam-4430238475",
@@ -1443,12 +1443,12 @@
     "jobTitle": "Creatio Developer",
     "company": "Salmon Group Ltd",
     "location": "Serbia",
-    "jobUrl": "https://rs.linkedin.com/jobs/view/creatio-developer-at-salmon-group-ltd-4441190688",
+    "jobUrl": "https://th.linkedin.com/jobs/view/creatio-developer-at-salmon-group-ltd-4441199488",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Creatio Developer\n- Location: Serbia",
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788019455797,
-    "lastSeenAt": 1788087227671,
+    "lastSeenAt": 1788104042586,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://rs.linkedin.com/jobs/view/creatio-developer-at-salmon-group-ltd-4441190688",
@@ -1698,7 +1698,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788023467122,
-    "lastSeenAt": 1788087389778,
+    "lastSeenAt": 1788103887393,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://www.linkedin.com/jobs/view/sr-software-engineer-c%23-net-core-at-motorola-solutions-4423305213",
@@ -1784,7 +1784,7 @@
     "status": "applied",
     "errorReason": "",
     "firstSeenAt": 1788023492948,
-    "lastSeenAt": 1788087061514,
+    "lastSeenAt": 1788104042468,
     "recipientEmail": "info@northsys.company",
     "phone": null,
     "applicationUrl": "https://om.linkedin.com/jobs/view/java-backend-developer-at-northsys-4458497259",
@@ -1802,7 +1802,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788023497809,
-    "lastSeenAt": 1788087107395,
+    "lastSeenAt": 1788104043003,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://il.linkedin.com/jobs/view/advanced-software-development-engineer-at-nvidia-4441362838",
@@ -1855,7 +1855,7 @@
     "status": "applied",
     "errorReason": "",
     "firstSeenAt": 1788023743541,
-    "lastSeenAt": 1788087227896,
+    "lastSeenAt": 1788104069119,
     "recipientEmail": "NGBS@nedbank.co.za",
     "phone": "+27 10 224 8000",
     "applicationUrl": "https://za.linkedin.com/jobs/view/software-developer-at-nedbank-4430287744",
@@ -1873,7 +1873,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788023748142,
-    "lastSeenAt": 1788087245560,
+    "lastSeenAt": 1788104069279,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://il.linkedin.com/jobs/view/senior-software-developer-at-nvidia-4404223697",
@@ -1890,7 +1890,7 @@
     "status": "applied",
     "errorReason": "",
     "firstSeenAt": 1788023771218,
-    "lastSeenAt": 1788087271492,
+    "lastSeenAt": 1788104101316,
     "recipientEmail": "support@coralogix.com",
     "phone": null,
     "applicationUrl": "https://il.linkedin.com/jobs/view/backend-engineer-%E2%80%93-data-pipeline-at-coralogix-4414206828",
@@ -2156,7 +2156,7 @@
     "applicationUrl": "https://kz.linkedin.com/jobs/view/servicenow-developer-at-epam-systems-4459711667",
     "recruiterName": null,
     "firstSeenAt": 1788062018718,
-    "lastSeenAt": 1788087089082
+    "lastSeenAt": 1788104042665
   },
   {
     "id": "lead-1788062022931-812",
@@ -2226,7 +2226,7 @@
     "applicationUrl": "https://vn.linkedin.com/jobs/view/confirmed-erp-developer-at-majorbird-china-4459718363",
     "recruiterName": null,
     "firstSeenAt": 1788062267720,
-    "lastSeenAt": 1788087190447
+    "lastSeenAt": 1788104056428
   },
   {
     "id": "lead-1788062272474-619",
@@ -2261,7 +2261,7 @@
     "applicationUrl": "https://am.linkedin.com/jobs/view/technical-ai-consultant-at-epam-systems-4459716626",
     "recruiterName": null,
     "firstSeenAt": 1788062293882,
-    "lastSeenAt": 1788087271440
+    "lastSeenAt": 1788104089527
   },
   {
     "id": "lead-1788062298323-926",
@@ -2505,7 +2505,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-java-microservices-at-epam-systems-4459706705",
     "recruiterName": null,
     "firstSeenAt": 1788062622569,
-    "lastSeenAt": 1788062622569
+    "lastSeenAt": 1788103770172
   },
   {
     "id": "lead-1788062627073-309",
@@ -2523,7 +2523,7 @@
     "recruiterName": null,
     "appliedAt": 1788062640418,
     "firstSeenAt": 1788062640480,
-    "lastSeenAt": 1788087335878
+    "lastSeenAt": 1788103807439
   },
   {
     "id": "lead-1788062644895-616",
@@ -2540,7 +2540,7 @@
     "applicationUrl": "https://es.linkedin.com/jobs/view/senior-java-software-engineer-at-epam-systems-4459715613",
     "recruiterName": null,
     "firstSeenAt": 1788062649810,
-    "lastSeenAt": 1788062649810
+    "lastSeenAt": 1788103843842
   },
   {
     "id": "lead-1788062654235-383",
@@ -2557,7 +2557,7 @@
     "applicationUrl": "https://uk.linkedin.com/jobs/view/software-engineer-frontend-typescript-at-motorola-solutions-4422654496",
     "recruiterName": null,
     "firstSeenAt": 1788062663676,
-    "lastSeenAt": 1788087379731
+    "lastSeenAt": 1788103881693
   },
   {
     "id": "lead-1788062668826-882",
@@ -2574,7 +2574,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-ii-net-noida-at-trintech-4424239782",
     "recruiterName": null,
     "firstSeenAt": 1788062674735,
-    "lastSeenAt": 1788087433070
+    "lastSeenAt": 1788103905778
   },
   {
     "id": "lead-1788086897282-846",
@@ -2592,7 +2592,7 @@
     "recruiterName": null,
     "appliedAt": 1788086911979,
     "firstSeenAt": 1788086912062,
-    "lastSeenAt": 1788086912062
+    "lastSeenAt": 1788104041163
   },
   {
     "id": "lead-1788086916290-704",
@@ -2610,7 +2610,7 @@
     "recruiterName": null,
     "appliedAt": 1788086930320,
     "firstSeenAt": 1788086930381,
-    "lastSeenAt": 1788095227978
+    "lastSeenAt": 1788104041591
   },
   {
     "id": "lead-1788086934602-594",
@@ -2644,7 +2644,7 @@
     "applicationUrl": "https://ye.linkedin.com/jobs/view/%D8%B4%D8%B1%D9%83%D8%A9-%D8%AB%D9%85%D8%A7%D9%86%D9%8A%D8%A9-%D8%AA%D8%B7%D8%B1%D8%AD-4-%D9%88%D8%B8%D8%A7%D8%A6%D9%81-%D8%A5%D8%AF%D8%A7%D8%B1%D9%8A%D8%A9-%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9-%D9%81%D9%8ی-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6-%D9%88%D8%B9%D9%86-%D8%A8%D8%B9%D8%AF-at-%D9%88%D8%B8%D9%8A%D9%81%D8%AA%D9%83-%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%89-4458840554",
     "recruiterName": null,
     "firstSeenAt": 1788086952912,
-    "lastSeenAt": 1788086952912
+    "lastSeenAt": 1788104041925
   },
   {
     "id": "lead-1788086957129-896",
@@ -2661,7 +2661,7 @@
     "applicationUrl": "https://il.linkedin.com/jobs/view/python-backend-developer-at-dokka-4458849348",
     "recruiterName": null,
     "firstSeenAt": 1788086964634,
-    "lastSeenAt": 1788086964634
+    "lastSeenAt": 1788104041991
   },
   {
     "id": "lead-1788086968855-580",
@@ -2697,7 +2697,7 @@
     "recruiterName": null,
     "appliedAt": 1788086999861,
     "firstSeenAt": 1788086999938,
-    "lastSeenAt": 1788086999938
+    "lastSeenAt": 1788104042071
   },
   {
     "id": "lead-1788087004173-410",
@@ -2715,7 +2715,7 @@
     "recruiterName": null,
     "appliedAt": 1788087017560,
     "firstSeenAt": 1788087017604,
-    "lastSeenAt": 1788087017604
+    "lastSeenAt": 1788104042198
   },
   {
     "id": "lead-1788087021923-557",
@@ -2749,7 +2749,7 @@
     "applicationUrl": "https://il.linkedin.com/jobs/view/salesforce-developer-at-nisha-pro-4458830437",
     "recruiterName": null,
     "firstSeenAt": 1788087039666,
-    "lastSeenAt": 1788087039666
+    "lastSeenAt": 1788104042337
   },
   {
     "id": "lead-1788087043901-40",
@@ -2785,7 +2785,7 @@
     "recruiterName": null,
     "appliedAt": 1788087074699,
     "firstSeenAt": 1788087074787,
-    "lastSeenAt": 1788087074787
+    "lastSeenAt": 1788104042526
   },
   {
     "id": "lead-1788087079002-988",
@@ -2820,7 +2820,7 @@
     "recruiterName": null,
     "appliedAt": 1788087102915,
     "firstSeenAt": 1788087103004,
-    "lastSeenAt": 1788095281941
+    "lastSeenAt": 1788104042729
   },
   {
     "id": "lead-1788087107453-756",
@@ -2856,7 +2856,7 @@
     "recruiterName": null,
     "appliedAt": 1788087138153,
     "firstSeenAt": 1788087138264,
-    "lastSeenAt": 1788087138264
+    "lastSeenAt": 1788104043202
   },
   {
     "id": "lead-1788087142597-922",
@@ -2874,7 +2874,7 @@
     "recruiterName": null,
     "appliedAt": 1788087155285,
     "firstSeenAt": 1788087155361,
-    "lastSeenAt": 1788095282034
+    "lastSeenAt": 1788104055963
   },
   {
     "id": "lead-1788087159761-864",
@@ -2891,7 +2891,7 @@
     "applicationUrl": "https://jo.linkedin.com/jobs/view/backend-developer-senior-specialist-at-zaincash-jo-4460872551",
     "recruiterName": null,
     "firstSeenAt": 1788087165775,
-    "lastSeenAt": 1788087165775
+    "lastSeenAt": 1788104056171
   },
   {
     "id": "lead-1788087170124-491",
@@ -2908,7 +2908,7 @@
     "applicationUrl": "https://il.linkedin.com/jobs/view/full-stack-engineer-at-rakuten-viber-4460888776",
     "recruiterName": null,
     "firstSeenAt": 1788087177317,
-    "lastSeenAt": 1788087177317
+    "lastSeenAt": 1788104056234
   },
   {
     "id": "lead-1788087181542-108",
@@ -2925,7 +2925,7 @@
     "applicationUrl": "https://il.linkedin.com/jobs/view/full-stack-developer-2542-at-shabak-israeli-security-agency-career-4458848357",
     "recruiterName": null,
     "firstSeenAt": 1788087186147,
-    "lastSeenAt": 1788087186147
+    "lastSeenAt": 1788104056292
   },
   {
     "id": "lead-1788087190528-237",
@@ -2943,7 +2943,7 @@
     "recruiterName": null,
     "appliedAt": 1788087205216,
     "firstSeenAt": 1788087205291,
-    "lastSeenAt": 1788087205291
+    "lastSeenAt": 1788104056486
   },
   {
     "id": "lead-1788087209604-13",
@@ -2961,7 +2961,7 @@
     "recruiterName": null,
     "appliedAt": 1788087223227,
     "firstSeenAt": 1788087223309,
-    "lastSeenAt": 1788087223309
+    "lastSeenAt": 1788104056613
   },
   {
     "id": "lead-1788087227924-764",
@@ -2979,7 +2979,7 @@
     "recruiterName": null,
     "appliedAt": 1788087241205,
     "firstSeenAt": 1788087241278,
-    "lastSeenAt": 1788087241278
+    "lastSeenAt": 1788104069212
   },
   {
     "id": "lead-1788087245653-714",
@@ -2996,7 +2996,7 @@
     "applicationUrl": "https://rs.linkedin.com/jobs/view/staff-software-developer-intellij-platform-at-jetbrains-4395868550",
     "recruiterName": null,
     "firstSeenAt": 1788087251703,
-    "lastSeenAt": 1788087251703
+    "lastSeenAt": 1788104069342
   },
   {
     "id": "lead-1788087255924-447",
@@ -3014,7 +3014,7 @@
     "recruiterName": null,
     "appliedAt": 1788087266938,
     "firstSeenAt": 1788087267016,
-    "lastSeenAt": 1788087267016
+    "lastSeenAt": 1788104069410
   },
   {
     "id": "lead-1788087271643-358",
@@ -3022,7 +3022,7 @@
     "jobTitle": "NET Developer (Remote)",
     "company": "Jobs Ai",
     "location": "United Arab Emirates",
-    "jobUrl": "https://ae.linkedin.com/jobs/view/net-developer-remote-at-jobs-ai-4460894166",
+    "jobUrl": "https://bd.linkedin.com/jobs/view/net-developer-remote-at-jobs-ai-4460895497",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Remote position\n- .NET development experience\n- Location: United Arab Emirates",
     "status": "no_email",
     "errorReason": "",
@@ -3031,7 +3031,7 @@
     "applicationUrl": "https://ae.linkedin.com/jobs/view/net-developer-remote-at-jobs-ai-4460894166",
     "recruiterName": null,
     "firstSeenAt": 1788087279832,
-    "lastSeenAt": 1788087279832
+    "lastSeenAt": 1788104041299
   },
   {
     "id": "lead-1788087284395-596",
@@ -3048,7 +3048,7 @@
     "applicationUrl": "https://il.linkedin.com/jobs/view/software-engineer-ai-at-alice-formerly-activefence-4458735342",
     "recruiterName": null,
     "firstSeenAt": 1788087291333,
-    "lastSeenAt": 1788087291333
+    "lastSeenAt": 1788104134493
   },
   {
     "id": "lead-1788087295577-91",
@@ -3065,7 +3065,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/java-full-stack-developer-global-markets-it-at-bnp-paribas-4442105055",
     "recruiterName": null,
     "firstSeenAt": 1788087301965,
-    "lastSeenAt": 1788087301965
+    "lastSeenAt": 1788103769681
   },
   {
     "id": "lead-1788087306274-933",
@@ -3073,7 +3073,7 @@
     "jobTitle": "Java Developer",
     "company": "Hired",
     "location": "Singapore",
-    "jobUrl": "https://sg.linkedin.com/jobs/view/java-developer-at-hired-4461013025",
+    "jobUrl": "https://uk.linkedin.com/jobs/view/java-developer-at-hired-4461007571",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Java development skills\n• Experience with software engineering",
     "status": "no_email",
     "errorReason": "",
@@ -3082,7 +3082,7 @@
     "applicationUrl": "https://sg.linkedin.com/jobs/view/java-developer-at-hired-4461013025",
     "recruiterName": null,
     "firstSeenAt": 1788087312215,
-    "lastSeenAt": 1788087312215
+    "lastSeenAt": 1788103885380
   },
   {
     "id": "lead-1788087316449-275",
@@ -3100,7 +3100,7 @@
     "recruiterName": null,
     "appliedAt": 1788087331317,
     "firstSeenAt": 1788087331380,
-    "lastSeenAt": 1788087331380
+    "lastSeenAt": 1788103793649
   },
   {
     "id": "lead-1788087335945-650",
@@ -3118,7 +3118,7 @@
     "recruiterName": null,
     "appliedAt": 1788087349840,
     "firstSeenAt": 1788087349922,
-    "lastSeenAt": 1788087349922
+    "lastSeenAt": 1788103832145
   },
   {
     "id": "lead-1788087354242-786",
@@ -3135,7 +3135,7 @@
     "applicationUrl": "https://www.linkedin.com/jobs/view/remote-sr-software-engineer-at-jobot-4449246533",
     "recruiterName": null,
     "firstSeenAt": 1788087360064,
-    "lastSeenAt": 1788087360064
+    "lastSeenAt": 1788103856883
   },
   {
     "id": "lead-1788087364290-321",
@@ -3153,7 +3153,7 @@
     "recruiterName": null,
     "appliedAt": 1788087375369,
     "firstSeenAt": 1788087375455,
-    "lastSeenAt": 1788087375455
+    "lastSeenAt": 1788103879917
   },
   {
     "id": "lead-1788087380042-319",
@@ -3170,7 +3170,7 @@
     "applicationUrl": "https://fr.linkedin.com/jobs/view/concepteur-d%C3%A9veloppeur-java-confirm%C3%A9-h-f-at-open-4423398794",
     "recruiterName": null,
     "firstSeenAt": 1788087385503,
-    "lastSeenAt": 1788087385503
+    "lastSeenAt": 1788103886861
   },
   {
     "id": "lead-1788087389799-872",
@@ -3187,7 +3187,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ind-senior-software-engineer-at-walmart-global-tech-india-4402451350",
     "recruiterName": null,
     "firstSeenAt": 1788087396565,
-    "lastSeenAt": 1788087396565
+    "lastSeenAt": 1788103889142
   },
   {
     "id": "lead-1788087400791-604",
@@ -3204,7 +3204,7 @@
     "applicationUrl": "https://www.linkedin.com/jobs/view/software-engineer-and-developer-at-booz-allen-hamilton-4415542763",
     "recruiterName": null,
     "firstSeenAt": 1788087407639,
-    "lastSeenAt": 1788087407639
+    "lastSeenAt": 1788103892124
   },
   {
     "id": "lead-1788087412083-25",
@@ -3221,7 +3221,7 @@
     "applicationUrl": "https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur-full-stack-net-core-angular-ngrx-at-lgs-an-ibm-company-4405463502",
     "recruiterName": null,
     "firstSeenAt": 1788087418406,
-    "lastSeenAt": 1788087418406
+    "lastSeenAt": 1788103894282
   },
   {
     "id": "lead-1788087422631-302",
@@ -3238,7 +3238,7 @@
     "applicationUrl": "https://www.linkedin.com/jobs/view/remote-staff-software-engineer-at-jobot-4449249261",
     "recruiterName": null,
     "firstSeenAt": 1788087428749,
-    "lastSeenAt": 1788087428749
+    "lastSeenAt": 1788103905610
   },
   {
     "id": "lead-1788087433677-309",
@@ -3255,7 +3255,7 @@
     "applicationUrl": "https://www.linkedin.com/jobs/view/software-engineer-ios-all-teams-at-doordash-4420758202",
     "recruiterName": null,
     "firstSeenAt": 1788087438402,
-    "lastSeenAt": 1788087438402
+    "lastSeenAt": 1788103931599
   },
   {
     "id": "lead-1788087443043-188",
@@ -4285,7 +4285,7 @@
     "jobTitle": "TypeScript Developer (Remote)",
     "company": "Jobs Ai",
     "location": "Germany",
-    "jobUrl": "https://de.linkedin.com/jobs/view/typescript-developer-remote-at-jobs-ai-4461006298",
+    "jobUrl": "https://bd.linkedin.com/jobs/view/typescript-developer-remote-at-jobs-ai-4460894501",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with TypeScript\n- Remote work capability\n- Location: Germany",
     "status": "no_email",
     "errorReason": "",
@@ -4294,7 +4294,7 @@
     "applicationUrl": "https://de.linkedin.com/jobs/view/typescript-developer-remote-at-jobs-ai-4461006298",
     "recruiterName": null,
     "firstSeenAt": 1788095034495,
-    "lastSeenAt": 1788095034495
+    "lastSeenAt": 1788104041446
   },
   {
     "id": "lead-1788095038722-386",
@@ -4476,7 +4476,7 @@
     "jobTitle": "Python Developer",
     "company": "Quik Hire Staffing",
     "location": "Pakistan",
-    "jobUrl": "https://pk.linkedin.com/jobs/view/python-developer-at-quik-hire-staffing-4460892553",
+    "jobUrl": "https://ke.linkedin.com/jobs/view/python-developer-at-quik-hire-staffing-4461011105",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Python development skills\n- Experience as indicated in the LinkedIn job posting",
     "status": "applied",
     "errorReason": "",
@@ -4486,7 +4486,7 @@
     "recruiterName": null,
     "appliedAt": 1788095184259,
     "firstSeenAt": 1788095184340,
-    "lastSeenAt": 1788095184340
+    "lastSeenAt": 1788104041734
   },
   {
     "id": "lead-1788095188569-977",
@@ -4504,7 +4504,7 @@
     "recruiterName": null,
     "appliedAt": 1788095203450,
     "firstSeenAt": 1788095203528,
-    "lastSeenAt": 1788095203528
+    "lastSeenAt": 1788104041526
   },
   {
     "id": "lead-1788095207815-573",
@@ -4652,7 +4652,7 @@
     "jobTitle": "full stack mobile application developer",
     "company": "LYNX",
     "location": "Abhā, 'Asir, Saudi Arabia",
-    "jobUrl": "https://sa.linkedin.com/jobs/view/full-stack-mobile-application-developer-at-lynx-4458838888",
+    "jobUrl": "https://sa.linkedin.com/jobs/view/full-stack-mobile-application-developer-at-lynx-4458838868",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in full stack mobile application development.\n- Ability to work on complete mobile application lifecycle from development to deployment.",
     "status": "no_email",
     "errorReason": "",
@@ -4661,7 +4661,7 @@
     "applicationUrl": "https://sa.linkedin.com/jobs/view/full-stack-mobile-application-developer-at-lynx-4458838888",
     "recruiterName": null,
     "firstSeenAt": 1788095328834,
-    "lastSeenAt": 1788095328834
+    "lastSeenAt": 1788104056551
   },
   {
     "id": "lead-1788095333064-356",
@@ -4886,6 +4886,570 @@
     "applicationUrl": "https://bd.linkedin.com/jobs/view/python-developer-at-hired-4461007457",
     "recruiterName": null,
     "firstSeenAt": 1788101151120,
-    "lastSeenAt": 1788101151120
+    "lastSeenAt": 1788104041021
+  },
+  {
+    "id": "lead-1788101691747-454",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "Hired",
+    "location": "Bangladesh",
+    "jobUrl": "https://bd.linkedin.com/jobs/view/full-stack-engineer-at-hired-4461005562",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Engineering experience\n- Complete details to be analyzed upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": "612-808-9500",
+    "applicationUrl": "https://bd.linkedin.com/jobs/view/full-stack-engineer-at-hired-4461005562",
+    "recruiterName": null,
+    "firstSeenAt": 1788101698026,
+    "lastSeenAt": 1788104041093
+  },
+  {
+    "id": "lead-1788101702370-436",
+    "source": "linkedin",
+    "jobTitle": "Golang Developer (Remote)",
+    "company": "Hire Feed",
+    "location": "Bangladesh",
+    "jobUrl": "https://bd.linkedin.com/jobs/view/golang-developer-remote-at-hire-feed-4461002219",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Golang development.\n- Ability to work remotely.",
+    "status": "applied",
+    "errorReason": "",
+    "recipientEmail": "info@quik-hire.com",
+    "phone": null,
+    "applicationUrl": "https://bd.linkedin.com/jobs/view/golang-developer-remote-at-hire-feed-4461002219",
+    "recruiterName": null,
+    "appliedAt": 1788101715017,
+    "firstSeenAt": 1788101715067,
+    "lastSeenAt": 1788104041235
+  },
+  {
+    "id": "lead-1788101719346-216",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "Labedan IT Solutions",
+    "location": "Dar es Salaam, Tanzania",
+    "jobUrl": "https://tz.linkedin.com/jobs/view/full-stack-engineer-at-labedan-it-solutions-4458846917",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Engineering skills\n- Ability to work on complete development lifecycle as analyzed upon import",
+    "status": "applied",
+    "errorReason": "",
+    "recipientEmail": "info@labedan.solutions",
+    "phone": "+255 765 029 000",
+    "applicationUrl": "https://tz.linkedin.com/jobs/view/full-stack-engineer-at-labedan-it-solutions-4458846917",
+    "recruiterName": null,
+    "appliedAt": 1788101733504,
+    "firstSeenAt": 1788101733562,
+    "lastSeenAt": 1788104041374
+  },
+  {
+    "id": "lead-1788101737985-174",
+    "source": "linkedin",
+    "jobTitle": "Software engineer, Fullstack",
+    "company": "Alion",
+    "location": "Per-per 'a', Eastern Region, Uganda",
+    "jobUrl": "https://ug.linkedin.com/jobs/view/software-engineer-fullstack-at-alion-4461010256",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Fullstack software engineering skills\n- Experience with software development life cycle",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": "alion-team.com",
+    "phone": null,
+    "applicationUrl": "https://ug.linkedin.com/jobs/view/software-engineer-fullstack-at-alion-4461010256",
+    "recruiterName": null,
+    "firstSeenAt": 1788101743686,
+    "lastSeenAt": 1788104041659
+  },
+  {
+    "id": "lead-1788101747986-276",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer",
+    "company": "Mawahebna",
+    "location": "Amman, Amman, Jordan",
+    "jobUrl": "https://jo.linkedin.com/jobs/view/software-engineer-at-mawahebna-4458851053",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software Engineer role located in Amman, Amman, Jordan.\n- Complete details will be analyzed upon import.",
+    "status": "applied",
+    "errorReason": "",
+    "recipientEmail": "hello@mawahebna.com",
+    "phone": null,
+    "applicationUrl": "https://jo.linkedin.com/jobs/view/software-engineer-at-mawahebna-4458851053",
+    "recruiterName": null,
+    "appliedAt": 1788101761222,
+    "firstSeenAt": 1788101761266,
+    "lastSeenAt": 1788104041797
+  },
+  {
+    "id": "lead-1788101765499-50",
+    "source": "linkedin",
+    "jobTitle": "Priority Developer",
+    "company": "MotoRad Ltd.",
+    "location": "Karmiel, North District, Israel",
+    "jobUrl": "https://il.linkedin.com/jobs/view/priority-developer-at-motorad-ltd-4460895254",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Priority Developer.\n- Ability to work in Karmiel, North District, Israel.",
+    "status": "applied",
+    "errorReason": "",
+    "recipientEmail": "info@motoradusa.com",
+    "phone": "+1-888-262-4153",
+    "applicationUrl": "https://il.linkedin.com/jobs/view/priority-developer-at-motorad-ltd-4460895254",
+    "recruiterName": null,
+    "appliedAt": 1788101778896,
+    "firstSeenAt": 1788101778938,
+    "lastSeenAt": 1788104041861
+  },
+  {
+    "id": "lead-1788101783342-596",
+    "source": "linkedin",
+    "jobTitle": "Back-End Engineer",
+    "company": "Ubiquiti Inc.",
+    "location": "Riga, Riga, Latvia",
+    "jobUrl": "https://lv.linkedin.com/jobs/view/back-end-engineer-at-ubiquiti-inc-4395244342",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience in back-end engineering\n• Ability to analyze complete details upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://lv.linkedin.com/jobs/view/back-end-engineer-at-ubiquiti-inc-4395244342",
+    "recruiterName": null,
+    "firstSeenAt": 1788101789997,
+    "lastSeenAt": 1788104042134
+  },
+  {
+    "id": "lead-1788101794263-759",
+    "source": "linkedin",
+    "jobTitle": "Backend Developer (Node.js &amp; TypeScript)",
+    "company": "DIGITALL",
+    "location": "Sofia, Sofia City, Bulgaria",
+    "jobUrl": "https://bg.linkedin.com/jobs/view/backend-developer-node-js-typescript-at-digitall-4451091864",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Proficiency in Node.js and TypeScript",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": "+49 721 46 476-100",
+    "applicationUrl": "https://bg.linkedin.com/jobs/view/backend-developer-node-js-typescript-at-digitall-4451091864",
+    "recruiterName": null,
+    "firstSeenAt": 1788101801657,
+    "lastSeenAt": 1788104042262
+  },
+  {
+    "id": "lead-1788101806297-365",
+    "source": "linkedin",
+    "jobTitle": "מהנדס/ת תוכנה מנוסה",
+    "company": "IAI - Israel Aerospace Industries",
+    "location": "Ashdod, South District, Israel",
+    "jobUrl": "https://il.linkedin.com/jobs/view/%D7%9E%D7%94%D7%A0%D7%93%D7%A1-%D7%AA-%D7%AA%D7%95%D7%9B%D7%A0%D7%94-at-iai-israel-aerospace-industries-4414142438",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• ניסיון כמהנדס/ת תוכנה",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://il.linkedin.com/jobs/view/%D7%9E%D7%94%D7%A0%D7%93%D7%A1-%D7%AA-%D7%AA%D7%95%D7%9B%D7%A0%D7%94-%D7%9E%D7%A0%D7%95%D7%A1%D7%94-at-iai-israel-aerospace-industries-4414497460",
+    "recruiterName": null,
+    "firstSeenAt": 1788101812850,
+    "lastSeenAt": 1788104043280
+  },
+  {
+    "id": "lead-1788101817066-774",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "Thula",
+    "location": "Sri Lanka",
+    "jobUrl": "https://lk.linkedin.com/jobs/view/full-stack-engineer-at-thula-4459747261",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Engineering skills\n- Experience as detailed in the LinkedIn posting",
+    "status": "applied",
+    "errorReason": "",
+    "recipientEmail": "thula@thula.is",
+    "phone": "+354 463 33 30",
+    "applicationUrl": "https://lk.linkedin.com/jobs/view/full-stack-engineer-at-thula-4459747261",
+    "recruiterName": null,
+    "appliedAt": 1788101831022,
+    "firstSeenAt": 1788101831071,
+    "lastSeenAt": 1788104042868
+  },
+  {
+    "id": "lead-1788101835435-728",
+    "source": "linkedin",
+    "jobTitle": "Backend Engineer",
+    "company": "HUMAN",
+    "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
+    "jobUrl": "https://il.linkedin.com/jobs/view/backend-engineer-at-human-4459749232",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Backend engineering skills\n- Experience working at HUMAN in Tel Aviv-Yafo, Israel",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": "800-457-4708",
+    "applicationUrl": "https://il.linkedin.com/jobs/view/backend-engineer-at-human-4459749232",
+    "recruiterName": null,
+    "firstSeenAt": 1788101841117,
+    "lastSeenAt": 1788104043068
+  },
+  {
+    "id": "lead-1788101845340-340",
+    "source": "linkedin",
+    "jobTitle": "Backend Developer - 2117",
+    "company": "TSG",
+    "location": "Or Yehuda, Tel Aviv District, Israel",
+    "jobUrl": "https://il.linkedin.com/jobs/view/backend-developer-2117-at-tsg-4461007385",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in backend development\n- Location: Or Yehuda, Tel Aviv District, Israel",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://il.linkedin.com/jobs/view/backend-developer-2117-at-tsg-4461007385",
+    "recruiterName": null,
+    "firstSeenAt": 1788101852164,
+    "lastSeenAt": 1788104043129
+  },
+  {
+    "id": "lead-1788101856437-38",
+    "source": "linkedin",
+    "jobTitle": "מהנדס/ת תוכנה",
+    "company": "IAI - Israel Aerospace Industries",
+    "location": "Ashdod, South District, Israel",
+    "jobUrl": "https://il.linkedin.com/jobs/view/%D7%9E%D7%94%D7%A0%D7%93%D7%A1-%D7%AA-%D7%AA%D7%95%D7%9B%D7%A0%D7%94-at-iai-israel-aerospace-industries-4414142438",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\nSoftware engineering skills and responsibilities as required by IAI.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://il.linkedin.com/jobs/view/%D7%9E%D7%94%D7%A0%D7%93%D7%A1-%D7%AA-%D7%AA%D7%95%D7%9B%D7%A0%D7%94-at-iai-israel-aerospace-industries-4414142438",
+    "recruiterName": null,
+    "firstSeenAt": 1788101862462,
+    "lastSeenAt": 1788101862462
+  },
+  {
+    "id": "lead-1788104043293-586",
+    "source": "linkedin",
+    "jobTitle": "Delphi Developer (f/m)",
+    "company": "Siemens",
+    "location": "Žilina, Zilina, Slovakia",
+    "jobUrl": "https://sk.linkedin.com/jobs/view/delphi-developer-f-m-at-siemens-4424578760",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Delphi development skills",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": "+49 89 38035491",
+    "applicationUrl": "https://sk.linkedin.com/jobs/view/delphi-developer-f-m-at-siemens-4424578760",
+    "recruiterName": null,
+    "firstSeenAt": 1788101870359,
+    "lastSeenAt": 1788104046863
+  },
+  {
+    "id": "lead-1788101874623-127",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Developer",
+    "company": "Check Point Software",
+    "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
+    "jobUrl": "https://il.linkedin.com/jobs/view/full-stack-developer-at-check-point-software-4460894493",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Development experience\n- Complete details will be analyzed upon import.",
+    "status": "applied",
+    "errorReason": "",
+    "recipientEmail": "cppa@checkpoint.com",
+    "phone": "+1-866-488-6691",
+    "applicationUrl": "https://il.linkedin.com/jobs/view/full-stack-developer-at-check-point-software-4460894493",
+    "recruiterName": null,
+    "appliedAt": 1788101887860,
+    "firstSeenAt": 1788101887916,
+    "lastSeenAt": 1788104056032
+  },
+  {
+    "id": "lead-1788101892129-956",
+    "source": "linkedin",
+    "jobTitle": "Front-End Developer",
+    "company": "Ubiquiti Inc.",
+    "location": "Riga, Riga, Latvia",
+    "jobUrl": "https://lv.linkedin.com/jobs/view/front-end-developer-at-ubiquiti-inc-4395241413",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Front-End Development experience\n- Location: Riga, Riga, Latvia",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://lv.linkedin.com/jobs/view/front-end-developer-at-ubiquiti-inc-4395241413",
+    "recruiterName": null,
+    "firstSeenAt": 1788101898272,
+    "lastSeenAt": 1788104056106
+  },
+  {
+    "id": "lead-1788101902695-434",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer",
+    "company": "Haystack",
+    "location": "Estonia",
+    "jobUrl": "https://ee.linkedin.com/jobs/view/software-engineer-at-haystack-4459739407",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering skills as per standard job description.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://ee.linkedin.com/jobs/view/software-engineer-at-haystack-4459739407",
+    "recruiterName": null,
+    "firstSeenAt": 1788101907830,
+    "lastSeenAt": 1788104056360
+  },
+  {
+    "id": "lead-1788104056625-720",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer II",
+    "company": "NCR Atleos",
+    "location": "Karāchi, Sindh, Pakistan",
+    "jobUrl": "https://pk.linkedin.com/jobs/view/software-engineer-ii-at-ncr-atleos-4414752945",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering experience\n- Ability to work on development tasks as required by NCR Atleos",
+    "status": "no_email",
+    "errorReason": "",
+    "firstSeenAt": 1788101912735,
+    "lastSeenAt": 1788104060036,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://pk.linkedin.com/jobs/view/software-engineer-ii-at-ncr-atleos-4414752945",
+    "recruiterName": null
+  },
+  {
+    "id": "lead-1788104069423-272",
+    "source": "linkedin",
+    "jobTitle": "Core Full Stack Engineer – Platform &amp; Products",
+    "company": "TrueLinks.AI",
+    "location": "Doha, Qatar",
+    "jobUrl": "https://qa.linkedin.com/jobs/view/core-full-stack-engineer-%E2%80%93-platform-products-at-truelinks-ai-4351959935",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Full stack engineering experience\n• Experience with platform and product development",
+    "status": "applied",
+    "errorReason": "",
+    "firstSeenAt": 1788101917682,
+    "lastSeenAt": 1788104080432,
+    "recipientEmail": "contact@truelinks.ai",
+    "phone": null,
+    "applicationUrl": "https://qa.linkedin.com/jobs/view/core-full-stack-engineer-%E2%80%93-platform-products-at-truelinks-ai-4351959935",
+    "recruiterName": null,
+    "appliedAt": 1788104080375
+  },
+  {
+    "id": "lead-1788104089541-487",
+    "source": "linkedin",
+    "jobTitle": "Mobile Developer (AWS)",
+    "company": "wherewework Jobs",
+    "location": "Sofia, Sofia City, Bulgaria",
+    "jobUrl": "https://bg.linkedin.com/jobs/view/mobile-developer-aws-at-wherewework-jobs-4459751098",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Mobile Development\n- Experience with AWS",
+    "status": "no_email",
+    "errorReason": "",
+    "firstSeenAt": 1788101922372,
+    "lastSeenAt": 1788104092234,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://bg.linkedin.com/jobs/view/mobile-developer-aws-at-wherewework-jobs-4459751098",
+    "recruiterName": null
+  },
+  {
+    "id": "lead-1788104101360-8",
+    "source": "linkedin",
+    "jobTitle": "System Analyst",
+    "company": "ExxonMobil",
+    "location": "Bangkok, Bangkok City, Thailand",
+    "jobUrl": "https://th.linkedin.com/jobs/view/system-analyst-at-exxonmobil-4442120548",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- System analysis and related IT responsibilities as outlined in the full job description on LinkedIn.",
+    "status": "applied",
+    "errorReason": "",
+    "firstSeenAt": 1788101927154,
+    "lastSeenAt": 1788104110910,
+    "recipientEmail": "capital.markets@exxonmobil.com",
+    "phone": null,
+    "applicationUrl": "https://th.linkedin.com/jobs/view/system-analyst-at-exxonmobil-4442120548",
+    "recruiterName": null,
+    "appliedAt": 1788104110851
+  },
+  {
+    "id": "lead-1788104119931-664",
+    "source": "linkedin",
+    "jobTitle": "Lead Software Engineer",
+    "company": "Aumet inc",
+    "location": "Amman, Amman, Jordan",
+    "jobUrl": "https://jo.linkedin.com/jobs/view/lead-software-engineer-at-aumet-inc-4458845999",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Lead Software Engineer or in a similar leadership role.\n- Strong software development background.\n- Ability to lead engineering teams and projects.",
+    "status": "no_email",
+    "errorReason": "",
+    "firstSeenAt": 1788101931778,
+    "lastSeenAt": 1788104125420,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://jo.linkedin.com/jobs/view/lead-software-engineer-at-aumet-inc-4458845999",
+    "recruiterName": null
+  },
+  {
+    "id": "lead-1788103770337-310",
+    "source": "linkedin",
+    "jobTitle": "Backend Java Engineer (salary up to SGD 200k-300k+)",
+    "company": "Ambition",
+    "location": "Singapore, Singapore",
+    "jobUrl": "https://sg.linkedin.com/jobs/view/backend-java-engineer-salary-up-to-sgd-200k-300k%2B-at-ambition-4454163296",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 28.645232863s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.5-flash-lite\",\"location\":\"global\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"28s\"}]",
+    "firstSeenAt": 1788101936987,
+    "lastSeenAt": 1788103770927
+  },
+  {
+    "id": "lead-1788103780358-236",
+    "source": "linkedin",
+    "jobTitle": "Java Full Stack Software Engineer",
+    "company": "ISS | Institutional Shareholder Services",
+    "location": "Mumbai Metropolitan Region",
+    "jobUrl": "https://in.linkedin.com/jobs/view/java-full-stack-software-engineer-at-iss-institutional-shareholder-services-4414915123",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 18.40974668s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"18s\"}]",
+    "firstSeenAt": 1788101941937,
+    "lastSeenAt": 1788103782977
+  },
+  {
+    "id": "lead-1788103793808-536",
+    "source": "linkedin",
+    "jobTitle": "Fullstack Developer .NET &amp; Angular with SAP Integration",
+    "company": "HiLoker",
+    "location": "South Jakarta, Jakarta, Indonesia",
+    "jobUrl": "https://id.linkedin.com/jobs/view/fullstack-developer-net-angular-with-sap-integration-at-hiloker-4459739298",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 4.360141611s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.5-flash-lite\",\"location\":\"global\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"4s\"}]",
+    "firstSeenAt": 1788101946614,
+    "lastSeenAt": 1788103795768
+  },
+  {
+    "id": "lead-1788103808370-166",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer (Java)",
+    "company": "Scotiabank",
+    "location": "Toronto, Ontario, Canada",
+    "jobUrl": "https://ca.linkedin.com/jobs/view/software-engineer-java-at-scotiabank-4381895601",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 50.347611797s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"50s\"}]",
+    "firstSeenAt": 1788101951344,
+    "lastSeenAt": 1788103811422
+  },
+  {
+    "id": "lead-1788103820944-656",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer II -Backend",
+    "company": "talabat",
+    "location": "Dubai, Dubai, United Arab Emirates",
+    "jobUrl": "https://ae.linkedin.com/jobs/view/software-engineer-ii-backend-at-talabat-4362085519",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 38.053404764s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"38s\"}]",
+    "firstSeenAt": 1788101955978,
+    "lastSeenAt": 1788103821873
+  },
+  {
+    "id": "lead-1788103832291-823",
+    "source": "linkedin",
+    "jobTitle": "MTS / SMTS Backend Java Developer",
+    "company": "Transaction Network Services (TNS)",
+    "location": "Noida, Uttar Pradesh, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/mts-smts-backend-java-developer-at-transaction-network-services-tns-4411192816",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 26.66135227s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"26s\"}]",
+    "firstSeenAt": 1788101960788,
+    "lastSeenAt": 1788103833605
+  },
+  {
+    "id": "lead-1788103843968-746",
+    "source": "linkedin",
+    "jobTitle": "Java Developer",
+    "company": "AvePoint",
+    "location": "Singapore",
+    "jobUrl": "https://sg.linkedin.com/jobs/view/java-developer-at-avepoint-4039760488",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 15.104233073s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"15s\"}]",
+    "firstSeenAt": 1788101965481,
+    "lastSeenAt": 1788103846150
+  },
+  {
+    "id": "lead-1788103857142-468",
+    "source": "linkedin",
+    "jobTitle": "Senior Java Developer",
+    "company": "Virtusa",
+    "location": "Mississauga, Ontario, Canada",
+    "jobUrl": "https://ca.linkedin.com/jobs/view/senior-java-developer-at-virtusa-4439264418",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 1.392892257s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"1s\"}]",
+    "firstSeenAt": 1788101970179,
+    "lastSeenAt": 1788103859105
+  },
+  {
+    "id": "lead-1788103868618-736",
+    "source": "linkedin",
+    "jobTitle": "Java Springboot Developer",
+    "company": "TechJobsData",
+    "location": "Bengaluru East, Karnataka, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/java-springboot-developer-at-techjobsdata-4459727683",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 50.274562968s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.5-flash-lite\",\"location\":\"global\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"50s\"}]",
+    "firstSeenAt": 1788101974786,
+    "lastSeenAt": 1788103870245
+  },
+  {
+    "id": "lead-1788103894543-710",
+    "source": "linkedin",
+    "jobTitle": "Java Developer",
+    "company": "Lacento Technologies Private Limited",
+    "location": "Mumbai, Maharashtra, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/java-developer-at-lacento-technologies-private-limited-4459736400",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 24.280972206s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"24s\"}]",
+    "firstSeenAt": 1788101980201,
+    "lastSeenAt": 1788103896427
+  },
+  {
+    "id": "lead-1788103905930-975",
+    "source": "linkedin",
+    "jobTitle": "Java AWS Developer",
+    "company": "Mphasis",
+    "location": "Bengaluru, Karnataka, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/java-aws-developer-at-mphasis-4442437720",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 11.957516825s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.5-flash-lite\",\"location\":\"global\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"11s\"}]",
+    "firstSeenAt": 1788101984948,
+    "lastSeenAt": 1788103909230
+  },
+  {
+    "id": "lead-1788103918578-474",
+    "source": "linkedin",
+    "jobTitle": ".Net Developer",
+    "company": "Fyld",
+    "location": "Lisbon, Lisbon, Portugal",
+    "jobUrl": "https://pt.linkedin.com/jobs/view/net-developer-at-fyld-4460898579",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 336.537032ms. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"0s\"}]",
+    "firstSeenAt": 1788101989533,
+    "lastSeenAt": 1788103920690
+  },
+  {
+    "id": "lead-1788103932325-814",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer - Credit Card Platform",
+    "company": "OCBC",
+    "location": "Hong Kong SAR",
+    "jobUrl": "https://hk.linkedin.com/jobs/view/software-engineer-credit-card-platform-at-ocbc-4432950651",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 46.25360927s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"location\":\"global\",\"model\":\"gemini-3.5-flash-lite\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"46s\"}]",
+    "firstSeenAt": 1788101994465,
+    "lastSeenAt": 1788103935256
+  },
+  {
+    "id": "lead-1788103945912-144",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer - Angular &amp; Python (m/w/d)",
+    "company": "Rocken®",
+    "location": "Zurich, Zurich, Switzerland",
+    "jobUrl": "https://ch.linkedin.com/jobs/view/software-engineer-angular-python-m-w-d-at-rocken%C2%AE-4459742241",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
+    "status": "failed",
+    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite\nPlease retry in 31.133283954s. [{\"@type\":\"type.googleapis.com/google.rpc.Help\",\"links\":[{\"description\":\"Learn more about Gemini API quotas\",\"url\":\"https://ai.google.dev/gemini-api/docs/rate-limits\"}]},{\"@type\":\"type.googleapis.com/google.rpc.QuotaFailure\",\"violations\":[{\"quotaMetric\":\"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\"quotaId\":\"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\"quotaDimensions\":{\"model\":\"gemini-3.5-flash-lite\",\"location\":\"global\"},\"quotaValue\":\"500\"}]},{\"@type\":\"type.googleapis.com/google.rpc.RetryInfo\",\"retryDelay\":\"31s\"}]",
+    "firstSeenAt": 1788101999159,
+    "lastSeenAt": 1788103948401
   }
 ]

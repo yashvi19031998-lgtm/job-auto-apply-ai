@@ -1,8 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const google = require('googlethis');
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
+
+function extractEmailsFromHtml(html: string): string | null {
+  const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+  const matches = html.match(emailRegex);
+  if (!matches) return null;
+  
+  const valid = matches.filter(e => {
+    const lower = e.toLowerCase();
+    return !lower.endsWith('.png') && !lower.endsWith('.jpg') && !lower.endsWith('.jpeg') &&
+           !lower.endsWith('.gif') && !lower.endsWith('.svg') && !lower.endsWith('.webp') && 
+           !lower.includes('example') && !lower.includes('sentry') && !lower.includes('w3.org');
+  });
+  
+  return valid.length > 0 ? valid[0] : null;
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -58,81 +72,79 @@ ${text}
     const parsed = JSON.parse(responseText);
     let jobs = parsed.jobs || [];
 
-    // Process and verify emails
     const validJobs = [];
 
     for (let i = 0; i < jobs.length; i++) {
       const job = jobs[i];
       let foundEmail = job.recipientEmail;
 
-      // If it's from the scraper and we have a Job URL, try to fetch the page content directly
-      if (!foundEmail && inputType === 'scraper' && job.alternateContact && job.alternateContact.startsWith('http')) {
+      // 1. Direct Page Fetch (Fix for Custom/WebSearch)
+      if (!foundEmail && inputType === 'scraper' && job.alternateContact && job.alternateContact.startsWith('http') && !job.alternateContact.includes('linkedin.com')) {
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 3000);
+          const timeoutId = setTimeout(() => controller.abort(), 8000); // Increased timeout to 8 seconds
           
           const pageRes = await fetch(job.alternateContact, {
-            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
             signal: controller.signal,
             cache: 'no-store'
-          });
+          }).catch(() => null);
           clearTimeout(timeoutId);
 
-          if (pageRes.ok) {
+          if (pageRes && pageRes.ok) {
             const html = await pageRes.text();
-            // Simple regex to strip HTML tags and scripts
-            const strippedText = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-                                     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-                                     .replace(/<[^>]+>/g, ' ')
-                                     .replace(/\s+/g, ' ')
-                                     .substring(0, 15000); // Send max 15k chars to AI
+            
+            // Fast Regex extraction FIRST (catches mailto: links before HTML stripping!)
+            const regexEmail = extractEmailsFromHtml(html);
+            if (regexEmail) {
+               foundEmail = regexEmail;
+            } else {
+              // Fallback to Gemini if Regex fails
+              const strippedText = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+                                       .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+                                       .replace(/<[^>]+>/g, ' ')
+                                       .replace(/\s+/g, ' ')
+                                       .substring(0, 15000);
 
-            const pagePrompt = `
-Extract any explicit official company email address from the following webpage text. 
-Do NOT fabricate, invent, or guess. Only return the email if it explicitly appears in the text.
-Return strictly a JSON object: { "email": "the_email_found" } or { "email": null } if none is found.
-
-Webpage Text:
-${strippedText}
-`;
-            const pageResult = await model.generateContent(pagePrompt);
-            const pageParsed = JSON.parse(pageResult.response.text());
-            if (pageParsed && pageParsed.email) {
-              foundEmail = pageParsed.email;
+              const pagePrompt = `Extract explicit official company email from this webpage text. Return strictly JSON: { "email": "found_email" } or null. Text: ${strippedText}`;
+              const pageResult = await model.generateContent(pagePrompt);
+              const pageParsed = JSON.parse(pageResult.response.text());
+              if (pageParsed && pageParsed.email) {
+                foundEmail = pageParsed.email;
+              }
             }
           }
         } catch (fetchErr) {
-          console.error("Failed to fetch page content for email verification:", fetchErr);
+          console.error("Failed direct page fetch");
         }
       }
 
-      // Fallback: Web search for missing emails if not found on page
-      if (!foundEmail && job.company && job.company !== "LinkedIn Job") {
+      // 2. DuckDuckGo Fallback (for LinkedIn where direct fetch is blocked)
+      if (!foundEmail && job.company && job.company !== "LinkedIn Job" && job.company !== "Unknown") {
         try {
           const query = `${job.company} official website contact`;
           const ddgRes = await fetch('https://lite.duckduckgo.com/lite/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+              'User-Agent': 'Mozilla/5.0'
             },
             body: `q=${encodeURIComponent(query)}`,
             cache: 'no-store'
-          });
+          }).catch(() => null);
           
-          if (ddgRes.ok) {
+          if (ddgRes && ddgRes.ok) {
             const html = await ddgRes.text();
             const urlMatches = [...html.matchAll(/href=(["'])(.*?)\1/gi)].map(m => m[2]);
-            const links = urlMatches.filter(u => u.startsWith('http') && !u.includes('duckduckgo') && !u.includes('w3.org') && !u.includes('linkedin.com') && !u.includes('glassdoor'));
+            const links = urlMatches.filter(u => u.startsWith('http') && !u.includes('duckduckgo') && !u.includes('linkedin'));
             let targetUrl = links.length > 0 ? links[0] : "";
             
             if (targetUrl) {
               job.companyWebsite = targetUrl;
-              // Now fetch the contact page
               const controller = new AbortController();
-              const timeoutId = setTimeout(() => controller.abort(), 6000);
+              const timeoutId = setTimeout(() => controller.abort(), 8000);
               const pageRes = await fetch(targetUrl, {
-                headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+                headers: { 'User-Agent': 'Mozilla/5.0' },
                 signal: controller.signal,
                 cache: 'no-store'
               }).catch(() => null);
@@ -140,41 +152,33 @@ ${strippedText}
 
               if (pageRes && pageRes.ok) {
                 const pageHtml = await pageRes.text();
-                const strippedText = pageHtml.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-                                         .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-                                         .replace(/<[^>]+>/g, ' ')
-                                         .replace(/\s+/g, ' ')
-                                         .substring(0, 15000);
-
-                const pagePrompt = `
-Extract the official company email address AND contact phone number from the following webpage text. 
-Do NOT fabricate, invent, or guess. Only return what explicitly appears in the text.
-Return strictly a JSON object: { "email": "the_email_found_or_null", "phone": "the_phone_found_or_null" }
-
-Webpage Text:
-${strippedText}
-`;
-                const pageResult = await model.generateContent(pagePrompt);
-                const pageParsed = JSON.parse(pageResult.response.text());
                 
-                if (pageParsed) {
-                  if (pageParsed.email) foundEmail = pageParsed.email;
-                  if (pageParsed.phone) {
-                    job.phone = pageParsed.phone;
-                    job.alternateContact = job.alternateContact ? `${job.alternateContact} | Phone: ${pageParsed.phone}` : `Phone: ${pageParsed.phone}`;
+                const regexEmail = extractEmailsFromHtml(pageHtml);
+                if (regexEmail) {
+                   foundEmail = regexEmail;
+                } else {
+                  const strippedText = pageHtml.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '').replace(/<[^>]+>/g, ' ').substring(0, 15000);
+                  const pagePrompt = `Extract company email AND contact phone. strictly JSON: { "email": "email_or_null", "phone": "phone_or_null" }. Text: ${strippedText}`;
+                  const pageResult = await model.generateContent(pagePrompt);
+                  const pageParsed = JSON.parse(pageResult.response.text());
+                  
+                  if (pageParsed) {
+                    if (pageParsed.email) foundEmail = pageParsed.email;
+                    if (pageParsed.phone) {
+                      job.phone = pageParsed.phone;
+                      job.alternateContact = job.alternateContact ? `${job.alternateContact} | Phone: ${pageParsed.phone}` : `Phone: ${pageParsed.phone}`;
+                    }
                   }
                 }
               }
             }
           }
         } catch (searchError) {
-          console.error("DDG Search Error for company:", job.company, searchError);
+          console.error("DDG Search Error");
         }
       }
 
-      // Store whatever we found
       if (foundEmail) job.recipientEmail = foundEmail;
-      // Always push the job, even if no email is found, so the user can manually apply
       validJobs.push(job);
     }
 
