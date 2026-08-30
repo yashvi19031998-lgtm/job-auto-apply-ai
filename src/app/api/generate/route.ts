@@ -30,7 +30,8 @@ export async function POST(req: NextRequest) {
     let resumeText = "";
     if (resumeBase64) {
       try {
-        const pdfParse = require("pdf-parse");
+        const pdfParseModule = require("pdf-parse");
+        const pdfParse = pdfParseModule.default || pdfParseModule;
         const base64Data = resumeBase64.split(";base64,").pop();
         const buffer = Buffer.from(base64Data, "base64");
         const pdfData = await pdfParse(buffer);

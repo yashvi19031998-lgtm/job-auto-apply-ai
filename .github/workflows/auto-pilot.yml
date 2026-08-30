@@ -1,0 +1,68 @@
+name: Auto-Pilot Cloud Worker
+
+on:
+  schedule:
+    # Run every 3 hours: 00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 UTC
+    - cron: '0 */3 * * *'
+  workflow_dispatch: # Allows manual testing from the GitHub Actions UI
+
+jobs:
+  run-auto-pilot:
+    runs-on: ubuntu-latest
+    
+    env:
+      # This flag tells our script to run once and exit, rather than loop forever
+      GITHUB_ACTIONS: "true"
+      
+      # We read from GitHub Secrets instead of hardcoding
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      SMTP_HOST: ${{ secrets.SMTP_HOST || 'smtp.gmail.com' }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      SMTP_FROM_EMAIL: ${{ secrets.SMTP_FROM_EMAIL || secrets.SMTP_USER }}
+      APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
+      
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # Using a specific token if needed for pushing back, otherwise default GITHUB_TOKEN works
+          fetch-depth: 1
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install Dependencies
+        run: npm ci || npm install
+        
+      - name: Start Next.js Server
+        run: |
+          npm run dev &
+          echo "Waiting for Next.js to start on port 3000..."
+          npx wait-on http://localhost:3000 --timeout 60000
+          echo "Next.js is ready!"
+          
+      - name: Run Auto-Pilot Worker
+        run: node run-autopilot.js
+        
+      - name: Commit and Push Updated Leads
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Stage the files that might have changed
+          git add data/auto_scout_leads.json || true
+          git add data/autopilot_status.json || true
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No new leads or changes to save."
+          else
+            git commit -m "chore(auto-pilot): update discovered leads [skip ci]"
+            git push
+            echo "Successfully saved new leads to repository."
+          fi

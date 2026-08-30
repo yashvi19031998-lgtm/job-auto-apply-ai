@@ -30,6 +30,9 @@ Required JSON format:
       "company": "String or null",
       "recruiterName": "String or null",
       "recipientEmail": "String or null (Must be a valid email format)",
+      "phone": "String or null (Extract explicitly)",
+      "applicationUrl": "String or null (Extract explicitly, e.g. 'Apply here: https...')",
+      "companyWebsite": "String or null",
       "alternateContact": "String or null (Extract ANY available contact info: WhatsApp number, Phone number, LinkedIn profile, or Website link. If Job Link is provided, ALWAYS include it here.)",
       "requirements": "A concise bulleted list string of key skills and responsibilities."
     }
@@ -124,6 +127,7 @@ ${strippedText}
             let targetUrl = links.length > 0 ? links[0] : "";
             
             if (targetUrl) {
+              job.companyWebsite = targetUrl;
               // Now fetch the contact page
               const controller = new AbortController();
               const timeoutId = setTimeout(() => controller.abort(), 6000);
@@ -156,6 +160,7 @@ ${strippedText}
                 if (pageParsed) {
                   if (pageParsed.email) foundEmail = pageParsed.email;
                   if (pageParsed.phone) {
+                    job.phone = pageParsed.phone;
                     job.alternateContact = job.alternateContact ? `${job.alternateContact} | Phone: ${pageParsed.phone}` : `Phone: ${pageParsed.phone}`;
                   }
                 }

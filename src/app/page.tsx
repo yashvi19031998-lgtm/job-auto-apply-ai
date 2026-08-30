@@ -27,8 +27,8 @@ export default function Dashboard() {
   if (!mounted || !signature) return null;
 
   // Filter Jobs
-  const sentJobs = jobs.filter(j => j.status === 'sent' || j.status === 'manually_applied').sort((a, b) => b.createdAt - a.createdAt);
-  const pendingJobs = jobs.filter(j => j.status !== 'sent' && j.status !== 'manually_applied').sort((a, b) => b.createdAt - a.createdAt);
+  const sentJobs = jobs.filter(j => j.status === 'sent' || j.status === 'manually_applied').sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  const pendingJobs = jobs.filter(j => j.status !== 'sent' && j.status !== 'manually_applied').sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 
   const totalPendingPages = Math.ceil(pendingJobs.length / ITEMS_PER_PAGE);
   const paginatedPending = pendingJobs.slice((pendingPage - 1) * ITEMS_PER_PAGE, pendingPage * ITEMS_PER_PAGE);

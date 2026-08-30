@@ -53,3 +53,23 @@ export interface JobApplication {
   status: JobApplicationStatus;
   createdAt: number;
 }
+
+export interface AutoScoutLead {
+  id: string;
+  source: string;
+  jobTitle: string;
+  company: string;
+  location: string;
+  jobUrl: string;
+  fullDescription: string;
+  recipientEmail?: string;
+  phone?: string;
+  applicationUrl?: string;
+  recruiterName?: string;
+  matchScore?: number;
+  status: 'new' | 'applied' | 'no_email' | 'failed';
+  firstSeenAt: number;
+  lastSeenAt: number;
+  appliedAt?: number;
+  errorReason?: string;
+}
