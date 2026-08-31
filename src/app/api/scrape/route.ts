@@ -17,6 +17,10 @@ export async function POST(req: Request) {
       query = `site:naukri.com/job-listings ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
     } else if (searchSource === "indeed") {
       query = `site:in.indeed.com/viewjob OR site:indeed.com/viewjob ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+    } else if (searchSource === "cutshort") {
+      query = `site:cutshort.io/job ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+    } else if (searchSource === "alignerr") {
+      query = `site:app.alignerr.com ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
     } else if (searchSource === "custom") {
       query = keywords;
     } else {
@@ -156,13 +160,18 @@ export async function POST(req: Request) {
     // ==========================================
     try {
       const ddgUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+      
       const response = await fetch(ddgUrl, {
+        signal: controller.signal,
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
           'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
           'Accept-Language': 'en-US,en;q=0.5'
         }
       });
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         return NextResponse.json({ error: `Web Search blocked by provider (HTTP ${response.status}). Rate Limit exceeded.` }, { status: 429 });

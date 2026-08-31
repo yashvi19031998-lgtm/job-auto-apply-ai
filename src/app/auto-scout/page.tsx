@@ -41,6 +41,9 @@ export default function AutoScoutPage() {
   const [page, setPage] = useState(1);
   const ITEMS_PER_PAGE = 10;
 
+  // Selection State
+  const [selectedJobs, setSelectedJobs] = useState<number[]>([]);
+
   // Processing State
   const [processingJobs, setProcessingJobs] = useState<Record<number, boolean>>({});
   const [processingLogs, setProcessingLogs] = useState<Record<number, string>>({});
@@ -90,6 +93,7 @@ export default function AutoScoutPage() {
 
       setScrapedJobs(data.jobs || []);
       setPage(1);
+      setSelectedJobs([]);
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -286,6 +290,8 @@ export default function AutoScoutPage() {
                 onChange={e => setPrefs({...prefs, source: e.target.value as any})}
               >
                 <option value="linkedin">LinkedIn (Recommended)</option>
+                <option value="cutshort">Cutshort (Via Web Search)</option>
+                <option value="alignerr">Alignerr (Via Web Search)</option>
                 <option value="web">Global Web Search</option>
                 <option value="custom">Custom Google Search (Raw)</option>
                 <option value="naukri">Naukri.com</option>
@@ -354,17 +360,70 @@ export default function AutoScoutPage() {
         });
 
         const totalPages = Math.ceil(filteredJobs.length / ITEMS_PER_PAGE);
+        const currentFilteredJobs = filteredJobs.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+        const currentPageIndices = currentFilteredJobs.map(job => scrapedJobs.indexOf(job));
+        const allSelected = currentPageIndices.length > 0 && currentPageIndices.every(idx => selectedJobs.includes(idx));
+
+        const toggleSelectAll = () => {
+           if (allSelected) {
+             setSelectedJobs(selectedJobs.filter(idx => !currentPageIndices.includes(idx)));
+           } else {
+             const newSelected = [...selectedJobs];
+             currentPageIndices.forEach(idx => {
+               if (!newSelected.includes(idx)) newSelected.push(idx);
+             });
+             setSelectedJobs(newSelected);
+           }
+        };
+
+        const handleApplySelected = async () => {
+           const jobsToProcess = [...selectedJobs];
+           setSelectedJobs([]);
+           
+           for (const idx of jobsToProcess) {
+             const job = scrapedJobs[idx];
+             if (job && !processingJobs[idx] && !processingLogs[idx]?.includes("✅")) {
+               await handleOneClickApply(job, idx);
+               // Wait 4 seconds between requests to respect Gemini Free Tier limits (15 RPM)
+               await new Promise(resolve => setTimeout(resolve, 4000));
+             }
+           }
+        };
 
         return (
           <div className="space-y-4">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
               <h2 className="text-xl font-bold text-gray-900">Found {filteredJobs.length} Opportunities</h2>
               <div className="flex bg-gray-100 rounded-lg p-1 border border-gray-200">
-                <button onClick={() => {setFilter('all'); setPage(1)}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'all' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>All</button>
-                <button onClick={() => {setFilter('new'); setPage(1)}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'new' ? 'bg-white shadow-sm text-purple-700' : 'text-gray-500 hover:text-gray-700'}`}>New Leads</button>
-                <button onClick={() => {setFilter('applied'); setPage(1)}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'applied' ? 'bg-white shadow-sm text-green-700' : 'text-gray-500 hover:text-gray-700'}`}>Already Applied</button>
+                <button onClick={() => {setFilter('all'); setPage(1); setSelectedJobs([]);}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'all' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>All</button>
+                <button onClick={() => {setFilter('new'); setPage(1); setSelectedJobs([]);}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'new' ? 'bg-white shadow-sm text-purple-700' : 'text-gray-500 hover:text-gray-700'}`}>New Leads</button>
+                <button onClick={() => {setFilter('applied'); setPage(1); setSelectedJobs([]);}} className={`px-4 py-1.5 rounded-md text-sm font-medium transition ${filter === 'applied' ? 'bg-white shadow-sm text-green-700' : 'text-gray-500 hover:text-gray-700'}`}>Already Applied</button>
               </div>
             </div>
+
+            {filteredJobs.length > 0 && (
+              <div className="flex items-center justify-between bg-white p-4 border rounded-xl shadow-sm mb-4">
+                <div className="flex items-center gap-3">
+                  <input 
+                    type="checkbox" 
+                    checked={allSelected}
+                    onChange={toggleSelectAll}
+                    className="w-5 h-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500 cursor-pointer"
+                    id="selectAllHeader"
+                  />
+                  <label htmlFor="selectAllHeader" className="text-sm font-medium text-gray-700 cursor-pointer">Select All on Page</label>
+                </div>
+                <button 
+                  onClick={handleApplySelected}
+                  disabled={selectedJobs.length === 0}
+                  className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-purple-700 transition disabled:opacity-50 flex items-center"
+                >
+                  <Play className="w-4 h-4 mr-2 fill-current" /> Apply Selected ({selectedJobs.length})
+                </button>
+              </div>
+            )}
+
             {filteredJobs.length === 0 ? (
                <div className="text-center py-10 text-gray-500">No jobs match the selected filter.</div>
             ) : (
@@ -376,17 +435,43 @@ export default function AutoScoutPage() {
             
             return (
               <div key={actualIdx} className="bg-white p-5 border rounded-2xl shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div className="flex-1">
-                  <h4 className="font-bold text-gray-900 text-lg">{job.title || "Unknown Title"}</h4>
-                  <p className="text-sm text-gray-600 font-medium mb-2">{job.company || "Unknown Company"} &bull; {job.location || "Unknown Location"}</p>
-                  <p className="text-sm text-gray-500 line-clamp-2">{job.snippet}</p>
-                  {logMsg && (
-                    <div className={`mt-3 text-sm font-medium flex items-center ${isDone ? 'text-green-600' : 'text-blue-600'}`}>
-                      {isProcessing && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
-                      {isDone && <CheckCircle2 className="w-4 h-4 mr-2" />}
-                      {logMsg}
+                <div className="flex items-center gap-4 flex-1">
+                  <input 
+                    type="checkbox" 
+                    checked={selectedJobs.includes(actualIdx)}
+                    onChange={() => {
+                      if (selectedJobs.includes(actualIdx)) {
+                        setSelectedJobs(selectedJobs.filter(id => id !== actualIdx));
+                      } else {
+                        setSelectedJobs([...selectedJobs, actualIdx]);
+                      }
+                    }}
+                    className="w-5 h-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500 cursor-pointer"
+                  />
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 text-lg">{job.title || "Unknown Title"}</h4>
+                    <p className="text-sm text-gray-600 font-medium mb-3">{job.company || "Unknown Company"} &bull; {job.location || "Unknown Location"} &bull; <span className="text-gray-500">{job.date || "Recent"}</span></p>
+                    
+                    <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 space-y-2 mb-2">
+                      <p className="text-sm text-gray-700">
+                        <strong className="text-gray-900">Description:</strong> <span className="text-gray-600 leading-relaxed">{job.snippet}</span>
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        <strong className="text-gray-900">URL:</strong> <a href={job.url} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline break-all">{job.url}</a>
+                      </p>
+                      <p className="text-xs text-purple-600 italic mt-2 font-medium">
+                        * Note: Phone number, exact website, and full email are automatically extracted by AI when you click "1-Click Apply".
+                      </p>
                     </div>
-                  )}
+
+                    {logMsg && (
+                      <div className={`mt-3 text-sm font-medium flex items-center ${isDone ? 'text-green-600' : 'text-blue-600'}`}>
+                        {isProcessing && <Loader2 className="w-4 h-4 animate-spin mr-2" />}
+                        {isDone && <CheckCircle2 className="w-4 h-4 mr-2" />}
+                        {logMsg}
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2 min-w-[140px]">
                   <button
@@ -396,7 +481,29 @@ export default function AutoScoutPage() {
                   >
                     {isProcessing ? "Working..." : isDone ? "Applied" : <><Play className="w-4 h-4 mr-1.5 fill-current" /> 1-Click Apply</>}
                   </button>
-                  <a href={job.url} target="_blank" rel="noreferrer" className="w-full text-center text-xs font-medium text-gray-500 hover:text-gray-800 p-2">
+                  <button
+                    onClick={() => {
+                      addJob({
+                        inputSource: "manual",
+                        originalInput: `Manually applied. URL: ${job.url}`,
+                        status: "sent",
+                        jobType: prefs.mode,
+                        jobTitle: job.title,
+                        company: job.company,
+                        recipientEmail: "manual@applied",
+                        alternateContact: job.url,
+                        jobUrl: job.url,
+                        generatedSubject: "Manually Applied",
+                        generatedBody: "I applied to this job manually outside the platform.",
+                      });
+                      setLog(actualIdx, "✅ Marked as Applied");
+                    }}
+                    disabled={isProcessing || isDone}
+                    className="w-full text-center text-xs font-bold text-gray-500 hover:text-green-600 p-2 disabled:opacity-50 transition"
+                  >
+                    Mark Manually Applied
+                  </button>
+                  <a href={job.url} target="_blank" rel="noreferrer" className="w-full text-center text-xs font-medium text-gray-400 hover:text-gray-800 p-1">
                     View Source
                   </a>
                 </div>

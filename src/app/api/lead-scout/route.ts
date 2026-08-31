@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         try {
           const model = genAI.getGenerativeModel({
             model: 'gemini-3.5-flash',
-            tools: [{ googleSearch: {} }]
+            tools: [{ googleSearch: {} } as any]
           });
 
           const prompt = `
@@ -96,8 +96,8 @@ export async function POST(req: NextRequest) {
         if ('error' in result.value) {
           errors[result.value.source] = result.value.error;
         } else {
-          if (result.value.source === 'gemini') {
-            allLeads = allLeads.concat(result.value.items as Lead[]);
+          if ((result.value.source as string) === 'gemini') {
+            allLeads = allLeads.concat(result.value.items as unknown as Lead[]);
           } else {
             const normalized = normalizeApifyResults(result.value.source as ApifySource, result.value.items);
             allLeads = allLeads.concat(normalized);

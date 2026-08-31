@@ -32,7 +32,7 @@ export type JobApplicationStatus = "draft" | "generated" | "sent" | "manually_ap
 
 export interface JobApplication {
   id: string;
-  inputSource: "text" | "file" | "scraper";
+  inputSource: "text" | "file" | "scraper" | "manual";
   originalInput: string;
   
   // Extracted by AI
@@ -65,6 +65,7 @@ export interface AutoScoutLead {
   recipientEmail?: string;
   phone?: string;
   applicationUrl?: string;
+  companyWebsite?: string;
   recruiterName?: string;
   matchScore?: number;
   status: 'new' | 'applied' | 'no_email' | 'failed';
