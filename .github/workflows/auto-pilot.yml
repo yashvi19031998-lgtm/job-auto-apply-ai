@@ -9,7 +9,9 @@ on:
 jobs:
   run-auto-pilot:
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write
+      
     env:
       # This flag tells our script to run once and exit, rather than loop forever
       GITHUB_ACTIONS: "true"
