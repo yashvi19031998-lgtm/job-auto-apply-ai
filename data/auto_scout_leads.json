@@ -8360,7 +8360,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-i-software-development-engineering-at-s-p-global-4460653420",
     "recruiterName": null,
     "firstSeenAt": 1788304382866,
-    "lastSeenAt": 1788347093640
+    "lastSeenAt": 1788366234764
   },
   {
     "id": "lead-1788304392742-888",
@@ -8462,7 +8462,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/dotnet-developer-at-prudent-corporate-advisory-services-ltd-4462111965",
     "recruiterName": null,
     "firstSeenAt": 1788346963465,
-    "lastSeenAt": 1788346963465
+    "lastSeenAt": 1788366224551
   },
   {
     "id": "lead-1788346972492-625",
@@ -8479,7 +8479,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/net-developer-at-solvios-4462168279",
     "recruiterName": null,
     "firstSeenAt": 1788346973554,
-    "lastSeenAt": 1788346973554
+    "lastSeenAt": 1788366234659
   },
   {
     "id": "lead-1788346982557-87",
@@ -8496,7 +8496,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/nodejs-developer-wfo-ahmedabad-at-solguruz%C2%AE-4460948111",
     "recruiterName": null,
     "firstSeenAt": 1788346983483,
-    "lastSeenAt": 1788346983483
+    "lastSeenAt": 1788366214184
   },
   {
     "id": "lead-1788346992487-473",
@@ -8530,7 +8530,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/java-software-engineer-at-artech-l-l-c-4460958091",
     "recruiterName": null,
     "firstSeenAt": 1788347005034,
-    "lastSeenAt": 1788347005034
+    "lastSeenAt": 1788366234638
   },
   {
     "id": "lead-1788347014053-429",
@@ -8547,7 +8547,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/flutter-developer-wfo-ahmedabad-at-solguruz%C2%AE-4460949254",
     "recruiterName": null,
     "firstSeenAt": 1788347016133,
-    "lastSeenAt": 1788347016133
+    "lastSeenAt": 1788366234789
   },
   {
     "id": "lead-1788347025150-955",
@@ -8564,7 +8564,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/integration-specialist-at-mantras2success-com-4459910428",
     "recruiterName": null,
     "firstSeenAt": 1788347026203,
-    "lastSeenAt": 1788347026203
+    "lastSeenAt": 1788366234713
   },
   {
     "id": "lead-1788347035222-716",
@@ -8581,7 +8581,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-node-js-developer-at-addvantage-digital-solutions-4460962968",
     "recruiterName": null,
     "firstSeenAt": 1788347036454,
-    "lastSeenAt": 1788347036454
+    "lastSeenAt": 1788366234678
   },
   {
     "id": "lead-1788347045471-307",
@@ -8598,7 +8598,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/java-software-engineer-at-tata-consultancy-services-4458372453",
     "recruiterName": null,
     "firstSeenAt": 1788347046694,
-    "lastSeenAt": 1788347046694
+    "lastSeenAt": 1788366234696
   },
   {
     "id": "lead-1788347055722-642",
@@ -8615,7 +8615,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/platform-architect-at-svector-4459938207",
     "recruiterName": null,
     "firstSeenAt": 1788347057299,
-    "lastSeenAt": 1788347057299
+    "lastSeenAt": 1788366214210
   },
   {
     "id": "lead-1788347066303-164",
@@ -8632,7 +8632,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-lead-at-octave-4460932972",
     "recruiterName": null,
     "firstSeenAt": 1788347067547,
-    "lastSeenAt": 1788347067547
+    "lastSeenAt": 1788366234730
   },
   {
     "id": "lead-1788347076551-468",
@@ -8679,7 +8679,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/reactjs-developer-wfo-ahmedabad-at-solguruz%C2%AE-4460953127",
     "recruiterName": null,
     "firstSeenAt": 1788347119323,
-    "lastSeenAt": 1788347119323
+    "lastSeenAt": 1788366234621
   },
   {
     "id": "lead-1788347128339-736",
@@ -8693,5 +8693,39 @@
     "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
     "firstSeenAt": 1788347137849,
     "lastSeenAt": 1788347137849
+  },
+  {
+    "id": "lead-1788366214223-355",
+    "source": "linkedin",
+    "jobTitle": "Senior Engineer Software",
+    "company": "Infineon Technologies",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-engineer-software-at-infineon-technologies-4462189795",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering experience\n- Ability to work as a Senior Engineer Software",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-engineer-software-at-infineon-technologies-4462189795",
+    "recruiterName": null,
+    "firstSeenAt": 1788366215532,
+    "lastSeenAt": 1788366215532
+  },
+  {
+    "id": "lead-1788366224557-983",
+    "source": "linkedin",
+    "jobTitle": "Reactjs Developer",
+    "company": "Thinkwik",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/reactjs-developer-at-thinkwik-4460295359",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with React.js development.\n- Location: Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/reactjs-developer-at-thinkwik-4460295359",
+    "recruiterName": null,
+    "firstSeenAt": 1788366225603,
+    "lastSeenAt": 1788366225603
   }
 ]
