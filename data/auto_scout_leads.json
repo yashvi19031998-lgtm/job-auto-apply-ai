@@ -7603,7 +7603,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/zuora-billing-senior-developer-at-sophos-4423533895",
     "recruiterName": null,
     "firstSeenAt": 1788251545718,
-    "lastSeenAt": 1788347045467
+    "lastSeenAt": 1788382452498
   },
   {
     "id": "lead-1788251554738-467",
@@ -8360,7 +8360,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-i-software-development-engineering-at-s-p-global-4460653420",
     "recruiterName": null,
     "firstSeenAt": 1788304382866,
-    "lastSeenAt": 1788366234764
+    "lastSeenAt": 1788382483629
   },
   {
     "id": "lead-1788304392742-888",
@@ -8462,7 +8462,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/dotnet-developer-at-prudent-corporate-advisory-services-ltd-4462111965",
     "recruiterName": null,
     "firstSeenAt": 1788346963465,
-    "lastSeenAt": 1788366224551
+    "lastSeenAt": 1788382421180
   },
   {
     "id": "lead-1788346972492-625",
@@ -8479,7 +8479,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/net-developer-at-solvios-4462168279",
     "recruiterName": null,
     "firstSeenAt": 1788346973554,
-    "lastSeenAt": 1788366234659
+    "lastSeenAt": 1788382431786
   },
   {
     "id": "lead-1788346982557-87",
@@ -8496,7 +8496,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/nodejs-developer-wfo-ahmedabad-at-solguruz%C2%AE-4460948111",
     "recruiterName": null,
     "firstSeenAt": 1788346983483,
-    "lastSeenAt": 1788366214184
+    "lastSeenAt": 1788382431804
   },
   {
     "id": "lead-1788346992487-473",
@@ -8513,7 +8513,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-rhc-india-4462142603",
     "recruiterName": null,
     "firstSeenAt": 1788346993680,
-    "lastSeenAt": 1788346993680
+    "lastSeenAt": 1788382431824
   },
   {
     "id": "lead-1788347002684-603",
@@ -8530,7 +8530,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/java-software-engineer-at-artech-l-l-c-4460958091",
     "recruiterName": null,
     "firstSeenAt": 1788347005034,
-    "lastSeenAt": 1788366234638
+    "lastSeenAt": 1788382431849
   },
   {
     "id": "lead-1788347014053-429",
@@ -8547,7 +8547,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/flutter-developer-wfo-ahmedabad-at-solguruz%C2%AE-4460949254",
     "recruiterName": null,
     "firstSeenAt": 1788347016133,
-    "lastSeenAt": 1788366234789
+    "lastSeenAt": 1788382442178
   },
   {
     "id": "lead-1788347025150-955",
@@ -8564,7 +8564,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/integration-specialist-at-mantras2success-com-4459910428",
     "recruiterName": null,
     "firstSeenAt": 1788347026203,
-    "lastSeenAt": 1788366234713
+    "lastSeenAt": 1788382452447
   },
   {
     "id": "lead-1788347035222-716",
@@ -8581,7 +8581,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-node-js-developer-at-addvantage-digital-solutions-4460962968",
     "recruiterName": null,
     "firstSeenAt": 1788347036454,
-    "lastSeenAt": 1788366234678
+    "lastSeenAt": 1788382452463
   },
   {
     "id": "lead-1788347045471-307",
@@ -8598,7 +8598,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/java-software-engineer-at-tata-consultancy-services-4458372453",
     "recruiterName": null,
     "firstSeenAt": 1788347046694,
-    "lastSeenAt": 1788366234696
+    "lastSeenAt": 1788382452515
   },
   {
     "id": "lead-1788347055722-642",
@@ -8632,7 +8632,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-lead-at-octave-4460932972",
     "recruiterName": null,
     "firstSeenAt": 1788347067547,
-    "lastSeenAt": 1788366234730
+    "lastSeenAt": 1788382473089
   },
   {
     "id": "lead-1788347076551-468",
@@ -8649,7 +8649,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/sr-solutions-architect-oms-at-e-l-f-beauty-4452675716",
     "recruiterName": null,
     "firstSeenAt": 1788347084618,
-    "lastSeenAt": 1788347084618
+    "lastSeenAt": 1788382483614
   },
   {
     "id": "lead-1788347093653-267",
@@ -8679,20 +8679,24 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/reactjs-developer-wfo-ahmedabad-at-solguruz%C2%AE-4460953127",
     "recruiterName": null,
     "firstSeenAt": 1788347119323,
-    "lastSeenAt": 1788366234621
+    "lastSeenAt": 1788382504082
   },
   {
-    "id": "lead-1788347128339-736",
+    "id": "lead-1788382504088-193",
     "source": "linkedin",
     "jobTitle": "AI/ML Engineer (WFO - Ahmedabad)",
     "company": "SolGuruz®",
     "location": "Ahmedabad, Gujarat, India",
     "jobUrl": "https://in.linkedin.com/jobs/view/ai-ml-engineer-wfo-ahmedabad-at-solguruz%C2%AE-4460937870",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Work from office (WFO) in Ahmedabad, Gujarat, India.\n- Experience as an AI/ML Engineer.",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788347137849,
-    "lastSeenAt": 1788347137849
+    "lastSeenAt": 1788382505395,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ai-ml-engineer-wfo-ahmedabad-at-solguruz%C2%AE-4460937870",
+    "recruiterName": null
   },
   {
     "id": "lead-1788366214223-355",
@@ -8709,7 +8713,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-engineer-software-at-infineon-technologies-4462189795",
     "recruiterName": null,
     "firstSeenAt": 1788366215532,
-    "lastSeenAt": 1788366215532
+    "lastSeenAt": 1788382421165
   },
   {
     "id": "lead-1788366224557-983",
@@ -8726,6 +8730,142 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/reactjs-developer-at-thinkwik-4460295359",
     "recruiterName": null,
     "firstSeenAt": 1788366225603,
-    "lastSeenAt": 1788366225603
+    "lastSeenAt": 1788382452481
+  },
+  {
+    "id": "lead-1788382421185-930",
+    "source": "linkedin",
+    "jobTitle": "Dotnet Developer",
+    "company": "Infigrity - Infinite. Integrity.",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/dotnet-developer-at-infigrity-infinite-integrity-4459977648",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- .NET development skills\n- Experience with software development life cycle",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/dotnet-developer-at-infigrity-infinite-integrity-4459977648",
+    "recruiterName": null,
+    "firstSeenAt": 1788382422769,
+    "lastSeenAt": 1788382422769
+  },
+  {
+    "id": "lead-1788382431858-36",
+    "source": "linkedin",
+    "jobTitle": "Senior Java Developer",
+    "company": "Concetto Labs : Microsoft Solutions Partner",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-java-developer-at-concetto-labs-microsoft-solutions-partner-4459945195",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Senior Java Developer role based in Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-java-developer-at-concetto-labs-microsoft-solutions-partner-4459945195",
+    "recruiterName": null,
+    "firstSeenAt": 1788382433161,
+    "lastSeenAt": 1788382433161
+  },
+  {
+    "id": "lead-1788382442186-117",
+    "source": "linkedin",
+    "jobTitle": "Senior Systems Engineer",
+    "company": "Oracle",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-systems-engineer-at-oracle-4459983205",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Senior Systems Engineer or in a similar role\n- Strong technical and analytical skills",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-systems-engineer-at-oracle-4459983205",
+    "recruiterName": null,
+    "firstSeenAt": 1788382443429,
+    "lastSeenAt": 1788382443429
+  },
+  {
+    "id": "lead-1788382452521-239",
+    "source": "linkedin",
+    "jobTitle": "Senior Salesforce Marketing Cloud Developer ID87211",
+    "company": "AgileEngine",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-salesforce-marketing-cloud-developer-id87211-at-agileengine-4460992741",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Salesforce Marketing Cloud Developer.\n- Proficiency in marketing automation and related development tasks.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-salesforce-marketing-cloud-developer-id87211-at-agileengine-4460992741",
+    "recruiterName": null,
+    "firstSeenAt": 1788382453747,
+    "lastSeenAt": 1788382453747
+  },
+  {
+    "id": "lead-1788382462754-524",
+    "source": "linkedin",
+    "jobTitle": "Salesforce Marketing Cloud Developer ID87207",
+    "company": "AgileEngine",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/salesforce-marketing-cloud-developer-id87207-at-agileengine-4460995529",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience as a Salesforce Marketing Cloud Developer\n• Ability to work in Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/salesforce-marketing-cloud-developer-id87207-at-agileengine-4460995529",
+    "recruiterName": null,
+    "firstSeenAt": 1788382464072,
+    "lastSeenAt": 1788382464072
+  },
+  {
+    "id": "lead-1788382473096-748",
+    "source": "linkedin",
+    "jobTitle": "EPM Consultant (ARCS)-Contractor role",
+    "company": "Oracle",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/epm-consultant-arcs-contractor-role-at-oracle-4440481613",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as an EPM Consultant specializing in ARCS (Account Reconciliation Cloud Service).\n- Contractor role.\n- Location: Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/epm-consultant-arcs-contractor-role-at-oracle-4440481613",
+    "recruiterName": null,
+    "firstSeenAt": 1788382474596,
+    "lastSeenAt": 1788382474596
+  },
+  {
+    "id": "lead-1788382483638-861",
+    "source": "linkedin",
+    "jobTitle": "Website &amp; Server Support Engineer",
+    "company": "Rivulet IQ",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/website-server-support-engineer-at-rivulet-iq-4459979133",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Website support\n- Server support",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/website-server-support-engineer-at-rivulet-iq-4459979133",
+    "recruiterName": null,
+    "firstSeenAt": 1788382484846,
+    "lastSeenAt": 1788382484846
+  },
+  {
+    "id": "lead-1788382493855-620",
+    "source": "linkedin",
+    "jobTitle": "Senior Software Engineer Market Connectivity",
+    "company": "Trading Technologies",
+    "location": "Greater Ahmedabad Area",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-market-connectivity-at-trading-technologies-4425824381",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in market connectivity software development.\n- Strong software engineering skills.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-market-connectivity-at-trading-technologies-4425824381",
+    "recruiterName": null,
+    "firstSeenAt": 1788382495065,
+    "lastSeenAt": 1788382495065
   }
 ]
