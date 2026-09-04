@@ -9308,7 +9308,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/2-to-3-years-drupal-developer-skillset-core-php-drupal-and-wordpress-at-etech-global-services-4463310928",
     "recruiterName": null,
     "firstSeenAt": 1788519671350,
-    "lastSeenAt": 1788538157725
+    "lastSeenAt": 1788554345958
   },
   {
     "id": "lead-1788519680377-180",
@@ -9413,17 +9413,21 @@
     "lastSeenAt": 1788538446469
   },
   {
-    "id": "lead-1788538137562-187",
+    "id": "lead-1788554319346-807",
     "source": "linkedin",
     "jobTitle": "Full Stack Developer(React+ Node)",
     "company": "KanhaSoft",
     "location": "Ahmedabad, Gujarat, India",
     "jobUrl": "https://in.linkedin.com/jobs/view/full-stack-developer-react%2B-node-at-kanhasoft-4461173507",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with React and Node.js\n- Ability to work as a Full Stack Developer",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788538148705,
-    "lastSeenAt": 1788538148705
+    "lastSeenAt": 1788554336920,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-developer-react%2B-node-at-kanhasoft-4461173507",
+    "recruiterName": null
   },
   {
     "id": "lead-1788538157730-232",
@@ -9440,7 +9444,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-product-engineer-at-gstride-ai-4461995526",
     "recruiterName": null,
     "firstSeenAt": 1788538211956,
-    "lastSeenAt": 1788538211956
+    "lastSeenAt": 1788554345940
   },
   {
     "id": "lead-1788538221003-569",
@@ -9513,7 +9517,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ui-ux-designer-front-end-developer-at-cricbattle-inc-fantasy-sports-platform-4461988252",
     "recruiterName": null,
     "firstSeenAt": 1788538427913,
-    "lastSeenAt": 1788538427913
+    "lastSeenAt": 1788554345980
   },
   {
     "id": "lead-1788538436954-905",
@@ -9540,5 +9544,22 @@
     "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
     "firstSeenAt": 1788538475528,
     "lastSeenAt": 1788538475528
+  },
+  {
+    "id": "lead-1788554345987-805",
+    "source": "linkedin",
+    "jobTitle": "Embedded Software Engineer",
+    "company": "Kody Technolab Limited",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/embedded-software-engineer-at-kody-technolab-limited-4461162838",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience in embedded software engineering.\n• Ability to work on complete details upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/embedded-software-engineer-at-kody-technolab-limited-4461162838",
+    "recruiterName": null,
+    "firstSeenAt": 1788554365772,
+    "lastSeenAt": 1788554365772
   }
 ]
