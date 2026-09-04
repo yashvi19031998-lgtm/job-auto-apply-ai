@@ -9087,7 +9087,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-software-engineer-at-thomson-reuters-4462779910",
     "recruiterName": null,
     "firstSeenAt": 1788433246468,
-    "lastSeenAt": 1788494748704
+    "lastSeenAt": 1788497817042
   },
   {
     "id": "lead-1788433255565-227",
@@ -9172,7 +9172,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/technical-lead-mern-stack-at-the-elefant-4461666253",
     "recruiterName": null,
     "firstSeenAt": 1788452038245,
-    "lastSeenAt": 1788494748714
+    "lastSeenAt": 1788497817026
   },
   {
     "id": "lead-1788452047319-548",
@@ -9258,5 +9258,39 @@
     "recruiterName": null,
     "firstSeenAt": 1788494749980,
     "lastSeenAt": 1788494749980
+  },
+  {
+    "id": "lead-1788497817048-244",
+    "source": "linkedin",
+    "jobTitle": "Laravel Developer",
+    "company": "Krishna Infotechs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/laravel-developer-at-krishna-infotechs-4463184563",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Laravel development",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/laravel-developer-at-krishna-infotechs-4463184563",
+    "recruiterName": null,
+    "firstSeenAt": 1788497818254,
+    "lastSeenAt": 1788497818254
+  },
+  {
+    "id": "lead-1788497827259-370",
+    "source": "linkedin",
+    "jobTitle": "AI Developer",
+    "company": "Krishna Infotechs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/ai-developer-at-krishna-infotechs-4463199347",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Complete details will be analyzed upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ai-developer-at-krishna-infotechs-4463199347",
+    "recruiterName": null,
+    "firstSeenAt": 1788497828327,
+    "lastSeenAt": 1788497828327
   }
 ]
