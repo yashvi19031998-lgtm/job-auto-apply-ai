@@ -8275,7 +8275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-platform-software-engineer-at-oracle-4459538739",
     "recruiterName": null,
     "firstSeenAt": 1788286773782,
-    "lastSeenAt": 1788494748734
+    "lastSeenAt": 1788519730776
   },
   {
     "id": "lead-1788286782806-735",
@@ -9172,7 +9172,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/technical-lead-mern-stack-at-the-elefant-4461666253",
     "recruiterName": null,
     "firstSeenAt": 1788452038245,
-    "lastSeenAt": 1788497817026
+    "lastSeenAt": 1788519659231
   },
   {
     "id": "lead-1788452047319-548",
@@ -9223,7 +9223,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/sap-abap-developer-at-welspun-world-4461647793",
     "recruiterName": null,
     "firstSeenAt": 1788452074008,
-    "lastSeenAt": 1788494759010
+    "lastSeenAt": 1788519730791
   },
   {
     "id": "lead-1788452083073-773",
@@ -9274,7 +9274,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/laravel-developer-at-krishna-infotechs-4463184563",
     "recruiterName": null,
     "firstSeenAt": 1788497818254,
-    "lastSeenAt": 1788497818254
+    "lastSeenAt": 1788519701034
   },
   {
     "id": "lead-1788497827259-370",
@@ -9291,6 +9291,125 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-developer-at-krishna-infotechs-4463199347",
     "recruiterName": null,
     "firstSeenAt": 1788497828327,
-    "lastSeenAt": 1788497828327
+    "lastSeenAt": 1788519740688
+  },
+  {
+    "id": "lead-1788519659235-288",
+    "source": "linkedin",
+    "jobTitle": "2 to 3 Years Drupal Developer (Skillset : Core php, Drupal and Wordpress)",
+    "company": "Etech Global Services",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/2-to-3-years-drupal-developer-skillset-core-php-drupal-and-wordpress-at-etech-global-services-4463310928",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Skillset: Core PHP, Drupal, and WordPress\n- Experience: 2 to 3 years",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/2-to-3-years-drupal-developer-skillset-core-php-drupal-and-wordpress-at-etech-global-services-4463310928",
+    "recruiterName": null,
+    "firstSeenAt": 1788519671350,
+    "lastSeenAt": 1788519671350
+  },
+  {
+    "id": "lead-1788519680377-180",
+    "source": "linkedin",
+    "jobTitle": "Lead Full Stack Engineer (.NET)",
+    "company": "Gantner India",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/lead-full-stack-engineer-net-at-gantner-india-4461138846",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Lead Full Stack Engineer role focusing on .NET\n- Location: Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/lead-full-stack-engineer-net-at-gantner-india-4461138846",
+    "recruiterName": null,
+    "firstSeenAt": 1788519692018,
+    "lastSeenAt": 1788519692018
+  },
+  {
+    "id": "lead-1788519701041-885",
+    "source": "linkedin",
+    "jobTitle": "Integration Specialist, AHD GUJ",
+    "company": "Trelleborg Sealing Solutions",
+    "location": "Greater Ahmedabad Area",
+    "jobUrl": "https://in.linkedin.com/jobs/view/integration-specialist-ahd-guj-at-trelleborg-sealing-solutions-4452939167",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Location: Greater Ahmedabad Area\n• Directly scraped from LinkedIn",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/integration-specialist-ahd-guj-at-trelleborg-sealing-solutions-4452939167",
+    "recruiterName": null,
+    "firstSeenAt": 1788519711692,
+    "lastSeenAt": 1788519711692
+  },
+  {
+    "id": "lead-1788519720697-30",
+    "source": "linkedin",
+    "jobTitle": "## Artificial Intelligence Engineer ## ||| Ahemdabad || Indore ||",
+    "company": "AppZime Technologies",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/%23%23-artificial-intelligence-engineer-%23%23-ahemdabad-indore-at-appzime-technologies-4461146063",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Artificial Intelligence and related technologies.\n- Location preference: Ahmedabad or Indore.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/%23%23-artificial-intelligence-engineer-%23%23-ahemdabad-indore-at-appzime-technologies-4461146063",
+    "recruiterName": null,
+    "firstSeenAt": 1788519721761,
+    "lastSeenAt": 1788519721761
+  },
+  {
+    "id": "lead-1788519730798-673",
+    "source": "linkedin",
+    "jobTitle": "Solutions Engineer - Bugsnag",
+    "company": "SmartBear",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/solutions-engineer-bugsnag-at-smartbear-4452913772",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Solutions Engineer role focusing on Bugsnag.\n- Located in Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/solutions-engineer-bugsnag-at-smartbear-4452913772",
+    "recruiterName": null,
+    "firstSeenAt": 1788519731674,
+    "lastSeenAt": 1788519731674
+  },
+  {
+    "id": "lead-1788519740694-46",
+    "source": "linkedin",
+    "jobTitle": "Senior Python Data Scraping Engineer (Freelance)",
+    "company": "Mindrift",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-python-data-scraping-engineer-freelance-at-mindrift-4461117904",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Expertise in Python\n- Experience in data scraping and extraction\n- Ability to work on a freelance basis",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-python-data-scraping-engineer-freelance-at-mindrift-4461117904",
+    "recruiterName": null,
+    "firstSeenAt": 1788519751486,
+    "lastSeenAt": 1788519751486
+  },
+  {
+    "id": "lead-1788519760493-632",
+    "source": "linkedin",
+    "jobTitle": "Application Architect – Agentic AI &amp; Python",
+    "company": "UST",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/application-architect-%E2%80%93-agentic-ai-python-at-ust-4441591149",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Expertise in Python\n- Experience with Agentic AI\n- Strong background in application architecture",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/application-architect-%E2%80%93-agentic-ai-python-at-ust-4441591149",
+    "recruiterName": null,
+    "firstSeenAt": 1788519761515,
+    "lastSeenAt": 1788519761515
   }
 ]
