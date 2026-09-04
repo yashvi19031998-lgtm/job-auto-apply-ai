@@ -8275,7 +8275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-platform-software-engineer-at-oracle-4459538739",
     "recruiterName": null,
     "firstSeenAt": 1788286773782,
-    "lastSeenAt": 1788477035699
+    "lastSeenAt": 1788494748734
   },
   {
     "id": "lead-1788286782806-735",
@@ -8598,7 +8598,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/java-software-engineer-at-tata-consultancy-services-4458372453",
     "recruiterName": null,
     "firstSeenAt": 1788347046694,
-    "lastSeenAt": 1788477035721
+    "lastSeenAt": 1788494758996
   },
   {
     "id": "lead-1788347055722-642",
@@ -8934,7 +8934,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/net-core-developer-at-tigi-hr-4461397022",
     "recruiterName": null,
     "firstSeenAt": 1788408053506,
-    "lastSeenAt": 1788477035650
+    "lastSeenAt": 1788494748694
   },
   {
     "id": "lead-1788408062669-850",
@@ -9087,7 +9087,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-software-engineer-at-thomson-reuters-4462779910",
     "recruiterName": null,
     "firstSeenAt": 1788433246468,
-    "lastSeenAt": 1788477035662
+    "lastSeenAt": 1788494748704
   },
   {
     "id": "lead-1788433255565-227",
@@ -9138,7 +9138,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-i-product-implementation-labware-lims-at-ust-4450142996",
     "recruiterName": null,
     "firstSeenAt": 1788433276798,
-    "lastSeenAt": 1788477035749
+    "lastSeenAt": 1788494759023
   },
   {
     "id": "lead-1788433285820-491",
@@ -9172,7 +9172,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/technical-lead-mern-stack-at-the-elefant-4461666253",
     "recruiterName": null,
     "firstSeenAt": 1788452038245,
-    "lastSeenAt": 1788477035676
+    "lastSeenAt": 1788494748714
   },
   {
     "id": "lead-1788452047319-548",
@@ -9223,7 +9223,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/sap-abap-developer-at-welspun-world-4461647793",
     "recruiterName": null,
     "firstSeenAt": 1788452074008,
-    "lastSeenAt": 1788477035736
+    "lastSeenAt": 1788494759010
   },
   {
     "id": "lead-1788452083073-773",
@@ -9240,6 +9240,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-technical-lead-solution-architect-%E2%80%93-dynamics-365-ce-power-platform-jis146997-at-mm-management-consultant-4462825300",
     "recruiterName": null,
     "firstSeenAt": 1788452085459,
-    "lastSeenAt": 1788477035765
+    "lastSeenAt": 1788494759040
+  },
+  {
+    "id": "lead-1788494748738-619",
+    "source": "linkedin",
+    "jobTitle": "Senior Backend Engineer ID84744",
+    "company": "AgileEngine",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-backend-engineer-id84744-at-agileengine-4463163427",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Senior Backend Engineer role at AgileEngine.\n- Location: Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-backend-engineer-id84744-at-agileengine-4463163427",
+    "recruiterName": null,
+    "firstSeenAt": 1788494749980,
+    "lastSeenAt": 1788494749980
   }
 ]
