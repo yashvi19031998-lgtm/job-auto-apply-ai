@@ -50,14 +50,11 @@ export async function POST(req: NextRequest) {
       .map(w => `ID: ${w.id} | Name: ${w.name} | URL: ${w.url} | Description: ${w.description}`)
       .join("\n");
 
-    const modeInstructions = jobType === "freelance" || jobType === "contract" || jobType === "part-time"
-      ? `You are an expert freelance consultant pitching your services.
-Generate a tailored freelance proposal/pitch email. Do NOT ask for a full-time job.
-3. Explicitly state that you are a freelancer/contractor ready to deliver results immediately on a contract/part-time basis.
-4. MUST mention that you work at an affordable price starting at only 5000 Rs.`
-      : `You are an expert career coach and professional application writer.
-Generate a tailored job application email. Do NOT hallucinate skills not in the resume.
-3. Explicitly mention that I am an "Immediate Joiner" and ready to start right away.`;
+    const modeInstructions = `You are an expert career coach, professional application writer, and consultant.
+Generate a tailored job application or proposal email. Do NOT hallucinate skills not in your resume.
+3. Carefully analyze the Job Title and Requirements. 
+4. IF the job is explicitly a freelance, contract, or part-time role: You MUST state that you are a freelancer/contractor, your price is 450/- Rs. per hour, and you deliver fast work.
+5. IF the job is a full-time or permanent role: DO NOT mention freelancing, contract work, or hourly rates. Explicitly mention that you are an "Immediate Joiner" and ready to start right away.`;
 
     const prompt = `
 ${modeInstructions}
@@ -94,7 +91,8 @@ Instructions:
 {
   "subject": "String",
   "body": "String",
-  "selectedWebsiteId": "String (the ID of the primary website, or null)"
+  "selectedWebsiteId": "String (the ID of the primary website, or null)",
+  "matchScore": "Number (0 to 100, representing the percentage match between the job requirements and the resume skills)"
 }
 `;
 

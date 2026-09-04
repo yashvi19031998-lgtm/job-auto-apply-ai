@@ -97,158 +97,60 @@ export async function POST(req: Request) {
     }
 
     // ==========================================
-    // NAUKRI IMPLEMENTATION
-    // ==========================================
-    if (searchSource === "naukri") {
-      try {
-        // Direct fetching Naukri usually results in a 403 Forbidden or requires JS execution (Datadome/Cloudflare)
-        // Implementing a lightweight fetch to check if it's reachable from the cloud IP.
-        const url = `https://www.naukri.com/${keywords.replace(/\s+/g, '-')}-jobs-in-${location ? location.replace(/\s+/g, '-') : 'anywhere'}`;
-        const response = await fetch(url, {
-          headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-            'Accept': 'text/html,application/xhtml+xml,application/xml'
-          }
-        });
-        
-        if (!response.ok) {
-           return NextResponse.json({ 
-             error: `Naukri blocked the automated request (HTTP ${response.status}). Naukri requires browser execution or residential proxies which are unavailable in this serverless environment. Please use LinkedIn.` 
-           }, { status: 403 });
-        }
-        
-        const html = await response.text();
-        // Naukri HTML is mostly SPA (Single Page Application). We extract from the preloaded state if available.
-        const jobs: any[] = [];
-        const stateMatch = html.match(/window\.PRELOADED_STATE\s*=\s*(\{.*?\});/);
-        
-        if (stateMatch && stateMatch[1]) {
-           const state = JSON.parse(stateMatch[1]);
-           const jobList = state?.searchData?.jobList || [];
-           
-           for (const job of jobList) {
-             if (jobs.length >= 10) break;
-             jobs.push({
-                title: job.title || "Unknown Title",
-                company: job.companyName || "Unknown Company",
-                location: job.placeholders?.find((p: any) => p.type === 'location')?.label || location,
-                url: job.jdURL || `https://www.naukri.com/job-listings-${job.jobId}`,
-                snippet: job.jobDescription || "Fetched from Naukri"
-             });
-           }
-        }
-        
-        if (jobs.length > 0) return NextResponse.json({ jobs });
-        return NextResponse.json({ error: 'No jobs found on Naukri (or the page structure blocked extraction). Please use LinkedIn.' }, { status: 404 });
-      } catch (e: any) {
-        return NextResponse.json({ error: `Naukri Scrape Failed: ${e.message}` }, { status: 500 });
-      }
-    }
-
-    // ==========================================
-    // INDEED IMPLEMENTATION
-    // ==========================================
-    if (searchSource === "indeed") {
-       // Indeed uses aggressive Cloudflare protection which blocks standard fetches from AWS/Vercel with 403
-       return NextResponse.json({ 
-         error: `Indeed actively blocks automated cloud requests via Cloudflare. A premium proxy or local browser instance is required to bypass this, which is unsupported in this Vercel environment. Please use LinkedIn.` 
-       }, { status: 403 });
-    }
-
-    // ==========================================
-    // WEB & CUSTOM IMPLEMENTATION (DuckDuckGo HTML Scraping)
+    // NAUKRI, INDEED, ALIGNERR, CUTSHORT, CUSTOM & WEB
+    // using googlethis to bypass Cloudflare/Datadome
     // ==========================================
     try {
-      const ddgUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+      // @ts-ignore
+      const google = require('googlethis');
       
-      const response = await fetch(ddgUrl, {
-        signal: controller.signal,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-          'Accept-Language': 'en-US,en;q=0.5'
+      const searchOptions = {
+        page: 0, 
+        safe: false, 
+        parse_ads: false, 
+        additional_params: { 
+          hl: 'en' 
         }
-      });
-      clearTimeout(timeoutId);
+      };
 
-      if (!response.ok) {
-        return NextResponse.json({ error: `Web Search blocked by provider (HTTP ${response.status}). Rate Limit exceeded.` }, { status: 429 });
-      }
-
-      const html = await response.text();
+      const googleResponse = await google.search(query, searchOptions);
       
-      // If DDG threw an anomaly or captcha, the HTML won't have standard results
-      if (html.includes("If this error persists, please let us know")) {
-        return NextResponse.json({ error: 'Search engine anomaly detected. Your server IP is temporarily rate-limited. Please use LinkedIn.' }, { status: 429 });
-      }
-
       const jobs: any[] = [];
-      const resultRegex = /<a class="result__url" href="([^"]+)">([\s\S]*?)<\/a>[\s\S]*?<a class="result__snippet[^>]*>([\s\S]*?)<\/a>/g;
-      let match;
+      const results = googleResponse.results || [];
       
-      while ((match = resultRegex.exec(html)) !== null && jobs.length < 10) {
-        let rawUrl = match[1];
-        let title = match[2].replace(/<[^>]*>?/gm, '').trim();
-        const snippet = match[3].replace(/<[^>]*>?/gm, '').trim();
+      for (const result of results) {
+        if (jobs.length >= 15) break;
         
-        // 1. Clean the DuckDuckGo tracking URL
-        let cleanUrl = rawUrl;
-        if (rawUrl.includes('uddg=')) {
-           try {
-             const uddgMatch = rawUrl.match(/uddg=([^&]+)/);
-             if (uddgMatch && uddgMatch[1]) {
-                cleanUrl = decodeURIComponent(uddgMatch[1]);
-             }
-           } catch(e) {}
-        } else if (rawUrl.startsWith('//')) {
-           cleanUrl = 'https:' + rawUrl;
-        }
-
-        // Validate HTTP/HTTPS
-        if (!cleanUrl.startsWith('http://') && !cleanUrl.startsWith('https://')) {
-           continue; // Reject malformed URLs
-        }
-
-        // Prevent exact duplicates
-        if (jobs.some(j => j.url === cleanUrl)) {
-           continue;
-        }
-        
-        // 2. Improve Title and Company Parsing
-        let company = "";
-        let finalTitle = title;
+        let title = result.title;
+        let company = "Unknown Company";
         
         if (title.includes(' - ')) {
            const parts = title.split(' - ');
-           finalTitle = parts[0].trim();
+           title = parts[0].trim();
            company = parts.slice(1).join(' - ').trim();
         } else if (title.includes(' | ')) {
            const parts = title.split(' | ');
-           finalTitle = parts[0].trim();
+           title = parts[0].trim();
            company = parts.slice(1).join(' | ').trim();
         }
-        
-        if (finalTitle && cleanUrl) {
-          jobs.push({
-            title: finalTitle,
-            company: company,
-            location: location || "",
-            url: cleanUrl,
-            snippet: snippet,
-          });
-        }
+
+        jobs.push({
+          title: title,
+          company: company,
+          location: location || "",
+          url: result.url,
+          snippet: result.description || "Found via Google Search",
+        });
       }
 
       if (jobs.length > 0) {
         return NextResponse.json({ jobs });
       } else {
-        return NextResponse.json({ error: 'No jobs found matching your web search criteria.' }, { status: 404 });
+        return NextResponse.json({ error: `No jobs found matching your criteria on ${searchSource}.` }, { status: 404 });
       }
 
     } catch (e: any) {
-      return NextResponse.json({ error: `Web Search Failed: ${e.message}` }, { status: 500 });
+      return NextResponse.json({ error: `${searchSource} Scrape Failed (Google Blocked): ${e.message}` }, { status: 500 });
     }
 
   } catch (error: any) {

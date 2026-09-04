@@ -45,7 +45,7 @@ jobs:
         run: |
           npm run dev &
           echo "Waiting for Next.js to start on port 3000..."
-          npx wait-on http://localhost:3000 --timeout 60000
+          npx -y wait-on http://localhost:3000 --timeout 120000
           echo "Next.js is ready!"
           
       - name: Run Auto-Pilot Worker

@@ -162,7 +162,19 @@ async function runScan() {
           if (!genRes.ok) throw new Error(`Cover Letter Generation Failed: ${await genRes.text()}`);
           const genData = await genRes.json();
 
-          console.log(`  ✉ Sending Application via SMTP...`);
+          if (genData.matchScore !== undefined && genData.matchScore < 30) {
+            console.log(`  ⚠ MATCH SCORE TOO LOW (${genData.matchScore}%). Skipping email but saving as ignored.`);
+            leadObj.status = 'ignored';
+            leadObj.errorReason = `Match Score: ${genData.matchScore}%`;
+            // Save it and skip the email sending logic
+            const saveRes = await fetch(`${BASE_URL}/api/auto-scout/leads`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(leadObj) });
+            if (!saveRes.ok) console.error("Save failed:", await saveRes.text());
+            stats.saved++;
+            await sleep(9000);
+            continue;
+          }
+
+          console.log(`  ✉ Match Score: ${genData.matchScore !== undefined ? genData.matchScore + '%' : 'N/A'}. Sending Application via SMTP...`);
 
           // 2. Send Application via SMTP
           const sendPayload = {
@@ -184,6 +196,10 @@ async function runScan() {
         } // close valid email block
         }
       } catch (jobErr) {
+        if (jobErr.message === 'IGNORE_LEAD') {
+          await sleep(9000);
+          continue;
+        }
         console.error(`  ❌ FAILED processing job:`, jobErr.message);
         leadObj.status = 'failed';
         leadObj.errorReason = jobErr.message;

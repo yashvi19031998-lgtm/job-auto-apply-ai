@@ -13,7 +13,7 @@ export default function AutoScoutDashboard() {
   
   const [selectedLead, setSelectedLead] = useState<AutoScoutLead | null>(null);
 
-  const [filterStatus, setFilterStatus] = useState<"all" | "new" | "applied" | "no_email" | "failed">("all");
+  const [filterStatus, setFilterStatus] = useState<"all" | "new" | "applied" | "no_email" | "failed" | "ignored">("all");
   const [filterSource, setFilterSource] = useState<"all" | "linkedin" | "web" | "custom">("all");
 
   const [autoPilotStatus, setAutoPilotStatus] = useState<any>(null);
@@ -115,6 +115,7 @@ export default function AutoScoutDashboard() {
           <option value="applied">Applied (Emailed)</option>
           <option value="no_email">No Email Found</option>
           <option value="failed">Failed</option>
+          <option value="ignored">Ignored (Low Match)</option>
         </select>
         
         <select 
@@ -171,6 +172,7 @@ export default function AutoScoutDashboard() {
                     {lead.status === 'new' && <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span>}
                     {lead.status === 'no_email' && <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">No Email</span>}
                     {lead.status === 'failed' && <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"><AlertCircle size={12} className="mr-1"/> Failed</span>}
+                    {lead.status === 'ignored' && <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800"><AlertCircle size={12} className="mr-1"/> Ignored</span>}
                     {lead.errorReason && <p className="text-[10px] text-red-500 mt-1 max-w-[150px] truncate">{lead.errorReason}</p>}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -181,6 +183,16 @@ export default function AutoScoutDashboard() {
                       <button onClick={() => setSelectedLead(lead)} className="text-gray-400 hover:text-blue-600 transition-colors" title="View Full Description">
                         <Eye size={18} />
                       </button>
+                      {lead.recipientEmail && (
+                        <a href={`mailto:${lead.recipientEmail}`} className="text-gray-400 hover:text-green-600 transition-colors" title="Send Email">
+                          <Mail size={18} />
+                        </a>
+                      )}
+                      {lead.phone && (
+                        <a href={`https://wa.me/${lead.phone.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors" title="Send WhatsApp">
+                          <Phone size={18} />
+                        </a>
+                      )}
                       {lead.jobUrl && (
                         <a href={lead.jobUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors" title="Open Job URL">
                           <ExternalLink size={18} />

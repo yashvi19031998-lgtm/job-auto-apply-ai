@@ -68,7 +68,7 @@ export interface AutoScoutLead {
   companyWebsite?: string;
   recruiterName?: string;
   matchScore?: number;
-  status: 'new' | 'applied' | 'no_email' | 'failed';
+  status: 'new' | 'applied' | 'no_email' | 'failed' | 'ignored';
   firstSeenAt: number;
   lastSeenAt: number;
   appliedAt?: number;
