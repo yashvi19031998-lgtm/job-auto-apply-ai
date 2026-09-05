@@ -9597,7 +9597,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-brazil-4462320859",
     "recruiterName": null,
     "firstSeenAt": 1788580782548,
-    "lastSeenAt": 1788628550078
+    "lastSeenAt": 1788639125339
   },
   {
     "id": "lead-1788580832001-923",
@@ -9648,6 +9648,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/python-developer-at-park-universal-private-limited-4461454721",
     "recruiterName": null,
     "firstSeenAt": 1788603796250,
-    "lastSeenAt": 1788628550061
+    "lastSeenAt": 1788639125298
+  },
+  {
+    "id": "lead-1788639125346-502",
+    "source": "linkedin",
+    "jobTitle": "LLM Developer (Gen AI - Python) Internship",
+    "company": "Arihant AI",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/llm-developer-gen-ai-python-internship-at-arihant-ai-4462647010",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Skills: Python, Generative AI, Large Language Models (LLMs)\n- Location: Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/llm-developer-gen-ai-python-internship-at-arihant-ai-4462647010",
+    "recruiterName": null,
+    "firstSeenAt": 1788639126613,
+    "lastSeenAt": 1788639126613
   }
 ]
