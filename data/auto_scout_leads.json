@@ -7671,7 +7671,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/in-senior-associate-sap-fico-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4461519486",
     "recruiterName": null,
     "firstSeenAt": 1788251585739,
-    "lastSeenAt": 1788538446484
+    "lastSeenAt": 1788580821834
   },
   {
     "id": "lead-1788251594756-979",
@@ -8266,7 +8266,7 @@
     "jobTitle": "Senior Platform Software Engineer",
     "company": "Oracle",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/senior-platform-software-engineer-at-oracle-4460735683",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-platform-software-engineer-at-oracle-4461186747",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Location: Ahmedabad, Gujarat, India\n- Experience and skills to be analyzed upon import.",
     "status": "no_email",
     "errorReason": "",
@@ -8275,7 +8275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-platform-software-engineer-at-oracle-4459538739",
     "recruiterName": null,
     "firstSeenAt": 1788286773782,
-    "lastSeenAt": 1788538231320
+    "lastSeenAt": 1788580770800
   },
   {
     "id": "lead-1788286782806-735",
@@ -9308,7 +9308,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/2-to-3-years-drupal-developer-skillset-core-php-drupal-and-wordpress-at-etech-global-services-4463310928",
     "recruiterName": null,
     "firstSeenAt": 1788519671350,
-    "lastSeenAt": 1788562611160
+    "lastSeenAt": 1788580770714
   },
   {
     "id": "lead-1788519680377-180",
@@ -9342,7 +9342,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/integration-specialist-ahd-guj-at-trelleborg-sealing-solutions-4452939167",
     "recruiterName": null,
     "firstSeenAt": 1788519711692,
-    "lastSeenAt": 1788538220993
+    "lastSeenAt": 1788580770773
   },
   {
     "id": "lead-1788519720697-30",
@@ -9376,7 +9376,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/solutions-engineer-bugsnag-at-smartbear-4452913772",
     "recruiterName": null,
     "firstSeenAt": 1788519731674,
-    "lastSeenAt": 1788538242037
+    "lastSeenAt": 1788580801645
   },
   {
     "id": "lead-1788519740694-46",
@@ -9393,7 +9393,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-python-data-scraping-engineer-freelance-at-mindrift-4461117904",
     "recruiterName": null,
     "firstSeenAt": 1788519751486,
-    "lastSeenAt": 1788538436945
+    "lastSeenAt": 1788580811729
   },
   {
     "id": "lead-1788519760493-632",
@@ -9410,7 +9410,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/application-architect-%E2%80%93-agentic-ai-python-at-ust-4441591149",
     "recruiterName": null,
     "firstSeenAt": 1788519761515,
-    "lastSeenAt": 1788538446469
+    "lastSeenAt": 1788580821819
   },
   {
     "id": "lead-1788554319346-807",
@@ -9423,7 +9423,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788538148705,
-    "lastSeenAt": 1788562611129,
+    "lastSeenAt": 1788580770690,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-developer-react%2B-node-at-kanhasoft-4461173507",
@@ -9444,33 +9444,41 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-product-engineer-at-gstride-ai-4461995526",
     "recruiterName": null,
     "firstSeenAt": 1788538211956,
-    "lastSeenAt": 1788562611144
+    "lastSeenAt": 1788580770751
   },
   {
-    "id": "lead-1788538221003-569",
+    "id": "lead-1788580770804-198",
     "source": "linkedin",
     "jobTitle": "IN_Manager_SAP CPI_Enterprise Apps SAP_Advisory_Ahmedabad",
     "company": "PwC India",
     "location": "Ahmedabad, Gujarat, India",
     "jobUrl": "https://in.linkedin.com/jobs/view/in-manager-sap-cpi-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4463374319",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Expertise in SAP CPI\n- Experience in Enterprise Apps SAP Advisory\n- Manager level experience",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788538222303,
-    "lastSeenAt": 1788538222303
+    "lastSeenAt": 1788580772299,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/in-manager-sap-cpi-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4463374319",
+    "recruiterName": null
   },
   {
-    "id": "lead-1788538231325-208",
+    "id": "lead-1788580791554-270",
     "source": "linkedin",
     "jobTitle": "Sr. Technical Architect",
     "company": "Conga",
     "location": "Greater Ahmedabad Area",
     "jobUrl": "https://in.linkedin.com/jobs/view/sr-technical-architect-at-conga-4434674363",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Role: Sr. Technical Architect\n- Location: Greater Ahmedabad Area",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788538233020,
-    "lastSeenAt": 1788538233020
+    "lastSeenAt": 1788580792629,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/sr-technical-architect-at-conga-4434674363",
+    "recruiterName": null
   },
   {
     "id": "lead-1788538242047-308",
@@ -9487,20 +9495,24 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/servicenow-automation-developer-india-at-synoptek-4463372529",
     "recruiterName": null,
     "firstSeenAt": 1788538319287,
-    "lastSeenAt": 1788538319287
+    "lastSeenAt": 1788580801663
   },
   {
-    "id": "lead-1788538328293-976",
+    "id": "lead-1788580801672-940",
     "source": "linkedin",
     "jobTitle": "Senior Java Developer ID87212",
     "company": "AgileEngine",
     "location": "Ahmedabad, Gujarat, India",
     "jobUrl": "https://in.linkedin.com/jobs/view/senior-java-developer-id87212-at-agileengine-4461976240",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Java development\n- Location: Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788538347644,
-    "lastSeenAt": 1788538347644
+    "lastSeenAt": 1788580802697,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-java-developer-id87212-at-agileengine-4461976240",
+    "recruiterName": null
   },
   {
     "id": "lead-1788538356651-371",
@@ -9517,33 +9529,41 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ui-ux-designer-front-end-developer-at-cricbattle-inc-fantasy-sports-platform-4461988252",
     "recruiterName": null,
     "firstSeenAt": 1788538427913,
-    "lastSeenAt": 1788562611179
+    "lastSeenAt": 1788580811714
   },
   {
-    "id": "lead-1788538436954-905",
+    "id": "lead-1788580811737-941",
     "source": "linkedin",
     "jobTitle": "AI Product Manager",
     "company": "Adani Enterprises Limited",
     "location": "Ahmedabad, Gujarat, India",
     "jobUrl": "https://in.linkedin.com/jobs/view/ai-product-manager-at-adani-enterprises-limited-4463332675",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- AI Product Management experience\n- Ability to analyze and manage AI product lifecycles",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788538437448,
-    "lastSeenAt": 1788538437448
+    "lastSeenAt": 1788580812802,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ai-product-manager-at-adani-enterprises-limited-4463332675",
+    "recruiterName": null
   },
   {
-    "id": "lead-1788538446491-19",
+    "id": "lead-1788580821843-98",
     "source": "linkedin",
     "jobTitle": "VOIP Trainee (local candidates only)",
     "company": "Ecosmob Technologies",
     "location": "Ahmedabad, Gujarat, India",
     "jobUrl": "https://in.linkedin.com/jobs/view/voip-trainee-local-candidates-only-at-ecosmob-technologies-4461155755",
-    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.",
-    "status": "failed",
-    "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Local candidates only\n- VOIP Trainee role requirements as per LinkedIn posting",
+    "status": "no_email",
+    "errorReason": "",
     "firstSeenAt": 1788538475528,
-    "lastSeenAt": 1788538475528
+    "lastSeenAt": 1788580822996,
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/voip-trainee-local-candidates-only-at-ecosmob-technologies-4461155755",
+    "recruiterName": null
   },
   {
     "id": "lead-1788554345987-805",
@@ -9560,6 +9580,57 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/embedded-software-engineer-at-kody-technolab-limited-4461162838",
     "recruiterName": null,
     "firstSeenAt": 1788554365772,
-    "lastSeenAt": 1788562611203
+    "lastSeenAt": 1788580852316
+  },
+  {
+    "id": "lead-1788580781305-183",
+    "source": "linkedin",
+    "jobTitle": "Application Engineer (m/f/x)",
+    "company": "Beckhoff Automation Brazil",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-brazil-4462320859",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Location: Ahmedabad, Gujarat, India\n- Role: Application Engineer",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-brazil-4462320859",
+    "recruiterName": null,
+    "firstSeenAt": 1788580782548,
+    "lastSeenAt": 1788580782548
+  },
+  {
+    "id": "lead-1788580832001-923",
+    "source": "linkedin",
+    "jobTitle": "Application Engineer (m/f/x)",
+    "company": "Beckhoff Automation - INDIA",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-india-4462311717",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Location: Ahmedabad, Gujarat, India\n- Complete details to be analyzed upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-india-4462311717",
+    "recruiterName": null,
+    "firstSeenAt": 1788580833080,
+    "lastSeenAt": 1788580833080
+  },
+  {
+    "id": "lead-1788580842087-837",
+    "source": "linkedin",
+    "jobTitle": "IN_Associate_FICO_Enterprise Apps-SAP_Advisory_Ahmedabad",
+    "company": "PwC India",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/in-associate-fico-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4463602692",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience or knowledge in SAP FICO (Financials and Controlling).\n- Strong analytical and problem-solving skills.\n- Good communication and teamwork abilities.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/in-associate-fico-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4463602692",
+    "recruiterName": null,
+    "firstSeenAt": 1788580843297,
+    "lastSeenAt": 1788580843297
   }
 ]
