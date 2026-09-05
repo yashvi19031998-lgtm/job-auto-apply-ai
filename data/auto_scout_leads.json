@@ -7671,7 +7671,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/in-senior-associate-sap-fico-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4461519486",
     "recruiterName": null,
     "firstSeenAt": 1788251585739,
-    "lastSeenAt": 1788580821834
+    "lastSeenAt": 1788603805411
   },
   {
     "id": "lead-1788251594756-979",
@@ -8275,7 +8275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-platform-software-engineer-at-oracle-4459538739",
     "recruiterName": null,
     "firstSeenAt": 1788286773782,
-    "lastSeenAt": 1788580770800
+    "lastSeenAt": 1788603805291
   },
   {
     "id": "lead-1788286782806-735",
@@ -9423,7 +9423,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788538148705,
-    "lastSeenAt": 1788580770690,
+    "lastSeenAt": 1788603795193,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-developer-react%2B-node-at-kanhasoft-4461173507",
@@ -9444,7 +9444,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-product-engineer-at-gstride-ai-4461995526",
     "recruiterName": null,
     "firstSeenAt": 1788538211956,
-    "lastSeenAt": 1788580770751
+    "lastSeenAt": 1788603795211
   },
   {
     "id": "lead-1788580770804-198",
@@ -9457,7 +9457,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788538222303,
-    "lastSeenAt": 1788580772299,
+    "lastSeenAt": 1788603805318,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://in.linkedin.com/jobs/view/in-manager-sap-cpi-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4463374319",
@@ -9474,7 +9474,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788538233020,
-    "lastSeenAt": 1788580792629,
+    "lastSeenAt": 1788603805353,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://in.linkedin.com/jobs/view/sr-technical-architect-at-conga-4434674363",
@@ -9495,7 +9495,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/servicenow-automation-developer-india-at-synoptek-4463372529",
     "recruiterName": null,
     "firstSeenAt": 1788538319287,
-    "lastSeenAt": 1788580801663
+    "lastSeenAt": 1788603805377
   },
   {
     "id": "lead-1788580801672-940",
@@ -9529,7 +9529,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ui-ux-designer-front-end-developer-at-cricbattle-inc-fantasy-sports-platform-4461988252",
     "recruiterName": null,
     "firstSeenAt": 1788538427913,
-    "lastSeenAt": 1788580811714
+    "lastSeenAt": 1788603805275
   },
   {
     "id": "lead-1788580811737-941",
@@ -9542,7 +9542,7 @@
     "status": "no_email",
     "errorReason": "",
     "firstSeenAt": 1788538437448,
-    "lastSeenAt": 1788580812802,
+    "lastSeenAt": 1788603805397,
     "recipientEmail": null,
     "phone": null,
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-product-manager-at-adani-enterprises-limited-4463332675",
@@ -9597,7 +9597,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-brazil-4462320859",
     "recruiterName": null,
     "firstSeenAt": 1788580782548,
-    "lastSeenAt": 1788580782548
+    "lastSeenAt": 1788603805333
   },
   {
     "id": "lead-1788580832001-923",
@@ -9614,7 +9614,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/application-engineer-m-f-x-at-beckhoff-automation-india-4462311717",
     "recruiterName": null,
     "firstSeenAt": 1788580833080,
-    "lastSeenAt": 1788580833080
+    "lastSeenAt": 1788603805429
   },
   {
     "id": "lead-1788580842087-837",
@@ -9631,6 +9631,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/in-associate-fico-enterprise-apps-sap-advisory-ahmedabad-at-pwc-india-4463602692",
     "recruiterName": null,
     "firstSeenAt": 1788580843297,
-    "lastSeenAt": 1788580843297
+    "lastSeenAt": 1788603805454
+  },
+  {
+    "id": "lead-1788603795217-549",
+    "source": "linkedin",
+    "jobTitle": "Python Developer",
+    "company": "Park Universal Private Limited",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/python-developer-at-park-universal-private-limited-4461454721",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Python development skills\n• Experience with software development life cycle",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/python-developer-at-park-universal-private-limited-4461454721",
+    "recruiterName": null,
+    "firstSeenAt": 1788603796250,
+    "lastSeenAt": 1788603796250
   }
 ]
