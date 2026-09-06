@@ -9682,6 +9682,57 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/back-end-developer-immediate-joiner-at-aries-com-4461823295",
     "recruiterName": null,
     "firstSeenAt": 1788691326638,
-    "lastSeenAt": 1788707907402
+    "lastSeenAt": 1788725795295
+  },
+  {
+    "id": "lead-1788725795300-870",
+    "source": "linkedin",
+    "jobTitle": "Senior Staff Specialist IT - Windchill",
+    "company": "Infineon Technologies",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-staff-specialist-it-windchill-at-infineon-technologies-4339296897",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Expertise in Windchill IT systems\n- Experience as a Senior Staff Specialist",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-staff-specialist-it-windchill-at-infineon-technologies-4339296897",
+    "recruiterName": null,
+    "firstSeenAt": 1788725796756,
+    "lastSeenAt": 1788725796756
+  },
+  {
+    "id": "lead-1788725805761-811",
+    "source": "linkedin",
+    "jobTitle": "Senior Software Engineer",
+    "company": "Trading Technologies",
+    "location": "Greater Ahmedabad Area",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-trading-technologies-4426619749",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Senior Software Engineer role\n- Experience and skills to be analyzed from LinkedIn details",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-trading-technologies-4426619749",
+    "recruiterName": null,
+    "firstSeenAt": 1788725806822,
+    "lastSeenAt": 1788725806822
+  },
+  {
+    "id": "lead-1788725815829-642",
+    "source": "linkedin",
+    "jobTitle": "Senior Platform Engineer (Architect)",
+    "company": "Trading Technologies",
+    "location": "Greater Ahmedabad Area",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-platform-engineer-architect-at-trading-technologies-4426620925",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Platform Engineer or Architect.\n- Ability to design and build scalable platform infrastructure.\n- Strong technical leadership and problem-solving skills.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-platform-engineer-architect-at-trading-technologies-4426620925",
+    "recruiterName": null,
+    "firstSeenAt": 1788725816833,
+    "lastSeenAt": 1788725816833
   }
 ]
