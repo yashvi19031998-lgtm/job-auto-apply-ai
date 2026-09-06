@@ -9666,5 +9666,22 @@
     "recruiterName": null,
     "firstSeenAt": 1788639126613,
     "lastSeenAt": 1788667566177
+  },
+  {
+    "id": "lead-1788691325502-735",
+    "source": "linkedin",
+    "jobTitle": "Back End Developer (IMMEDIATE JOINER)",
+    "company": "Aries.com",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/back-end-developer-immediate-joiner-at-aries-com-4461823295",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Immediate joiner\n- Back End Developer skills and responsibilities as standard for the role.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/back-end-developer-immediate-joiner-at-aries-com-4461823295",
+    "recruiterName": null,
+    "firstSeenAt": 1788691326638,
+    "lastSeenAt": 1788691326638
   }
 ]
