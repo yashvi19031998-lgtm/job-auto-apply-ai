@@ -9682,7 +9682,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/back-end-developer-immediate-joiner-at-aries-com-4461823295",
     "recruiterName": null,
     "firstSeenAt": 1788691326638,
-    "lastSeenAt": 1788735021951
+    "lastSeenAt": 1788753917987
   },
   {
     "id": "lead-1788725795300-870",
@@ -9699,7 +9699,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-staff-specialist-it-windchill-at-infineon-technologies-4339296897",
     "recruiterName": null,
     "firstSeenAt": 1788725796756,
-    "lastSeenAt": 1788735021922
+    "lastSeenAt": 1788753918003
   },
   {
     "id": "lead-1788725805761-811",
@@ -9716,7 +9716,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-trading-technologies-4426619749",
     "recruiterName": null,
     "firstSeenAt": 1788725806822,
-    "lastSeenAt": 1788735021989
+    "lastSeenAt": 1788753918020
   },
   {
     "id": "lead-1788725815829-642",
@@ -9733,6 +9733,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-platform-engineer-architect-at-trading-technologies-4426620925",
     "recruiterName": null,
     "firstSeenAt": 1788725816833,
-    "lastSeenAt": 1788735022010
+    "lastSeenAt": 1788753918034
+  },
+  {
+    "id": "lead-1788753907746-473",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "Techify Solutions Pvt Ltd",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-techify-solutions-pvt-ltd-4462908482",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Full Stack development skills and responsibilities as per standard engineering requirements.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-techify-solutions-pvt-ltd-4462908482",
+    "recruiterName": null,
+    "firstSeenAt": 1788753908971,
+    "lastSeenAt": 1788753908971
   }
 ]
