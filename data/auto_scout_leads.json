@@ -7611,7 +7611,7 @@
     "jobTitle": "Software Engineer (AI Training)",
     "company": "Alignerr",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-ai-training-at-alignerr-4461541130",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-ai-training-at-alignerr-4464425121",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering experience\n- AI training capabilities\n- Ability to work based on complete details provided upon import",
     "status": "no_email",
     "errorReason": "",
@@ -7620,7 +7620,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-ai-training-at-alignerr-4461526941",
     "recruiterName": null,
     "firstSeenAt": 1788251555969,
-    "lastSeenAt": 1788304412780
+    "lastSeenAt": 1788865344218
   },
   {
     "id": "lead-1788271550515-398",
@@ -9495,7 +9495,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/servicenow-automation-developer-india-at-synoptek-4463372529",
     "recruiterName": null,
     "firstSeenAt": 1788538319287,
-    "lastSeenAt": 1788823405740
+    "lastSeenAt": 1788865303971
   },
   {
     "id": "lead-1788580801672-940",
@@ -9971,7 +9971,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-at-codal-4462972005",
     "recruiterName": null,
     "firstSeenAt": 1788807881896,
-    "lastSeenAt": 1788840406660
+    "lastSeenAt": 1788865273426
   },
   {
     "id": "lead-1788807890899-349",
@@ -9988,7 +9988,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-engineer-%E2%80%93-digital-solutions-and-ai-integration-at-adani-enterprises-limited-4464380414",
     "recruiterName": null,
     "firstSeenAt": 1788807892128,
-    "lastSeenAt": 1788840406682
+    "lastSeenAt": 1788865273446
   },
   {
     "id": "lead-1788807901164-298",
@@ -10005,7 +10005,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/junior-dotnet-developer-at-omex-infotech-4464096031",
     "recruiterName": null,
     "firstSeenAt": 1788807902154,
-    "lastSeenAt": 1788840406742
+    "lastSeenAt": 1788865293788
   },
   {
     "id": "lead-1788807911618-488",
@@ -10013,7 +10013,7 @@
     "jobTitle": "Senior Specialist IT",
     "company": "Infineon Technologies",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/senior-specialist-it-at-infineon-technologies-4464340161",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-specialist-it-at-infineon-technologies-4464341155",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience and skills in IT specialization.\n- Ability to work in Ahmedabad, Gujarat, India.",
     "status": "no_email",
     "errorReason": "",
@@ -10022,7 +10022,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-specialist-it-at-infineon-technologies-4464340161",
     "recruiterName": null,
     "firstSeenAt": 1788807913353,
-    "lastSeenAt": 1788840417072
+    "lastSeenAt": 1788865344232
   },
   {
     "id": "lead-1788807922399-27",
@@ -10086,6 +10086,176 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/sr-php-laravel-developer-ce80sf-rm-4374-at-source-right-4464404741",
     "recruiterName": null,
     "firstSeenAt": 1788840407988,
-    "lastSeenAt": 1788840407988
+    "lastSeenAt": 1788865293806
+  },
+  {
+    "id": "lead-1788865243082-23",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "earthRe",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-earthre-4448783396",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Engineering experience\n- Ability to work based on complete details upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-earthre-4448783396",
+    "recruiterName": null,
+    "firstSeenAt": 1788865244361,
+    "lastSeenAt": 1788865244361
+  },
+  {
+    "id": "lead-1788865253367-585",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "Zignuts Technolab",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-zignuts-technolab-4462277667",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Engineering skills\n- Complete details to be analyzed upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-zignuts-technolab-4462277667",
+    "recruiterName": null,
+    "firstSeenAt": 1788865254331,
+    "lastSeenAt": 1788865254331
+  },
+  {
+    "id": "lead-1788865263339-351",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer",
+    "company": "Otelier",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-at-otelier-4463256036",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering skills and responsibilities as per LinkedIn job description.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-at-otelier-4463256036",
+    "recruiterName": null,
+    "firstSeenAt": 1788865264406,
+    "lastSeenAt": 1788865264406
+  },
+  {
+    "id": "lead-1788865273454-651",
+    "source": "linkedin",
+    "jobTitle": "Software Developer (Core PHP, Drupal and WordPress)",
+    "company": "Etech Global Services",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-developer-core-php-drupal-and-wordpress-at-etech-global-services-4463261020",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Core PHP\n- Experience with Drupal\n- Experience with WordPress",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/software-developer-core-php-drupal-and-wordpress-at-etech-global-services-4463261020",
+    "recruiterName": null,
+    "firstSeenAt": 1788865274631,
+    "lastSeenAt": 1788865274631
+  },
+  {
+    "id": "lead-1788865283640-315",
+    "source": "linkedin",
+    "jobTitle": "Senior Full Stack Engineer (Java, Angular &amp; Cloud Infrastructure)",
+    "company": "360tf",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-java-angular-cloud-infrastructure-at-360tf-4462283587",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Java\n- Experience with Angular\n- Experience with Cloud Infrastructure",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-java-angular-cloud-infrastructure-at-360tf-4462283587",
+    "recruiterName": null,
+    "firstSeenAt": 1788865284770,
+    "lastSeenAt": 1788865284770
+  },
+  {
+    "id": "lead-1788865293832-726",
+    "source": "linkedin",
+    "jobTitle": "Senior Full Stack Engineer (Java, Angular &amp; Cloud Infrastructure)",
+    "company": "360tf",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-java-angular-cloud-infrastructure-at-360tf-4463249563",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Java\n- Experience with Angular\n- Experience with Cloud Infrastructure",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-java-angular-cloud-infrastructure-at-360tf-4463249563",
+    "recruiterName": null,
+    "firstSeenAt": 1788865294954,
+    "lastSeenAt": 1788865294954
+  },
+  {
+    "id": "lead-1788865303997-512",
+    "source": "linkedin",
+    "jobTitle": "Solutions Architect",
+    "company": "MSBC Group",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/solutions-architect-at-msbc-group-4453433541",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Solutions Architect\n- Ability to analyze complete details upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/solutions-architect-at-msbc-group-4453433541",
+    "recruiterName": null,
+    "firstSeenAt": 1788865304912,
+    "lastSeenAt": 1788865304912
+  },
+  {
+    "id": "lead-1788865313920-68",
+    "source": "linkedin",
+    "jobTitle": "Senior Navision / Business Central Technical Consultnat",
+    "company": "Tripearltech",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-navision-business-central-technical-consultnat-at-tripearltech-4453867563",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Microsoft Dynamics Navision / Business Central.\n- Strong technical and consulting skills.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-navision-business-central-technical-consultnat-at-tripearltech-4453867563",
+    "recruiterName": null,
+    "firstSeenAt": 1788865315048,
+    "lastSeenAt": 1788865315048
+  },
+  {
+    "id": "lead-1788865324055-74",
+    "source": "linkedin",
+    "jobTitle": "VOIP trainee - Ahmedabad local Only",
+    "company": "Ecosmob Technologies",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/voip-trainee-ahmedabad-local-only-at-ecosmob-technologies-4462284552",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Ahmedabad local only\n- VOIP trainee position",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/voip-trainee-ahmedabad-local-only-at-ecosmob-technologies-4462284552",
+    "recruiterName": null,
+    "firstSeenAt": 1788865325075,
+    "lastSeenAt": 1788865325075
+  },
+  {
+    "id": "lead-1788865334081-730",
+    "source": "linkedin",
+    "jobTitle": "Technical Product Manager",
+    "company": "MYCPE ONE",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/technical-product-manager-at-mycpe-one-4463226605",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience as a Technical Product Manager\n• Ability to analyze and manage product development lifecycles",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/technical-product-manager-at-mycpe-one-4463226605",
+    "recruiterName": null,
+    "firstSeenAt": 1788865335050,
+    "lastSeenAt": 1788865335050
   }
 ]
