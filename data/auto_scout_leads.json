@@ -9325,7 +9325,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-full-stack-engineer-net-at-gantner-india-4461138846",
     "recruiterName": null,
     "firstSeenAt": 1788519692018,
-    "lastSeenAt": 1788823405658
+    "lastSeenAt": 1788840406763
   },
   {
     "id": "lead-1788519701041-885",
@@ -9767,7 +9767,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/mern-stack-developer-wfo-ahmedabad-at-solguruz%C2%AE-4462932601",
     "recruiterName": null,
     "firstSeenAt": 1788782998063,
-    "lastSeenAt": 1788823405523
+    "lastSeenAt": 1788840406625
   },
   {
     "id": "lead-1788783007068-792",
@@ -9784,7 +9784,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-tipsons-group-4464327140",
     "recruiterName": null,
     "firstSeenAt": 1788783008115,
-    "lastSeenAt": 1788823405552
+    "lastSeenAt": 1788840406642
   },
   {
     "id": "lead-1788783017122-866",
@@ -9801,7 +9801,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-loadninja-at-smartbear-4462914666",
     "recruiterName": null,
     "firstSeenAt": 1788783018333,
-    "lastSeenAt": 1788823405605
+    "lastSeenAt": 1788840406707
   },
   {
     "id": "lead-1788783027341-920",
@@ -9835,7 +9835,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/php-developer-at-cmexpertise-infotech-pvt-ltd-4464090764",
     "recruiterName": null,
     "firstSeenAt": 1788783038441,
-    "lastSeenAt": 1788823405621
+    "lastSeenAt": 1788840406724
   },
   {
     "id": "lead-1788783047450-109",
@@ -9869,7 +9869,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/team-lead-dot-net-%2B-angular-at-evince-development-cmmi-level-3-certified-4462202575",
     "recruiterName": null,
     "firstSeenAt": 1788783058727,
-    "lastSeenAt": 1788823405676
+    "lastSeenAt": 1788840406784
   },
   {
     "id": "lead-1788783067735-995",
@@ -9886,7 +9886,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/mobile-application-developer-at-tipsons-group-4464313208",
     "recruiterName": null,
     "firstSeenAt": 1788783068637,
-    "lastSeenAt": 1788823405695
+    "lastSeenAt": 1788840417008
   },
   {
     "id": "lead-1788783077643-329",
@@ -9903,7 +9903,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/intern-at-resolute-corp-4462919669",
     "recruiterName": null,
     "firstSeenAt": 1788783078618,
-    "lastSeenAt": 1788823405712
+    "lastSeenAt": 1788840417038
   },
   {
     "id": "lead-1788783087625-589",
@@ -9971,7 +9971,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-full-stack-at-codal-4462972005",
     "recruiterName": null,
     "firstSeenAt": 1788807881896,
-    "lastSeenAt": 1788823405567
+    "lastSeenAt": 1788840406660
   },
   {
     "id": "lead-1788807890899-349",
@@ -9988,7 +9988,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-engineer-%E2%80%93-digital-solutions-and-ai-integration-at-adani-enterprises-limited-4464380414",
     "recruiterName": null,
     "firstSeenAt": 1788807892128,
-    "lastSeenAt": 1788823405589
+    "lastSeenAt": 1788840406682
   },
   {
     "id": "lead-1788807901164-298",
@@ -10005,7 +10005,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/junior-dotnet-developer-at-omex-infotech-4464096031",
     "recruiterName": null,
     "firstSeenAt": 1788807902154,
-    "lastSeenAt": 1788823405639
+    "lastSeenAt": 1788840406742
   },
   {
     "id": "lead-1788807911618-488",
@@ -10013,7 +10013,7 @@
     "jobTitle": "Senior Specialist IT",
     "company": "Infineon Technologies",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/senior-specialist-it-at-infineon-technologies-4464341155",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-specialist-it-at-infineon-technologies-4464340161",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience and skills in IT specialization.\n- Ability to work in Ahmedabad, Gujarat, India.",
     "status": "no_email",
     "errorReason": "",
@@ -10022,7 +10022,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-specialist-it-at-infineon-technologies-4464340161",
     "recruiterName": null,
     "firstSeenAt": 1788807913353,
-    "lastSeenAt": 1788823405807
+    "lastSeenAt": 1788840417072
   },
   {
     "id": "lead-1788807922399-27",
@@ -10070,5 +10070,22 @@
     "errorReason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
     "firstSeenAt": 1788807983202,
     "lastSeenAt": 1788807983202
+  },
+  {
+    "id": "lead-1788840406788-311",
+    "source": "linkedin",
+    "jobTitle": "Sr PHP Laravel Developer (CE80SF RM 4374)",
+    "company": "Source-Right",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/sr-php-laravel-developer-ce80sf-rm-4374-at-source-right-4464404741",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with PHP and Laravel framework.\n- Senior-level development skills.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/sr-php-laravel-developer-ce80sf-rm-4374-at-source-right-4464404741",
+    "recruiterName": null,
+    "firstSeenAt": 1788840407988,
+    "lastSeenAt": 1788840407988
   }
 ]
