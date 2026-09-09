@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, FileText, Briefcase, Send, Settings, Bot, Target } from 'lucide-react';
+import { LayoutDashboard, FileText, Briefcase, Send, Settings, Bot, Target, MapPin } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
 const navItems = [
@@ -11,6 +11,7 @@ const navItems = [
   { name: 'Resume', href: '/resume', icon: FileText },
   { name: 'Jobs', href: '/jobs', icon: Briefcase },
   { name: 'Lead Scout', href: '/lead-scout', icon: Target },
+  { name: 'Ahmedabad Leads', href: '/ahmedabad-leads', icon: MapPin },
   { name: 'Applications', href: '/applications', icon: Send },
   { name: 'Settings', href: '/settings', icon: Settings },
 ];

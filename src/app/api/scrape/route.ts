@@ -98,59 +98,79 @@ export async function POST(req: Request) {
 
     // ==========================================
     // NAUKRI, INDEED, ALIGNERR, CUTSHORT, CUSTOM & WEB
-    // using googlethis to bypass Cloudflare/Datadome
+    // Exclusive Bing Search Scraper (No Google, No DDG, No Apify, No Gemini)
     // ==========================================
+    const jobs: any[] = [];
+    
     try {
-      // @ts-ignore
-      const google = require('googlethis');
+      const cheerio = require('cheerio');
+      console.log(`[Scrape] Initiating Bing Search for: ${query}`);
+      
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+      
+      const bingUrl = `https://www.bing.com/search?q=${encodeURIComponent(query)}&count=15`;
+      const response = await fetch(bingUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept-Language': 'en-US,en;q=0.9',
+          'Accept': 'text/html,application/xhtml+xml'
+        },
+        signal: controller.signal,
+        cache: 'no-store'
+      });
+      clearTimeout(timeoutId);
 
-      const searchOptions = {
-        page: 0,
-        safe: false,
-        parse_ads: false,
-        additional_params: {
-          hl: 'en'
-        }
-      };
-
-      const googleResponse = await google.search(query, searchOptions);
-
-      const jobs: any[] = [];
-      const results = googleResponse.results || [];
-
-      for (const result of results) {
-        if (jobs.length >= 15) break;
-
-        let title = result.title;
-        let company = "Unknown Company";
-
-        if (title.includes(' - ')) {
-          const parts = title.split(' - ');
-          title = parts[0].trim();
-          company = parts.slice(1).join(' - ').trim();
-        } else if (title.includes(' | ')) {
-          const parts = title.split(' | ');
-          title = parts[0].trim();
-          company = parts.slice(1).join(' | ').trim();
-        }
-
-        jobs.push({
-          title: title,
-          company: company,
-          location: location || "",
-          url: result.url,
-          snippet: result.description || "Found via Google Search",
-        });
+      if (!response.ok) {
+        throw new Error(`Bing returned status ${response.status}`);
       }
 
-      if (jobs.length > 0) {
-        return NextResponse.json({ jobs });
-      } else {
-        return NextResponse.json({ error: `No jobs found matching your criteria on ${searchSource}.` }, { status: 404 });
+      const html = await response.text();
+      const $ = cheerio.load(html);
+      
+      $('li.b_algo').each((i: number, el: any) => {
+        if (jobs.length >= 15) return;
+        
+        const titleEl = $(el).find('h2 a');
+        const snippetEl = $(el).find('.b_caption p, .b_algoSlug');
+        
+        const url = titleEl.attr('href');
+        let title = titleEl.text().trim();
+        const snippet = snippetEl.text().trim();
+        
+        if (url && url.startsWith('http') && title) {
+          let company = "Unknown Company";
+          if (title.includes(' - ')) {
+            const parts = title.split(' - ');
+            title = parts[0].trim();
+            company = parts.slice(1).join(' - ').trim();
+          } else if (title.includes(' | ')) {
+            const parts = title.split(' | ');
+            title = parts[0].trim();
+            company = parts.slice(1).join(' | ').trim();
+          }
+          
+          jobs.push({
+            title: title || "Unknown Job",
+            company: company,
+            location: location || "",
+            url: url,
+            snippet: snippet || "Found via Bing Search",
+          });
+        }
+      });
+      
+      if (jobs.length === 0) {
+        console.warn(`[Scrape] Bing returned 0 valid jobs for query: ${query}`);
+        return NextResponse.json({ error: `Bing Search returned 0 results for your query.` }, { status: 404 });
       }
 
-    } catch (e: any) {
-      return NextResponse.json({ error: `${searchSource} Scrape Failed (Google Blocked): ${e.message}` }, { status: 500 });
+      console.log(`[Scrape] Successfully extracted ${jobs.length} leads from Bing.`);
+      return NextResponse.json({ jobs });
+      
+    } catch (error: any) {
+      console.error(`[Scrape] Bing Scrape Failed:`, error.message);
+      return NextResponse.json({ error: `Web Scrape Failed. Bing Error: ${error.message}` }, { status: 500 });
     }
 
   } catch (error: any) {

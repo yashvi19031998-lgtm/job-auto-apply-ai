@@ -53,21 +53,56 @@ async function runScan() {
     const existingData = await existingRes.json();
     const existingLeads = existingData.leads || [];
 
-    console.log(`\n🔍 Scraping from ${prefs.source}...`);
-    const scrapeRes = await fetch(`${BASE_URL}/api/scrape`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ keywords: activeKeyword, location: prefs.location, searchMode: prefs.mode, searchSource: prefs.source, timeRange: prefs.timeRange })
-    });
+    console.log(`\n🔍 Scraping from ALL SOURCES: linkedin, web, custom...`);
+    
+    const sourcesToScrape = ['linkedin', 'web', 'custom'];
+    let jobs = [];
 
-    if (!scrapeRes.ok) throw new Error(`Scrape failed: ${await scrapeRes.text()}`);
+    for (const source of sourcesToScrape) {
+      console.log(`\n  👉 Initiating search on: ${source}`);
+      try {
+        const scrapeRes = await fetch(`${BASE_URL}/api/scrape`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ keywords: activeKeyword, location: prefs.location, searchMode: prefs.mode, searchSource: source, timeRange: prefs.timeRange })
+        });
 
-    const scrapeData = await scrapeRes.json();
-    const jobs = scrapeData.jobs || [];
-    // Uncomment the next line to test with only 3 jobs
-    // const jobs = jobs.slice(0, 3);
+        if (!scrapeRes.ok) {
+          console.error(`  ❌ Scrape failed for ${source}: ${await scrapeRes.text()}`);
+          continue;
+        }
+
+        const scrapeData = await scrapeRes.json();
+        const sourceJobs = scrapeData.jobs || [];
+        console.log(`  ✅ Found ${sourceJobs.length} jobs from ${source}.`);
+        
+        sourceJobs.forEach(job => {
+          job.source_used = source;
+          jobs.push(job);
+        });
+      } catch (err) {
+        console.error(`  ❌ Error scraping from ${source}: ${err.message}`);
+      }
+    }
+
+    // Deduplicate within the current run's results (so we don't process the same job twice)
+    const uniqueJobs = [];
+    for (const job of jobs) {
+      const urlMatches = job.url || job.link;
+      const isWithinRunDup = uniqueJobs.some(uj => {
+        let match = false;
+        if ((uj.url || uj.link) && urlMatches && normalizeUrl(uj.url || uj.link) === normalizeUrl(urlMatches)) match = true;
+        if (uj.title && uj.company && job.title && job.company !== 'Unknown') {
+          if (normalizeStr(uj.title) === normalizeStr(job.title) && normalizeStr(uj.company) === normalizeStr(job.company)) match = true;
+        }
+        return match;
+      });
+      if (!isWithinRunDup) uniqueJobs.push(job);
+    }
+    jobs = uniqueJobs;
+
     stats.discovered = jobs.length;
-    console.log(`✅ Found ${jobs.length} potential jobs.`);
+    console.log(`✅ Total unique jobs found across all sources: ${jobs.length}.`);
 
     for (let i = 0; i < jobs.length; i++) {
       const rawJob = jobs[i];
@@ -106,7 +141,7 @@ async function runScan() {
 
       stats.newLeads++;
 
-      let leadObj = { id: 'lead-' + Date.now() + '-' + Math.floor(Math.random()*1000), source: prefs.source, jobTitle: rawJob.title, company: rawCompany, location: rawJob.location || prefs.location, jobUrl: (rawJob.url || rawJob.link), fullDescription: rawJob.snippet || rawJob.description || '', status: 'new', errorReason: '' };
+      let leadObj = { id: 'lead-' + Date.now() + '-' + Math.floor(Math.random()*1000), source: rawJob.source_used || prefs.source, jobTitle: rawJob.title, company: rawCompany, location: rawJob.location || prefs.location, jobUrl: (rawJob.url || rawJob.link), fullDescription: rawJob.snippet || rawJob.description || '', status: 'new', errorReason: '' };
 
       try {
         console.log(`  🧠 Extracting contact info & parsing requirements...`);
@@ -225,6 +260,29 @@ async function runScan() {
     console.log(`Failed:               ${stats.failed}`);
     console.log(`Saved leads:          ${stats.saved}`);
     console.log(`========================================\n`);
+    
+    // --- DAILY REPORT TRIGGER ---
+    const todayStr = new Date().toLocaleDateString('en-IN');
+    const reportMarkerPath = path.join(dataDir, 'last_report_date.txt');
+    let lastReportDate = '';
+    if (fs.existsSync(reportMarkerPath)) {
+      lastReportDate = fs.readFileSync(reportMarkerPath, 'utf8').trim();
+    }
+    
+    if (lastReportDate !== todayStr) {
+      console.log(`\n📅 Triggering Daily Report for ${todayStr}...`);
+      try {
+        const reportRes = await fetch(`${BASE_URL}/api/report/daily`);
+        if (reportRes.ok) {
+          console.log(`✅ Daily Report sent successfully!`);
+          fs.writeFileSync(reportMarkerPath, todayStr);
+        } else {
+          console.error(`❌ Failed to send Daily Report: ${await reportRes.text()}`);
+        }
+      } catch (err) {
+        console.error(`❌ Error triggering Daily Report:`, err.message);
+      }
+    }
   }
 }
 

@@ -59,6 +59,7 @@ jobs:
           # Stage the files that might have changed
           git add data/auto_scout_leads.json || true
           git add data/autopilot_status.json || true
+          git add data/last_report_date.txt || true
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
