@@ -7569,7 +7569,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/back-end-developer-ai-infrastructure-at-alignerr-4461531262",
     "recruiterName": null,
     "firstSeenAt": 1788251525461,
-    "lastSeenAt": 1788952025996
+    "lastSeenAt": 1788970988520
   },
   {
     "id": "lead-1788251534500-550",
@@ -7603,7 +7603,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/zuora-billing-senior-developer-at-sophos-4423533895",
     "recruiterName": null,
     "firstSeenAt": 1788251545718,
-    "lastSeenAt": 1788952026012
+    "lastSeenAt": 1788971011320
   },
   {
     "id": "lead-1788251554738-467",
@@ -7611,7 +7611,7 @@
     "jobTitle": "Software Engineer (AI Training)",
     "company": "Alignerr",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-ai-training-at-alignerr-4464927936",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-ai-training-at-alignerr-4464925900",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering experience\n- AI training capabilities\n- Ability to work based on complete details provided upon import",
     "status": "no_email",
     "errorReason": "",
@@ -7620,7 +7620,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-ai-training-at-alignerr-4461526941",
     "recruiterName": null,
     "firstSeenAt": 1788251555969,
-    "lastSeenAt": 1788952026220
+    "lastSeenAt": 1788971038117
   },
   {
     "id": "lead-1788271550515-398",
@@ -10409,7 +10409,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-at-prectech-4462533255",
     "recruiterName": null,
     "firstSeenAt": 1788901220684,
-    "lastSeenAt": 1788952005573
+    "lastSeenAt": 1788970988465
   },
   {
     "id": "lead-1788909639226-878",
@@ -10426,7 +10426,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/laravel-developer-at-aims-infosoft-4464695177",
     "recruiterName": null,
     "firstSeenAt": 1788909640246,
-    "lastSeenAt": 1788952005551
+    "lastSeenAt": 1788970988451
   },
   {
     "id": "lead-1788927212194-32",
@@ -10494,7 +10494,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/drupal-developer-2%2B-years-skillset-drupal-wordpress-onsite-local-candidates-preferred-at-etech-global-services-4463831495",
     "recruiterName": null,
     "firstSeenAt": 1788952006897,
-    "lastSeenAt": 1788952006897
+    "lastSeenAt": 1788970988486
   },
   {
     "id": "lead-1788952015967-787",
@@ -10512,5 +10512,90 @@
     "recruiterName": null,
     "firstSeenAt": 1788952016980,
     "lastSeenAt": 1788952016980
+  },
+  {
+    "id": "lead-1788970966535-186",
+    "source": "linkedin",
+    "jobTitle": "Artificial Intelligence Engineer",
+    "company": "Reveation Labs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-reveation-labs-4463858345",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Artificial Intelligence and related technologies.\n- Ability to work as an AI Engineer based in Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-reveation-labs-4463858345",
+    "recruiterName": null,
+    "firstSeenAt": 1788970979430,
+    "lastSeenAt": 1788970979430
+  },
+  {
+    "id": "lead-1788970988526-494",
+    "source": "linkedin",
+    "jobTitle": "Backend Engineer Intern",
+    "company": "Reveation Labs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/backend-engineer-intern-at-reveation-labs-4463810844",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Backend engineering internship responsibilities and related skills.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/backend-engineer-intern-at-reveation-labs-4463810844",
+    "recruiterName": null,
+    "firstSeenAt": 1788970992036,
+    "lastSeenAt": 1788970992036
+  },
+  {
+    "id": "lead-1788971001040-131",
+    "source": "linkedin",
+    "jobTitle": "ML Technical Lead",
+    "company": "Azilen Technologies",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/ml-technical-lead-at-azilen-technologies-4463872777",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Technical leadership in Machine Learning\n- Experience in ML project execution and delivery",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ml-technical-lead-at-azilen-technologies-4463872777",
+    "recruiterName": null,
+    "firstSeenAt": 1788971002305,
+    "lastSeenAt": 1788971002305
+  },
+  {
+    "id": "lead-1788971011342-984",
+    "source": "linkedin",
+    "jobTitle": "Solutions Architect",
+    "company": "Anblicks",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/solutions-architect-at-anblicks-4465049105",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Solutions Architect role\n- Direct scraping from LinkedIn\n- Complete details to be analyzed upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/solutions-architect-at-anblicks-4465049105",
+    "recruiterName": null,
+    "firstSeenAt": 1788971016701,
+    "lastSeenAt": 1788971016701
+  },
+  {
+    "id": "lead-1788971025707-84",
+    "source": "linkedin",
+    "jobTitle": "Frontend Engineer Intern",
+    "company": "Reveation Labs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/frontend-engineer-intern-at-reveation-labs-4463818742",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Frontend engineering tasks\n- Internship role",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/frontend-engineer-intern-at-reveation-labs-4463818742",
+    "recruiterName": null,
+    "firstSeenAt": 1788971029007,
+    "lastSeenAt": 1788971029007
   }
 ]
