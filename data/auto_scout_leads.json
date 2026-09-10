@@ -7603,7 +7603,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/zuora-billing-senior-developer-at-sophos-4423533895",
     "recruiterName": null,
     "firstSeenAt": 1788251545718,
-    "lastSeenAt": 1788995251914
+    "lastSeenAt": 1789013464228
   },
   {
     "id": "lead-1788251554738-467",
@@ -10494,7 +10494,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/drupal-developer-2%2B-years-skillset-drupal-wordpress-onsite-local-candidates-preferred-at-etech-global-services-4463831495",
     "recruiterName": null,
     "firstSeenAt": 1788952006897,
-    "lastSeenAt": 1788995251728
+    "lastSeenAt": 1789013454010
   },
   {
     "id": "lead-1788952015967-787",
@@ -10528,7 +10528,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-reveation-labs-4463858345",
     "recruiterName": null,
     "firstSeenAt": 1788970979430,
-    "lastSeenAt": 1788995251687
+    "lastSeenAt": 1789013453950
   },
   {
     "id": "lead-1788970988526-494",
@@ -10545,7 +10545,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/backend-engineer-intern-at-reveation-labs-4463810844",
     "recruiterName": null,
     "firstSeenAt": 1788970992036,
-    "lastSeenAt": 1788995251825
+    "lastSeenAt": 1789013464200
   },
   {
     "id": "lead-1788971001040-131",
@@ -10562,7 +10562,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ml-technical-lead-at-azilen-technologies-4463872777",
     "recruiterName": null,
     "firstSeenAt": 1788971002305,
-    "lastSeenAt": 1788995251856
+    "lastSeenAt": 1789013464213
   },
   {
     "id": "lead-1788971011342-984",
@@ -10579,7 +10579,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/solutions-architect-at-anblicks-4465049105",
     "recruiterName": null,
     "firstSeenAt": 1788971016701,
-    "lastSeenAt": 1788995251966
+    "lastSeenAt": 1789013464241
   },
   {
     "id": "lead-1788971025707-84",
@@ -10596,6 +10596,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/frontend-engineer-intern-at-reveation-labs-4463818742",
     "recruiterName": null,
     "firstSeenAt": 1788971029007,
-    "lastSeenAt": 1788995252064
+    "lastSeenAt": 1789013464257
+  },
+  {
+    "id": "lead-1789013454048-199",
+    "source": "linkedin",
+    "jobTitle": "Mobile Consultant (flutter)",
+    "company": "Kody Technolab Limited",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/mobile-consultant-flutter-at-kody-technolab-limited-4464158796",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Flutter development\n- Mobile consulting skills",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/mobile-consultant-flutter-at-kody-technolab-limited-4464158796",
+    "recruiterName": null,
+    "firstSeenAt": 1789013455168,
+    "lastSeenAt": 1789013455168
   }
 ]
