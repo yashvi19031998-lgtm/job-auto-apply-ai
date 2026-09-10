@@ -7266,7 +7266,7 @@
     "jobTitle": "Custom Software Engineer",
     "company": "Accenture in India",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4464630421",
+    "jobUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4465697524",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Custom software engineering skills\n- Software development and implementation",
     "status": "no_email",
     "errorReason": "",
@@ -7275,7 +7275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4461212292",
     "recruiterName": null,
     "firstSeenAt": 1788195158335,
-    "lastSeenAt": 1788952026052
+    "lastSeenAt": 1789056905304
   },
   {
     "id": "lead-1788195167369-578",
@@ -7603,7 +7603,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/zuora-billing-senior-developer-at-sophos-4423533895",
     "recruiterName": null,
     "firstSeenAt": 1788251545718,
-    "lastSeenAt": 1789013464228
+    "lastSeenAt": 1789056905290
   },
   {
     "id": "lead-1788251554738-467",
@@ -9801,7 +9801,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-loadninja-at-smartbear-4462914666",
     "recruiterName": null,
     "firstSeenAt": 1788783018333,
-    "lastSeenAt": 1789038135400
+    "lastSeenAt": 1789056783020
   },
   {
     "id": "lead-1788783027341-920",
@@ -10630,7 +10630,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/website-developer-at-inexgress-4463425522",
     "recruiterName": null,
     "firstSeenAt": 1789038116043,
-    "lastSeenAt": 1789038116043
+    "lastSeenAt": 1789056782986
   },
   {
     "id": "lead-1789038125051-886",
@@ -10647,7 +10647,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/principal-full-stack-ai-engineer-at-united-hr-solutions-pvt-ltd-4465606836",
     "recruiterName": null,
     "firstSeenAt": 1789038126380,
-    "lastSeenAt": 1789038126380
+    "lastSeenAt": 1789056783003
   },
   {
     "id": "lead-1789038135430-454",
@@ -10664,7 +10664,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/mobile-application-developer-at-varniraj-100tech-infra-private-limited-4463438408",
     "recruiterName": null,
     "firstSeenAt": 1789038136682,
-    "lastSeenAt": 1789038136682
+    "lastSeenAt": 1789056881044
   },
   {
     "id": "lead-1789038145689-839",
@@ -10681,7 +10681,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/adobe-commerce-magento-developer-at-techies-institute-4465617868",
     "recruiterName": null,
     "firstSeenAt": 1789038147927,
-    "lastSeenAt": 1789038147927
+    "lastSeenAt": 1789056881005
   },
   {
     "id": "lead-1789038156934-382",
@@ -10716,5 +10716,192 @@
     "recruiterName": null,
     "firstSeenAt": 1789038170096,
     "lastSeenAt": 1789038170096
+  },
+  {
+    "id": "lead-1789056756173-758",
+    "source": "linkedin",
+    "jobTitle": "Senior Full Stack Engineer",
+    "company": "Digiqt Technolabs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-at-digiqt-technolabs-4463442371",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in full stack engineering.\n- Ability to work on complete project lifecycle.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-full-stack-engineer-at-digiqt-technolabs-4463442371",
+    "recruiterName": null,
+    "firstSeenAt": 1789056773969,
+    "lastSeenAt": 1789056773969
+  },
+  {
+    "id": "lead-1789056783027-256",
+    "source": "linkedin",
+    "jobTitle": ".Net Developer",
+    "company": "JobBricks",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/net-developer-at-jobbricks-4463427955",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in .Net development\n- Location: Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/net-developer-at-jobbricks-4463427955",
+    "recruiterName": null,
+    "firstSeenAt": 1789056800750,
+    "lastSeenAt": 1789056800750
+  },
+  {
+    "id": "lead-1789056809758-63",
+    "source": "linkedin",
+    "jobTitle": "Tech Lead – Software Engineer",
+    "company": "Digiqt Technolabs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/tech-lead-%E2%80%93-software-engineer-at-digiqt-technolabs-4463480430",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Leadership and software engineering skills\n- Complete details to be analyzed upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/tech-lead-%E2%80%93-software-engineer-at-digiqt-technolabs-4463480430",
+    "recruiterName": null,
+    "firstSeenAt": 1789056825358,
+    "lastSeenAt": 1789056825358
+  },
+  {
+    "id": "lead-1789056834364-387",
+    "source": "linkedin",
+    "jobTitle": "PHP Developer",
+    "company": "JobBricks",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/php-developer-at-jobbricks-4463443368",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- PHP development skills\n- Ability to work on backend web development tasks as required by JobBricks",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/php-developer-at-jobbricks-4463443368",
+    "recruiterName": null,
+    "firstSeenAt": 1789056845776,
+    "lastSeenAt": 1789056845776
+  },
+  {
+    "id": "lead-1789056854783-52",
+    "source": "linkedin",
+    "jobTitle": ".Net Developer (on-site in Ahmedabad only)",
+    "company": "Advanced Group",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/net-developer-on-site-in-ahmedabad-only-at-advanced-group-4464535592",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- On-site in Ahmedabad only\n- Experience as a .Net Developer",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/net-developer-on-site-in-ahmedabad-only-at-advanced-group-4464535592",
+    "recruiterName": null,
+    "firstSeenAt": 1789056871988,
+    "lastSeenAt": 1789056871988
+  },
+  {
+    "id": "lead-1789056881052-145",
+    "source": "linkedin",
+    "jobTitle": "Applied AI Engineer - Peryx.ai",
+    "company": "Peryx.ai",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/applied-ai-engineer-peryx-ai-at-peryx-ai-4463485078",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience and skills in Applied AI\n- Ability to work with AI technologies and models\n- Location preference: Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/applied-ai-engineer-peryx-ai-at-peryx-ai-4463485078",
+    "recruiterName": null,
+    "firstSeenAt": 1789056896274,
+    "lastSeenAt": 1789056896274
+  },
+  {
+    "id": "lead-1789056905311-898",
+    "source": "linkedin",
+    "jobTitle": "Artificial Intelligence Engineer",
+    "company": "Wappnet Systems Pvt. Ltd.",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-wappnet-systems-pvt-ltd-4463419417",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Artificial Intelligence\n- Complete details will be analyzed upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-at-wappnet-systems-pvt-ltd-4463419417",
+    "recruiterName": null,
+    "firstSeenAt": 1789056914133,
+    "lastSeenAt": 1789056914133
+  },
+  {
+    "id": "lead-1789056923144-344",
+    "source": "linkedin",
+    "jobTitle": "Senior/SDET Engineer",
+    "company": "Codal",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-sdet-engineer-at-codal-4464542027",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Senior/SDET Engineer.\n- Skills and responsibilities to be analyzed upon import from LinkedIn.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-sdet-engineer-at-codal-4464542027",
+    "recruiterName": null,
+    "firstSeenAt": 1789056931993,
+    "lastSeenAt": 1789056931993
+  },
+  {
+    "id": "lead-1789056940998-776",
+    "source": "linkedin",
+    "jobTitle": "MS Dynamics CRM Consultant (Functional)",
+    "company": "Intech Systems : Microsoft Solutions Partner",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/ms-dynamics-crm-consultant-functional-at-intech-systems-microsoft-solutions-partner-4463484095",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as an MS Dynamics CRM Consultant (Functional)\n- Ability to work in Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ms-dynamics-crm-consultant-functional-at-intech-systems-microsoft-solutions-partner-4463484095",
+    "recruiterName": null,
+    "firstSeenAt": 1789056957353,
+    "lastSeenAt": 1789056957353
+  },
+  {
+    "id": "lead-1789056966359-496",
+    "source": "linkedin",
+    "jobTitle": "Senior AI Engineer",
+    "company": "Digiqt Technolabs",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-digiqt-technolabs-4463466135",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in AI engineering and related technologies.\n- Ability to work in Ahmedabad, Gujarat, India.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-digiqt-technolabs-4463466135",
+    "recruiterName": null,
+    "firstSeenAt": 1789056967755,
+    "lastSeenAt": 1789056967755
+  },
+  {
+    "id": "lead-1789056976763-861",
+    "source": "linkedin",
+    "jobTitle": "Senior - React Native Developer",
+    "company": "JobBricks",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-react-native-developer-at-jobbricks-4463446159",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with React Native development\n- Senior level expertise in mobile application development",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-react-native-developer-at-jobbricks-4463446159",
+    "recruiterName": null,
+    "firstSeenAt": 1789056994513,
+    "lastSeenAt": 1789056994513
   }
 ]
