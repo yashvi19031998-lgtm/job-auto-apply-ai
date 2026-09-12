@@ -533,7 +533,7 @@
     "recruiterName": null,
     "appliedAt": 1788019021631,
     "firstSeenAt": 1788019021666,
-    "lastSeenAt": 1789208984907
+    "lastSeenAt": 1789226593079
   },
   {
     "id": "lead-1788019025886-758",
@@ -11191,7 +11191,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/tech-lead-at-saleshandy-at-saleshandy-4464269946",
     "recruiterName": null,
     "firstSeenAt": 1789208965786,
-    "lastSeenAt": 1789208965786
+    "lastSeenAt": 1789226593068
   },
   {
     "id": "lead-1789208974807-578",
@@ -11209,5 +11209,39 @@
     "recruiterName": null,
     "firstSeenAt": 1789208975848,
     "lastSeenAt": 1789208975848
+  },
+  {
+    "id": "lead-1789226593086-277",
+    "source": "linkedin",
+    "jobTitle": "Lead AI Engineer (Agentic Systems)",
+    "company": "S&amp;P Global",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/lead-ai-engineer-agentic-systems-at-s-p-global-4456236336",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience in Lead AI Engineering and Agentic Systems.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/lead-ai-engineer-agentic-systems-at-s-p-global-4456236336",
+    "recruiterName": null,
+    "firstSeenAt": 1789226594163,
+    "lastSeenAt": 1789226594163
+  },
+  {
+    "id": "lead-1789226603168-888",
+    "source": "linkedin",
+    "jobTitle": "Senior Site Reliability Engineer (US Hours)",
+    "company": "Trading Technologies",
+    "location": "Greater Ahmedabad Area",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-us-hours-at-trading-technologies-4410439699",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Site Reliability Engineer or in a similar role\n- Availability for US Hours\n- Skills related to site reliability engineering practices",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-us-hours-at-trading-technologies-4410439699",
+    "recruiterName": null,
+    "firstSeenAt": 1789226604266,
+    "lastSeenAt": 1789226604266
   }
 ]
