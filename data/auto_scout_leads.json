@@ -533,7 +533,7 @@
     "recruiterName": null,
     "appliedAt": 1788019021631,
     "firstSeenAt": 1788019021666,
-    "lastSeenAt": 1789226593079
+    "lastSeenAt": 1789244764079
   },
   {
     "id": "lead-1788019025886-758",
@@ -7266,7 +7266,7 @@
     "jobTitle": "Custom Software Engineer",
     "company": "Accenture in India",
     "location": "Ahmedabad, Gujarat, India",
-    "jobUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4465697524",
+    "jobUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4453133302",
     "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Custom software engineering skills\n- Software development and implementation",
     "status": "no_email",
     "errorReason": "",
@@ -7275,7 +7275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4461212292",
     "recruiterName": null,
     "firstSeenAt": 1788195158335,
-    "lastSeenAt": 1789143438978
+    "lastSeenAt": 1789244753792
   },
   {
     "id": "lead-1788195167369-578",
@@ -11191,7 +11191,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/tech-lead-at-saleshandy-at-saleshandy-4464269946",
     "recruiterName": null,
     "firstSeenAt": 1789208965786,
-    "lastSeenAt": 1789226593068
+    "lastSeenAt": 1789244753809
   },
   {
     "id": "lead-1789208974807-578",
@@ -11225,7 +11225,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-ai-engineer-agentic-systems-at-s-p-global-4456236336",
     "recruiterName": null,
     "firstSeenAt": 1789226594163,
-    "lastSeenAt": 1789226594163
+    "lastSeenAt": 1789244764098
   },
   {
     "id": "lead-1789226603168-888",
@@ -11242,6 +11242,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-us-hours-at-trading-technologies-4410439699",
     "recruiterName": null,
     "firstSeenAt": 1789226604266,
-    "lastSeenAt": 1789226604266
+    "lastSeenAt": 1789244764122
+  },
+  {
+    "id": "lead-1789244753814-596",
+    "source": "linkedin",
+    "jobTitle": "Senior Software Engineer - React Native",
+    "company": "Codal",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-react-native-at-codal-4466708201",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience as a Senior Software Engineer with React Native",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-react-native-at-codal-4466708201",
+    "recruiterName": null,
+    "firstSeenAt": 1789244755062,
+    "lastSeenAt": 1789244755062
   }
 ]
