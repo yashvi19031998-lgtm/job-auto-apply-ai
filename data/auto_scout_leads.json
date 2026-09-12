@@ -533,7 +533,7 @@
     "recruiterName": null,
     "appliedAt": 1788019021631,
     "firstSeenAt": 1788019021666,
-    "lastSeenAt": 1789186179935
+    "lastSeenAt": 1789208984907
   },
   {
     "id": "lead-1788019025886-758",
@@ -8513,7 +8513,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-ai-engineer-at-rhc-india-4462142603",
     "recruiterName": null,
     "firstSeenAt": 1788346993680,
-    "lastSeenAt": 1789186179839
+    "lastSeenAt": 1789208974802
   },
   {
     "id": "lead-1788347002684-603",
@@ -11038,7 +11038,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-ai-engineer-azure-at-rhc-india-4466072308",
     "recruiterName": null,
     "firstSeenAt": 1789124568925,
-    "lastSeenAt": 1789186179886
+    "lastSeenAt": 1789208984869
   },
   {
     "id": "lead-1789124577938-405",
@@ -11106,7 +11106,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/mern-stack-developer-at-digiqt-technolabs-4463969428",
     "recruiterName": null,
     "firstSeenAt": 1789143408799,
-    "lastSeenAt": 1789186179789
+    "lastSeenAt": 1789208964516
   },
   {
     "id": "lead-1789143417825-155",
@@ -11140,7 +11140,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-automation-strategist-at-rivulet-iq-4463988623",
     "recruiterName": null,
     "firstSeenAt": 1789143429949,
-    "lastSeenAt": 1789186179923
+    "lastSeenAt": 1789208984888
   },
   {
     "id": "lead-1789143438984-776",
@@ -11157,7 +11157,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/python-developer-at-clearquant-4463969709",
     "recruiterName": null,
     "firstSeenAt": 1789143467338,
-    "lastSeenAt": 1789186179978
+    "lastSeenAt": 1789208984943
   },
   {
     "id": "lead-1789159750180-523",
@@ -11174,6 +11174,40 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-core-infrastructure-engineer-at-oracle-4452850874",
     "recruiterName": null,
     "firstSeenAt": 1789159751364,
-    "lastSeenAt": 1789186179967
+    "lastSeenAt": 1789208984925
+  },
+  {
+    "id": "lead-1789208964522-57",
+    "source": "linkedin",
+    "jobTitle": "Tech Lead at Saleshandy",
+    "company": "Saleshandy",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/tech-lead-at-saleshandy-at-saleshandy-4464269946",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Technical leadership and development\n- Complete details will be analyzed upon import",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/tech-lead-at-saleshandy-at-saleshandy-4464269946",
+    "recruiterName": null,
+    "firstSeenAt": 1789208965786,
+    "lastSeenAt": 1789208965786
+  },
+  {
+    "id": "lead-1789208974807-578",
+    "source": "linkedin",
+    "jobTitle": "Zoho Developer",
+    "company": "ECHT VENTURES",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/zoho-developer-at-echt-ventures-4464285408",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Zoho Developer\n- Ability to work in Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/zoho-developer-at-echt-ventures-4464285408",
+    "recruiterName": null,
+    "firstSeenAt": 1789208975848,
+    "lastSeenAt": 1789208975848
   }
 ]
