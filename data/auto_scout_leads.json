@@ -7275,7 +7275,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/custom-software-engineer-at-accenture-in-india-4461212292",
     "recruiterName": null,
     "firstSeenAt": 1788195158335,
-    "lastSeenAt": 1789273282105
+    "lastSeenAt": 1789299139963
   },
   {
     "id": "lead-1788195167369-578",
@@ -11225,7 +11225,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/lead-ai-engineer-agentic-systems-at-s-p-global-4456236336",
     "recruiterName": null,
     "firstSeenAt": 1789226594163,
-    "lastSeenAt": 1789273282180
+    "lastSeenAt": 1789299158003
   },
   {
     "id": "lead-1789226603168-888",
@@ -11242,7 +11242,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-site-reliability-engineer-us-hours-at-trading-technologies-4410439699",
     "recruiterName": null,
     "firstSeenAt": 1789226604266,
-    "lastSeenAt": 1789273282203
+    "lastSeenAt": 1789299158023
   },
   {
     "id": "lead-1789244753814-596",
@@ -11259,6 +11259,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-software-engineer-react-native-at-codal-4466708201",
     "recruiterName": null,
     "firstSeenAt": 1789244755062,
-    "lastSeenAt": 1789273282138
+    "lastSeenAt": 1789299139989
+  },
+  {
+    "id": "lead-1789299139997-606",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer - Java - Ahmedabad, India",
+    "company": "Qatar Airways",
+    "location": "Greater Ahmedabad Area",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-java-ahmedabad-india-at-qatar-airways-4465471604",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in Java\n- Software engineering skills\n- Ability to work in Ahmedabad, India area",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-java-ahmedabad-india-at-qatar-airways-4465471604",
+    "recruiterName": null,
+    "firstSeenAt": 1789299148986,
+    "lastSeenAt": 1789299148986
   }
 ]
