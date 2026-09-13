@@ -20,6 +20,7 @@ export interface AutoScoutPreferences {
   mode: "fulltime" | "freelance";
   source: "web" | "linkedin" | "naukri" | "indeed" | "custom";
   timeRange?: "past_24h" | "past_week" | "past_month" | "any";
+  targetRoles?: string[];
 }
 
 export interface Resume {

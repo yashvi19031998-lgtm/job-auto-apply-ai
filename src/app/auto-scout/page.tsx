@@ -51,7 +51,7 @@ export default function AutoScoutPage() {
   useEffect(() => {
     setMounted(true);
     if (!signature || !resume) {
-      router.push("/setup");
+      router.push("/settings");
       return;
     }
     if (autoScoutPreferences) {

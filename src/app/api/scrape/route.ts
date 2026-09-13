@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   try {
-    const { keywords, location, searchMode, searchSource, timeRange } = await req.json();
+    const { keywords, location, searchMode, searchSource, timeRange, dynamicModifier } = await req.json();
 
     if (!keywords) {
       return NextResponse.json({ error: 'Keywords are required' }, { status: 400 });
@@ -10,23 +10,26 @@ export async function POST(req: Request) {
 
     let query = "";
     const locString = location ? location : "";
+    const modString = dynamicModifier ? dynamicModifier : (searchMode === "freelance" ? "freelance OR contract" : "");
 
     if (searchSource === "linkedin") {
-      query = `site:linkedin.com/jobs/view/ OR site:linkedin.com/jobs/ ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+      query = `site:linkedin.com/jobs/view/ OR site:linkedin.com/jobs/ ${keywords} ${locString} ${modString}`;
     } else if (searchSource === "naukri") {
-      query = `site:naukri.com/job-listings ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+      query = `site:naukri.com/job-listings ${keywords} ${locString} ${modString}`;
     } else if (searchSource === "indeed") {
-      query = `site:in.indeed.com/viewjob OR site:indeed.com/viewjob ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+      query = `site:in.indeed.com/viewjob OR site:indeed.com/viewjob ${keywords} ${locString} ${modString}`;
     } else if (searchSource === "cutshort") {
-      query = `site:cutshort.io/job ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+      query = `site:cutshort.io/job ${keywords} ${locString} ${modString}`;
     } else if (searchSource === "alignerr") {
-      query = `site:app.alignerr.com ${keywords} ${locString} ${searchMode === "freelance" ? "freelance OR contract" : ""}`;
+      query = `site:app.alignerr.com ${keywords} ${locString} ${modString}`;
+    } else if (searchSource === "reddit") {
+      query = `(site:reddit.com/r/forhire OR site:reddit.com/r/freelance_forhire OR site:reddit.com/r/jobbit OR site:reddit.com/r/RemoteJobs) ${keywords} ${locString} ${modString}`;
     } else if (searchSource === "custom") {
       query = keywords;
     } else {
       // Global Web Search
-      if (searchMode === "freelance") {
-        query = `${keywords} ${locString} freelance OR contract remote jobs`;
+      if (searchMode === "freelance" || dynamicModifier) {
+        query = `${keywords} ${locString} ${modString} jobs`;
       } else {
         query = `${keywords} ${locString} job opening careers`;
       }
@@ -134,9 +137,21 @@ export async function POST(req: Request) {
         const titleEl = $(el).find('h2 a');
         const snippetEl = $(el).find('.b_caption p, .b_algoSlug');
         
-        const url = titleEl.attr('href');
+        let url = titleEl.attr('href');
         let title = titleEl.text().trim();
         const snippet = snippetEl.text().trim();
+        
+        if (url && url.includes('bing.com/ck/a?!')) {
+          try {
+            const params = new URL(url).searchParams;
+            const encoded = params.get('u');
+            if (encoded && encoded.length > 2) {
+              url = Buffer.from(encoded.substring(2), 'base64').toString('utf-8');
+            }
+          } catch (e) {
+            // ignore
+          }
+        }
         
         if (url && url.startsWith('http') && title) {
           let company = "Unknown Company";

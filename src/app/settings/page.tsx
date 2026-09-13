@@ -64,8 +64,26 @@ export default function SetupPage() {
     setNewWebsite({ name: "", url: "", description: "" });
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     setSignature(formData);
+    
+    // Sync to backend for background worker
+    try {
+      const store = useAppStore.getState();
+      await fetch("/api/auto-scout/sync", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          signature: formData,
+          resume: store.resume,
+          autoScoutPreferences: store.autoScoutPreferences,
+          websites: store.websites
+        })
+      });
+    } catch (e) {
+      console.error("Sync failed", e);
+    }
+
     router.push("/");
   };
 
@@ -181,6 +199,74 @@ export default function SetupPage() {
               <Plus className="w-4 h-4 mr-1" /> Add Website
             </button>
           </div>
+        </section>
+
+        {/* Section 4: Auto-Scout AI Roles */}
+        <section className="bg-white rounded-2xl shadow-sm border p-8">
+          <div className="flex justify-between items-start mb-6">
+            <h2 className="text-xl font-semibold flex items-center">
+              <span className="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+              Auto-Scout AI Target Roles
+            </h2>
+            <button 
+              onClick={async () => {
+                if (!resume?.parsedText && !resume?.base64Data) {
+                  alert("Please upload a resume first.");
+                  return;
+                }
+                try {
+                  const res = await fetch("/api/generate/roles", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ resumeText: resume.parsedText || "Resume uploaded", location: formData.location })
+                  });
+                  if (!res.ok) throw new Error("Failed to generate roles");
+                  const data = await res.json();
+                  const currentPrefs = useAppStore.getState().autoScoutPreferences || { keywords: "", location: formData.location, mode: "freelance", source: "linkedin" };
+                  useAppStore.getState().setAutoScoutPreferences({
+                    ...currentPrefs,
+                    targetRoles: data.roles
+                  });
+                  alert("Roles generated successfully! Click Save & Continue to apply.");
+                } catch (e: any) {
+                  alert(e.message);
+                }
+              }}
+              className="bg-purple-100 text-purple-700 hover:bg-purple-200 px-4 py-2 rounded-lg text-sm font-medium transition"
+            >
+              Auto-Detect 7 Roles (AI)
+            </button>
+          </div>
+          <p className="text-sm text-gray-500 mb-6">
+            These 7 roles will be used by the background Auto-Pilot cron job to hunt for flexible and contract opportunities.
+          </p>
+          
+          {(() => {
+            const prefs = useAppStore.getState().autoScoutPreferences;
+            const roles = prefs?.targetRoles || [];
+            
+            return (
+              <div className="grid grid-cols-1 gap-3">
+                {Array.from({ length: 7 }).map((_, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="text-gray-400 font-medium w-4">{i + 1}.</span>
+                    <input 
+                      type="text" 
+                      placeholder={`Target Role ${i + 1}`}
+                      className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                      value={roles[i] || ""}
+                      onChange={(e) => {
+                        const newRoles = [...roles];
+                        newRoles[i] = e.target.value;
+                        const currentPrefs = useAppStore.getState().autoScoutPreferences || { keywords: "", location: formData.location, mode: "freelance", source: "linkedin" };
+                        useAppStore.getState().setAutoScoutPreferences({ ...currentPrefs, targetRoles: newRoles });
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
         </section>
 
         <div className="flex justify-end pt-4">

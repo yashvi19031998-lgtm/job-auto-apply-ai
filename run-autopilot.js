@@ -43,45 +43,55 @@ async function runScan() {
     if (!resume || !prefs) throw new Error("Incomplete preferences. Please setup your profile and auto-scout preferences first.");
 
     console.log(`- Loaded preferences for: ${signature?.fullName || 'User'}`);
-    const keywordList = prefs.keywords.split(',').map(k => k.trim()).filter(Boolean);
-    const activeKeyword = keywordList[Math.floor(Math.random() * keywordList.length)];
+    const rolesList = (prefs.targetRoles && prefs.targetRoles.length > 0) 
+      ? prefs.targetRoles 
+      : prefs.keywords.split(',').map(k => k.trim()).filter(Boolean);
     
-    console.log(`- Full Keyword List: ${keywordList.join(', ')}`);
-    console.log(`- Selected Keyword for this run: ${activeKeyword} | ${prefs.location} | Source: ${prefs.source}`);
+    // Cycle through search modifiers to find diverse jobs
+    const modifiers = ["full time", "part time", "contract base", "hourly paid", "hiring"];
+    
+    console.log(`- Target Roles Pool: ${rolesList.length} roles loaded`);
+    console.log(`- Location: ${prefs.location} | Source Mode: ${prefs.source}`);
 
     const existingRes = await fetch(`${BASE_URL}/api/auto-scout/leads`);
     const existingData = await existingRes.json();
     const existingLeads = existingData.leads || [];
 
-    console.log(`\n🔍 Scraping from ALL SOURCES: linkedin, web, custom...`);
+    console.log(`\n🔍 Scraping ALL 7 ROLES across ALL SOURCES: linkedin, reddit, web, custom...`);
     
-    const sourcesToScrape = ['linkedin', 'web', 'custom'];
+    const sourcesToScrape = ['linkedin', 'reddit', 'web', 'custom'];
     let jobs = [];
 
-    for (const source of sourcesToScrape) {
-      console.log(`\n  👉 Initiating search on: ${source}`);
-      try {
-        const scrapeRes = await fetch(`${BASE_URL}/api/scrape`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ keywords: activeKeyword, location: prefs.location, searchMode: prefs.mode, searchSource: source, timeRange: prefs.timeRange })
-        });
+    for (const activeKeyword of rolesList) {
+      for (const activeModifier of modifiers) {
+        console.log(`\n  👉 Initiating search for: [${activeKeyword}] with modifier: [${activeModifier}]`);
+        for (const source of sourcesToScrape) {
+          try {
+            const scrapeRes = await fetch(`${BASE_URL}/api/scrape`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ keywords: activeKeyword, location: prefs.location, searchMode: prefs.mode, searchSource: source, timeRange: prefs.timeRange, dynamicModifier: activeModifier })
+            });
 
-        if (!scrapeRes.ok) {
-          console.error(`  ❌ Scrape failed for ${source}: ${await scrapeRes.text()}`);
-          continue;
+            if (!scrapeRes.ok) {
+              console.error(`  ❌ Scrape failed for ${source}: ${await scrapeRes.text()}`);
+              continue;
+            }
+
+            const scrapeData = await scrapeRes.json();
+            const sourceJobs = scrapeData.jobs || [];
+            console.log(`  ✅ Found ${sourceJobs.length} jobs from ${source}.`);
+            
+            sourceJobs.forEach(job => {
+              job.source_used = source;
+              job.modifier_used = activeModifier;
+              jobs.push(job);
+            });
+          } catch (err) {
+            console.error(`  ❌ Error scraping from ${source}: ${err.message}`);
+          }
         }
-
-        const scrapeData = await scrapeRes.json();
-        const sourceJobs = scrapeData.jobs || [];
-        console.log(`  ✅ Found ${sourceJobs.length} jobs from ${source}.`);
-        
-        sourceJobs.forEach(job => {
-          job.source_used = source;
-          jobs.push(job);
-        });
-      } catch (err) {
-        console.error(`  ❌ Error scraping from ${source}: ${err.message}`);
+        await sleep(1500); // Small delay to avoid search engine rate limits
       }
     }
 
@@ -141,7 +151,7 @@ async function runScan() {
 
       stats.newLeads++;
 
-      let leadObj = { id: 'lead-' + Date.now() + '-' + Math.floor(Math.random()*1000), source: rawJob.source_used || prefs.source, jobTitle: rawJob.title, company: rawCompany, location: rawJob.location || prefs.location, jobUrl: (rawJob.url || rawJob.link), fullDescription: rawJob.snippet || rawJob.description || '', status: 'new', errorReason: '' };
+      let leadObj = { id: 'lead-' + Date.now() + '-' + Math.floor(Math.random()*1000), source: rawJob.source_used || prefs.source, jobTitle: rawJob.title, company: rawCompany, location: rawJob.location || prefs.location, jobUrl: (rawJob.url || rawJob.link), fullDescription: "[Found via search modifier: " + (rawJob.modifier_used || 'unknown') + "]\n\n" + (rawJob.snippet || rawJob.description || ''), status: 'new', errorReason: '' };
 
       try {
         console.log(`  🧠 Extracting contact info & parsing requirements...`);

@@ -77,7 +77,16 @@ export async function POST(req: NextRequest) {
           let targetUrl: string | null = null;
           $('li.b_algo h2 a').each((_: any, el: any) => {
             if (targetUrl) return;
-            const link = $(el).attr('href');
+            let link = $(el).attr('href');
+            if (link && link.includes('bing.com/ck/a?!')) {
+              try {
+                const params = new URL(link).searchParams;
+                const encoded = params.get('u');
+                if (encoded && encoded.length > 2) {
+                  link = Buffer.from(encoded.substring(2), 'base64').toString('utf-8');
+                }
+              } catch (e) {}
+            }
             if (link && link.startsWith('http') && !link.includes('linkedin.com')) {
               targetUrl = link;
             }

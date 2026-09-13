@@ -13,7 +13,7 @@ export default function LeadScoutPage() {
   const [sources, setSources] = useState<(ApifySource | 'gemini')[]>(['gemini']);
   const [keywords, setKeywords] = useState('');
   const [location, setLocation] = useState('');
-  const [leadTypeFilter, setLeadTypeFilter] = useState<'all' | 'job' | 'freelance'>('all');
+  const [leadTypeFilter, setLeadTypeFilter] = useState<'all' | 'job' | 'freelance'>('freelance');
   const [useProfile, setUseProfile] = useState(false);
   const [minMatchScore, setMinMatchScore] = useState<number>(0);
   
@@ -91,8 +91,8 @@ export default function LeadScoutPage() {
   return (
     <div className="mx-auto max-w-7xl p-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900">Lead Scout</h1>
-        <p className="text-gray-500 mt-2">Discover job and freelance opportunities tailored to your profile.</p>
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900">IT / Freelance Leads</h1>
+        <p className="text-gray-500 mt-2">Discover freelance gigs and IT project leads tailored to your profile.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -108,9 +108,8 @@ export default function LeadScoutPage() {
                 onChange={(e) => setLeadTypeFilter(e.target.value as any)}
                 className="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
               >
-                <option value="all">All</option>
-                <option value="job">Jobs</option>
-                <option value="freelance">Freelance</option>
+                <option value="freelance">Freelance Only</option>
+                <option value="all">Include Jobs</option>
               </select>
             </div>
 

@@ -10,8 +10,8 @@ const navItems = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   { name: 'Resume', href: '/resume', icon: FileText },
   { name: 'Jobs', href: '/jobs', icon: Briefcase },
-  { name: 'Lead Scout', href: '/lead-scout', icon: Target },
-  { name: 'Ahmedabad Leads', href: '/ahmedabad-leads', icon: MapPin },
+  { name: 'IT / Freelance Leads', href: '/jobs/freelance', icon: Target },
+  { name: 'Ahmedabad Jobs', href: '/jobs/ahmedabad', icon: MapPin },
   { name: 'Applications', href: '/applications', icon: Send },
   { name: 'Settings', href: '/settings', icon: Settings },
 ];
