@@ -11276,6 +11276,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-java-ahmedabad-india-at-qatar-airways-4465471604",
     "recruiterName": null,
     "firstSeenAt": 1789299148986,
-    "lastSeenAt": 1789315220783
+    "lastSeenAt": 1789331798956
+  },
+  {
+    "id": "lead-1789331798961-850",
+    "source": "linkedin",
+    "jobTitle": "React Frontend Intern",
+    "company": "Uminber Group",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/react-frontend-intern-at-uminber-group-4464737721",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience or knowledge in React\n• Frontend development skills",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/react-frontend-intern-at-uminber-group-4464737721",
+    "recruiterName": null,
+    "firstSeenAt": 1789331800389,
+    "lastSeenAt": 1789331800389
   }
 ]
