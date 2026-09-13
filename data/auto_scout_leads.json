@@ -11276,7 +11276,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-java-ahmedabad-india-at-qatar-airways-4465471604",
     "recruiterName": null,
     "firstSeenAt": 1789299148986,
-    "lastSeenAt": 1789331798956
+    "lastSeenAt": 1789340623629
   },
   {
     "id": "lead-1789331798961-850",
@@ -11293,6 +11293,23 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/react-frontend-intern-at-uminber-group-4464737721",
     "recruiterName": null,
     "firstSeenAt": 1789331800389,
-    "lastSeenAt": 1789331800389
+    "lastSeenAt": 1789340623646
+  },
+  {
+    "id": "lead-1789340613303-88",
+    "source": "linkedin",
+    "jobTitle": "Software Developer - AI",
+    "company": "SharkIT.in",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-developer-ai-at-sharkit-in-4464752769",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience in Software Development with a focus on AI\n• Ability to work in Ahmedabad, Gujarat, India",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/software-developer-ai-at-sharkit-in-4464752769",
+    "recruiterName": null,
+    "firstSeenAt": 1789340614609,
+    "lastSeenAt": 1789340614609
   }
 ]
