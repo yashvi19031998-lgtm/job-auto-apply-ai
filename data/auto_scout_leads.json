@@ -11311,5 +11311,22 @@
     "recruiterName": null,
     "firstSeenAt": 1789340614609,
     "lastSeenAt": 1789340614609
+  },
+  {
+    "id": "lead-1789388759517-596",
+    "source": "linkedin",
+    "jobTitle": "AI/ML Python Developer &amp; Lead",
+    "company": "Stackyzer",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/ai-ml-python-developer-lead-at-stackyzer-4464762544",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience in AI/ML and Python development\n- Leadership capabilities",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ai-ml-python-developer-lead-at-stackyzer-4464762544",
+    "recruiterName": null,
+    "firstSeenAt": 1789388773572,
+    "lastSeenAt": 1789388773572
   }
 ]
