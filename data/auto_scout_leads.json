@@ -11327,7 +11327,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-ml-python-developer-lead-at-stackyzer-4464762544",
     "recruiterName": null,
     "firstSeenAt": 1789388773572,
-    "lastSeenAt": 1789415271017
+    "lastSeenAt": 1789429693099
   },
   {
     "id": "lead-1789415260230-947",
@@ -11344,7 +11344,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-engineer-at-rhc-india-4467095446",
     "recruiterName": null,
     "firstSeenAt": 1789415261998,
-    "lastSeenAt": 1789415261998
+    "lastSeenAt": 1789429693002
   },
   {
     "id": "lead-1789415271023-758",
@@ -11361,6 +11361,40 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/junior-java-developer-at-gujarat-internship-4465223833",
     "recruiterName": null,
     "firstSeenAt": 1789415272448,
-    "lastSeenAt": 1789415272448
+    "lastSeenAt": 1789429714118
+  },
+  {
+    "id": "lead-1789429693200-707",
+    "source": "linkedin",
+    "jobTitle": "Mid-Level Backend Python Engineer (SQL, SQLAlchemy + Pytest) – Kerala or Ahmedabad – UK Hours",
+    "company": "Talent Hunters",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/mid-level-backend-python-engineer-sql-sqlalchemy-%2B-pytest-%E2%80%93-kerala-or-ahmedabad-%E2%80%93-uk-hours-at-talent-hunters-4467295797",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Python\n- SQL\n- SQLAlchemy\n- Pytest",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/mid-level-backend-python-engineer-sql-sqlalchemy-%2B-pytest-%E2%80%93-kerala-or-ahmedabad-%E2%80%93-uk-hours-at-talent-hunters-4467295797",
+    "recruiterName": null,
+    "firstSeenAt": 1789429694684,
+    "lastSeenAt": 1789429694684
+  },
+  {
+    "id": "lead-1789429703689-941",
+    "source": "linkedin",
+    "jobTitle": "Senior Frontend Developer / Engineer – Tailwind, TypeScript &amp; Vue (Multi‑Codebase, UK Hours) Ahmedabad or Kerala, India",
+    "company": "Talent Hunters",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/senior-frontend-developer-engineer-%E2%80%93-tailwind-typescript-vue-multi%E2%80%91codebase-uk-hours-ahmedabad-or-kerala-india-at-talent-hunters-4467282627",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n• Experience with Tailwind CSS\n• Strong proficiency in TypeScript\n• Experience with Vue.js\n• Ability to work across multiple codebases\n• Availability for UK hours",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/senior-frontend-developer-engineer-%E2%80%93-tailwind-typescript-vue-multi%E2%80%91codebase-uk-hours-ahmedabad-or-kerala-india-at-talent-hunters-4467282627",
+    "recruiterName": null,
+    "firstSeenAt": 1789429705098,
+    "lastSeenAt": 1789429705098
   }
 ]
