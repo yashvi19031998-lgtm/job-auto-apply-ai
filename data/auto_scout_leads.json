@@ -11327,6 +11327,40 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-ml-python-developer-lead-at-stackyzer-4464762544",
     "recruiterName": null,
     "firstSeenAt": 1789388773572,
-    "lastSeenAt": 1789388773572
+    "lastSeenAt": 1789415271017
+  },
+  {
+    "id": "lead-1789415260230-947",
+    "source": "linkedin",
+    "jobTitle": "AI Engineer",
+    "company": "RHC India",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/ai-engineer-at-rhc-india-4467095446",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with AI technologies and engineering.\n- Ability to work based on complete details upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/ai-engineer-at-rhc-india-4467095446",
+    "recruiterName": null,
+    "firstSeenAt": 1789415261998,
+    "lastSeenAt": 1789415261998
+  },
+  {
+    "id": "lead-1789415271023-758",
+    "source": "linkedin",
+    "jobTitle": "Junior java developer",
+    "company": "Gujarat Internship",
+    "location": "Kheda, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/junior-java-developer-at-gujarat-internship-4465223833",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Java development skills\n- Complete details will be analyzed upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/junior-java-developer-at-gujarat-internship-4465223833",
+    "recruiterName": null,
+    "firstSeenAt": 1789415272448,
+    "lastSeenAt": 1789415272448
   }
 ]
