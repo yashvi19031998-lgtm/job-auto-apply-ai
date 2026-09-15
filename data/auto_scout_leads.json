@@ -11344,7 +11344,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/ai-engineer-at-rhc-india-4467095446",
     "recruiterName": null,
     "firstSeenAt": 1789415261998,
-    "lastSeenAt": 1789446506822
+    "lastSeenAt": 1789471871738
   },
   {
     "id": "lead-1789415271023-758",
@@ -11378,7 +11378,7 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/mid-level-backend-python-engineer-sql-sqlalchemy-%2B-pytest-%E2%80%93-kerala-or-ahmedabad-%E2%80%93-uk-hours-at-talent-hunters-4467295797",
     "recruiterName": null,
     "firstSeenAt": 1789429694684,
-    "lastSeenAt": 1789446506872
+    "lastSeenAt": 1789471871760
   },
   {
     "id": "lead-1789429703689-941",
@@ -11395,6 +11395,108 @@
     "applicationUrl": "https://in.linkedin.com/jobs/view/senior-frontend-developer-engineer-%E2%80%93-tailwind-typescript-vue-multi%E2%80%91codebase-uk-hours-ahmedabad-or-kerala-india-at-talent-hunters-4467282627",
     "recruiterName": null,
     "firstSeenAt": 1789429705098,
-    "lastSeenAt": 1789446506905
+    "lastSeenAt": 1789471871782
+  },
+  {
+    "id": "lead-1789471840964-659",
+    "source": "linkedin",
+    "jobTitle": "Software Engineer",
+    "company": "Anomaly Business Consult",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-engineer-at-anomaly-business-consult-4465216796",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Software engineering skills and responsibilities as per company standards.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/software-engineer-at-anomaly-business-consult-4465216796",
+    "recruiterName": null,
+    "firstSeenAt": 1789471842562,
+    "lastSeenAt": 1789471842562
+  },
+  {
+    "id": "lead-1789471851595-80",
+    "source": "linkedin",
+    "jobTitle": "Full Stack Engineer",
+    "company": "NetSysCon Consulting",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-netsyscon-consulting-4467716208",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Full Stack Engineering skills and responsibilities as per LinkedIn job posting.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/full-stack-engineer-at-netsyscon-consulting-4467716208",
+    "recruiterName": null,
+    "firstSeenAt": 1789471852603,
+    "lastSeenAt": 1789471852603
+  },
+  {
+    "id": "lead-1789471861613-61",
+    "source": "linkedin",
+    "jobTitle": "Software Developer role (Core PHP, Drupal and WordPress)",
+    "company": "Etech Global Services",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/software-developer-role-core-php-drupal-and-wordpress-at-etech-global-services-4466507019",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Core PHP\n- Experience with Drupal\n- Experience with WordPress",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/software-developer-role-core-php-drupal-and-wordpress-at-etech-global-services-4466507019",
+    "recruiterName": null,
+    "firstSeenAt": 1789471862715,
+    "lastSeenAt": 1789471862715
+  },
+  {
+    "id": "lead-1789471871788-522",
+    "source": "linkedin",
+    "jobTitle": "Zoho Developer",
+    "company": "Dermatouch",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/zoho-developer-at-dermatouch-4452251613",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience as a Zoho Developer\n- Complete details will be analyzed upon import.",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/zoho-developer-at-dermatouch-4452251613",
+    "recruiterName": null,
+    "firstSeenAt": 1789471882173,
+    "lastSeenAt": 1789471882173
+  },
+  {
+    "id": "lead-1789471891181-413",
+    "source": "linkedin",
+    "jobTitle": "Principal Solution Architect – Presales and AI",
+    "company": "UST",
+    "location": "Ahmedabad, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/principal-solution-architect-%E2%80%93-presales-and-ai-at-ust-4415211750",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Expertise in Presales and AI\n- Solution Architecture experience",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/principal-solution-architect-%E2%80%93-presales-and-ai-at-ust-4415211750",
+    "recruiterName": null,
+    "firstSeenAt": 1789471893491,
+    "lastSeenAt": 1789471893491
+  },
+  {
+    "id": "lead-1789471902498-409",
+    "source": "linkedin",
+    "jobTitle": "Azure/MS Copilot &amp; Multi-Agent Engineer",
+    "company": "WillWare Technologies",
+    "location": "Gandhinagar, Gujarat, India",
+    "jobUrl": "https://in.linkedin.com/jobs/view/azure-ms-copilot-multi-agent-engineer-at-willware-technologies-4467445805",
+    "fullDescription": "Directly scraped from LinkedIn. Complete details will be analyzed upon import.\n\nExtracted Requirements:\n- Experience with Azure\n- Experience with MS Copilot\n- Experience with Multi-Agent Systems",
+    "status": "no_email",
+    "errorReason": "",
+    "recipientEmail": null,
+    "phone": null,
+    "applicationUrl": "https://in.linkedin.com/jobs/view/azure-ms-copilot-multi-agent-engineer-at-willware-technologies-4467445805",
+    "recruiterName": null,
+    "firstSeenAt": 1789471912174,
+    "lastSeenAt": 1789471912174
   }
 ]
